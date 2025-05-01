@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "wakfu",
+    "name": "Wakfu Mod",
+    "description": "L’univers du Wakfu infusé dans Minecraft. Tofus, portails, nations et chaos primordiaux au menu.",
+    "version": "1.0",
+    "mcversion": "1.12.2",
+    "logoFile": "",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["SAYLIE"],
+    "credits": "<Merci à Ankama d'avoir bercé mon enfance avec cette animé qui a sut rentré dans la légende>",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

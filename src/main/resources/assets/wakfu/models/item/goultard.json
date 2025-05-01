@@ -1,0 +1,6 @@
+{
+  "parent": "wakfu:custom/goultard_epee",
+  "textures": {
+    "0": "wakfu:items/goultard"
+  }
+}
