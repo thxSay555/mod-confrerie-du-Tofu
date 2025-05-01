@@ -1,7 +1,7 @@
 # Wakraft_by_Saylie
 # 🌌 Wakraft - Le monde de Wakfu dans Minecraft 1.12.2
 
-**Wakraft** est un mod ambitieux qui fusionne l’univers magique de **Wakfu** avec le bac à sable infini de **Minecraft Java 1.12.2**.  
+**Wakraft** est un mod ambitieu qui fusionne l’univers magique de **Wakfu** avec le bac à sable infini de **Minecraft Java 1.12.2**.  
 Un projet mêlant classes, compétences, animations, économie en kamas et combats épiques... tout ça, dans un seul mod.
 
 ---
