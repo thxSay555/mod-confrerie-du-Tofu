@@ -1,6 +1,7 @@
 package fr.wakfu.stats;
 
 public interface IPlayerStats {
+	void tickRegen();
 
     // --- Force ---
     int getForce();
@@ -44,5 +45,25 @@ public interface IPlayerStats {
 
     float getCurrentStamina();
     void setCurrentStamina(float value);
+    
+ // --- Intensité ---
+    int getIntensity();
+    void setIntensity(int value);
+    void addIntensity(int amount);
+    
+ //level and skill point
+    
+    int getLevel();
+    void setLevel(int level);
+    int getSkillPoints();
+    void setSkillPoints(int points);
+    void addSkillPoints(int amount);
+    
+ // Interface IPlayerStats
+    int getXp();
+    void setXp(int xp);
+    int getXpToNextLevel();
+    void setXpToNextLevel(int xp);
+
 
 }

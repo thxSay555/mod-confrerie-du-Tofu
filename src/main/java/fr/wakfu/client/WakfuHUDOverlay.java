@@ -41,16 +41,30 @@ public class WakfuHUDOverlay {
         int x = 10;
         int y = res.getScaledHeight() - 50;
 
+        // --- Barres principales ---
         drawBar(x, y, 100, 8, stats.getCurrentWakfu(), wakfuMax, 0xFF3BE3FF);
         drawBar(x, y + 12, 100, 8, stats.getCurrentStamina(), stamMax, 0xFFFFD700);
 
-        mc.fontRenderer.drawStringWithShadow("Wakfu: " + (int)stats.getCurrentWakfu() + " / " + (int)wakfuMax, x, y - 10, 0x3BE3FF);
-        mc.fontRenderer.drawStringWithShadow("Stamina: " + (int)stats.getCurrentStamina() + " / " + (int)stamMax, x, y + 2, 0xFFD700);
+        mc.fontRenderer.drawStringWithShadow("Wakfu: " + (int) stats.getCurrentWakfu() + " / " + (int) wakfuMax, x, y - 10, 0x3BE3FF);
+        mc.fontRenderer.drawStringWithShadow("Stamina: " + (int) stats.getCurrentStamina() + " / " + (int) stamMax, x, y + 2, 0xFFD700);
+
+        // --- Barre d'intensité ---
+        int intensity = stats.getIntensity(); // entre 0 et 100
+        int barWidth = 100;
+        int barX = x;
+        int barY = y - 22;
+
+        // Dessin du curseur d’intensité sur la barre de Wakfu
+        int cursorX = barX + (int) (barWidth * (intensity / 100.0f));
+        drawRect(cursorX - 1, y - 2, cursorX + 1, y + 10, 0xFFAA00FF); // curseur violet
+
+        // Texte affiché au-dessus
+        mc.fontRenderer.drawStringWithShadow("Intensité : " + intensity, barX, barY, 0xAA00FF);
     }
 
     private static void drawBar(int x, int y, int width, int height, float current, float max, int color) {
         float ratio = current / max;
-        int filled = (int)(width * ratio);
+        int filled = (int) (width * ratio);
 
         // Fond
         drawRect(x, y, x + width, y + height, 0x80000000);

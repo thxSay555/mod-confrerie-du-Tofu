@@ -26,7 +26,7 @@ public class CommandStat extends CommandBase {
 
     @Override
     public String getUsage(ICommandSender sender) {
-        return "/stat <joueur> <Force|Stamina|Wakfu|Agility> <valeur>";
+        return "/stat <joueur> <Force|Stamina|Wakfu|Agility|Intensity> <valeur>";
     }
 
     @Override
@@ -74,23 +74,24 @@ public class CommandStat extends CommandBase {
             case "agility":
                 stats.setAgility(value);
                 break;
+            case "intensity":
+                stats.setIntensity(value);
+                break;
             default:
-                sender.sendMessage(new TextComponentString("§cStat inconnue. Utilise Force, Stamina, Wakfu ou Agility."));
+                sender.sendMessage(new TextComponentString("§cStat inconnue. Utilise Force, Stamina, Wakfu, Agility ou Intensity."));
                 return;
         }
-     // Prépare le NBT
+
+        // Prépare le NBT
         NBTTagCompound tag = new NBTTagCompound();
-        tag.setInteger("Force",    stats.getForce());
-        tag.setInteger("Stamina",  stats.getStamina());
-        tag.setInteger("Wakfu",    stats.getWakfu());
-        tag.setInteger("Agility",  stats.getAgility());
+        tag.setInteger("Force",     stats.getForce());
+        tag.setInteger("Stamina",   stats.getStamina());
+        tag.setInteger("Wakfu",     stats.getWakfu());
+        tag.setInteger("Agility",   stats.getAgility());
+        tag.setInteger("Intensity", stats.getIntensity());
 
         // Envoie au client
-        WakfuNetwork.INSTANCE.sendTo(
-            new SyncStatsMessage(tag),
-            target
-        );
-
+        WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), target);
 
         sender.sendMessage(new TextComponentString("§a" + stat + " de " + target.getName() + " mise à " + value));
     }
@@ -100,7 +101,7 @@ public class CommandStat extends CommandBase {
         if (args.length == 1) {
             return getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames());
         } else if (args.length == 2) {
-            return getListOfStringsMatchingLastWord(args, Arrays.asList("Force", "Stamina", "Wakfu", "Agility"));
+            return getListOfStringsMatchingLastWord(args, Arrays.asList("Force", "Stamina", "Wakfu", "Agility", "Intensity"));
         }
         return super.getTabCompletions(server, sender, args, pos);
     }

@@ -8,33 +8,44 @@ import net.minecraftforge.common.capabilities.Capability.IStorage;
 
 public class PlayerStatsStorage implements IStorage<IPlayerStats> {
     @Override
-    public NBTTagCompound writeNBT(Capability<IPlayerStats> capability, IPlayerStats instance, EnumFacing side) {
+    public NBTTagCompound writeNBT(Capability<IPlayerStats> cap, IPlayerStats stats, EnumFacing side) {
         NBTTagCompound tag = new NBTTagCompound();
-        tag.setInteger("Force",    instance.getForce());
-        tag.setInteger("Stamina",  instance.getStamina());
-        tag.setInteger("Wakfu",    instance.getWakfu());
-        tag.setInteger("Agility",  instance.getAgility());
-        // persister aussi les multiplicateurs si besoin
-        tag.setFloat("WakfuMult",   instance.getWakfuMultiplier());
-        tag.setFloat("StaminaMult", instance.getStaminaMultiplier());
-        tag.setFloat("CurrentWakfu", instance.getCurrentWakfu());
-        tag.setFloat("CurrentStamina", instance.getCurrentStamina());
+        // Stats de base
+        tag.setInteger("Force",      stats.getForce());
+        tag.setInteger("Stamina",    stats.getStamina());
+        tag.setInteger("Wakfu",      stats.getWakfu());
+        tag.setInteger("Agility",    stats.getAgility());
+        // Leveling
+        tag.setInteger("Level",      stats.getLevel());
+        tag.setInteger("SkillPoints",stats.getSkillPoints());
+        tag.setInteger("Xp",         stats.getXp());
+        tag.setInteger("XpToNext",   stats.getXpToNextLevel());
+        // Intensity
+        tag.setInteger("Intensity",  stats.getIntensity());
+        // Currents & multipliers si tu veux
+        tag.setFloat("CurrentWakfu",   stats.getCurrentWakfu());
+        tag.setFloat("CurrentStamina", stats.getCurrentStamina());
         return tag;
     }
 
     @Override
-    public void readNBT(Capability<IPlayerStats> capability, IPlayerStats instance, EnumFacing side, NBTBase nbt) {
+    public void readNBT(Capability<IPlayerStats> cap, IPlayerStats stats, EnumFacing side, NBTBase nbt) {
         if (!(nbt instanceof NBTTagCompound)) return;
         NBTTagCompound tag = (NBTTagCompound) nbt;
-        instance.setForce(tag.getInteger("Force"));
-        instance.setStamina(tag.getInteger("Stamina"));
-        instance.setWakfu(tag.getInteger("Wakfu"));
-        instance.setAgility(tag.getInteger("Agility"));
-        // restaurer aussi les multiplicateurs
-        instance.setWakfuMultiplier(tag.getFloat("WakfuMult"));
-        instance.setStaminaMultiplier(tag.getFloat("StaminaMult"));
-        instance.setCurrentWakfu(tag.getFloat("CurrentWakfu"));
-        instance.setCurrentStamina(tag.getFloat("CurrentStamina"));
-
+        // Stats de base
+        stats.setForce     (tag.getInteger("Force"));
+        stats.setStamina   (tag.getInteger("Stamina"));
+        stats.setWakfu     (tag.getInteger("Wakfu"));
+        stats.setAgility   (tag.getInteger("Agility"));
+        // Leveling
+        stats.setLevel     (tag.getInteger("Level"));
+        stats.setSkillPoints(tag.getInteger("SkillPoints"));
+        stats.setXp        (tag.getInteger("Xp"));
+        stats.setXpToNextLevel(tag.getInteger("XpToNext"));
+        // Intensity
+        stats.setIntensity(tag.getInteger("Intensity"));
+        // Currents
+        stats.setCurrentWakfu  (tag.getFloat("CurrentWakfu"));
+        stats.setCurrentStamina(tag.getFloat("CurrentStamina"));
     }
 }
