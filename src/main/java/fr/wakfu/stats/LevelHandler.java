@@ -8,48 +8,71 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
 public class LevelHandler {
+
+    // Cache pour envoi conditionnel
+    private final Map<UUID, Integer> lastSyncedXp = new HashMap<>();
+    private final Map<UUID, Integer> lastSyncedLevel = new HashMap<>();
+
+    /** Calcul du besoin en XP (base 50, +10% par niveau) */
+    public static int getXpForNextLevel(int currentLevel) {
+        double base = 50 * Math.pow(1.1, currentLevel - 1);
+        return (int) Math.round(base);
+    }
 
     @SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent ev) {
         if (ev.phase != TickEvent.Phase.END || ev.player.world.isRemote
          || !(ev.player instanceof EntityPlayerMP)) return;
 
-        EntityPlayerMP p = (EntityPlayerMP) ev.player;
-        IPlayerStats s = p.getCapability(StatsProvider.PLAYER_STATS, null);
-        if (s == null) return;
+        EntityPlayerMP player = (EntityPlayerMP) ev.player;
+        IPlayerStats stats = player.getCapability(StatsProvider.PLAYER_STATS, null);
+        if (stats == null) return;
 
-        int xp    = s.getXp();
-        int next  = s.getXpToNextLevel();
-        int lvl   = s.getLevel();
+        UUID uuid = player.getUniqueID();
+        int currentXp = stats.getXp();
+        int currentLevel = stats.getLevel();
 
-        // Boucle sans plafond
-        while (xp >= next) {
-            xp -= next;
-            lvl++;
-            s.setLevel(lvl);
-            s.addSkillPoints(5);
-
-            next = getXpForNextLevel(lvl);
-            s.setXpToNextLevel(next);
-
-            p.sendMessage(new TextComponentString(
-                "§aBravo ! Niveau " + lvl + " (+5 SP)"
+        // Montée de niveau si xp dépasse le palier
+        boolean leveled = false;
+        int xpToNext = stats.getXpToNextLevel();
+        while (currentXp >= xpToNext) {
+            currentXp -= xpToNext;
+            currentLevel++;
+            stats.setLevel(currentLevel);
+            stats.addSkillPoints(5);
+            leveled = true;
+            xpToNext = getXpForNextLevel(currentLevel);
+            stats.setXpToNextLevel(xpToNext);
+            player.sendMessage(new TextComponentString(
+                "§aBravo ! Niveau " + currentLevel + " (+5 SP)."
             ));
         }
+        stats.setXp(currentXp);
 
-        s.setXp(xp);  // on remet la XP restante
+        // Condition d'envoi: xp ou niveau a changé depuis dernier envoi
+        int lastXp = lastSyncedXp.getOrDefault(uuid, -1);
+        int lastLevel = lastSyncedLevel.getOrDefault(uuid, -1);
+        if (currentXp != lastXp || currentLevel != lastLevel || leveled) {
+            // Prépare le NBT complet
+            NBTTagCompound tag = new NBTTagCompound();
+            tag.setInteger("Level", currentLevel);
+            tag.setInteger("SkillPoints", stats.getSkillPoints());
+            tag.setInteger("Xp", currentXp);
+            tag.setInteger("XpToNext", stats.getXpToNextLevel());
+            tag.setInteger("Force", stats.getForce());
+            tag.setInteger("Stamina", stats.getStamina());
+            tag.setInteger("Wakfu", stats.getWakfu());
+            tag.setInteger("Agility", stats.getAgility());
+            WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), player);
 
-        // Sync client
-        NBTTagCompound tag = new NBTTagCompound();
-        tag.setInteger("Level",      s.getLevel());
-        tag.setInteger("SkillPoints",s.getSkillPoints());
-        tag.setInteger("Xp",         s.getXp());
-        tag.setInteger("XpToNext",   s.getXpToNextLevel());
-        WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), p);
-    }
-
-    public static int getXpForNextLevel(int currentLevel) {
-        return (int) Math.round(50 * Math.pow(1.1, currentLevel - 1));
+            // Met à jour cache
+            lastSyncedXp.put(uuid, currentXp);
+            lastSyncedLevel.put(uuid, currentLevel);
+        }
     }
 }
