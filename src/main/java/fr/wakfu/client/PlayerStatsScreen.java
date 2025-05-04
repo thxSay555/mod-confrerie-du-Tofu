@@ -1,7 +1,9 @@
 package fr.wakfu.client;
 
-import fr.wakfu.network.WakfuNetwork;
+import org.lwjgl.input.Keyboard;
+
 import fr.wakfu.network.UpdateStatsMessage;
+import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.stats.IPlayerStats;
 import fr.wakfu.stats.StatsProvider;
 import net.minecraft.client.Minecraft;
@@ -14,7 +16,6 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
-import org.lwjgl.input.Keyboard;
 
 public class PlayerStatsScreen extends GuiScreen {
     private static final Minecraft mc = Minecraft.getMinecraft();
@@ -31,6 +32,18 @@ public class PlayerStatsScreen extends GuiScreen {
             Minecraft.getMinecraft().displayGuiScreen(new PlayerStatsScreen());
         }
     }
+    public void refreshData() {
+        IPlayerStats stats = mc.player.getCapability(StatsProvider.PLAYER_STATS, null);
+        if (stats != null) {
+            pendingForce = stats.getForce();
+            pendingStamina = stats.getStamina();
+            pendingWakfu = stats.getWakfu();
+            pendingAgility = stats.getAgility();
+            pendingPoints = stats.getSkillPoints();
+        }
+        initGui(); // Recharge les boutons avec les nouvelles données
+    }
+
 
     @Override
     public void initGui() {

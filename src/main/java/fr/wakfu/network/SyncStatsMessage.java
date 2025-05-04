@@ -56,10 +56,14 @@ public class SyncStatsMessage implements IMessage {
                     stats.setXp(tag.getInteger("Xp"));
                     stats.setXpToNextLevel(tag.getInteger("XpToNext"));
                     stats.setIntensity(tag.getInteger("Intensity"));
+                    
+                    // AJOUTER CES DEUX LIGNES :
+                    stats.setCurrentWakfu(tag.getFloat("CurrentWakfu"));
+                    stats.setCurrentStamina(tag.getFloat("CurrentStamina"));
 
-                    // Rafraîchissement de l'interface si ouverte
+                    // Rafraîchissement de l'interface sans la recréer
                     if (Minecraft.getMinecraft().currentScreen instanceof PlayerStatsScreen) {
-                        Minecraft.getMinecraft().displayGuiScreen(new PlayerStatsScreen());
+                        ((PlayerStatsScreen) Minecraft.getMinecraft().currentScreen).refreshData();
                     }
                 });
             }
