@@ -1,4 +1,4 @@
-// src/main/java/fr/wakfu/stats/StatsProvider.java
+ // src/main/java/fr/wakfu/stats/StatsProvider.java
 package fr.wakfu.stats;
 
 import net.minecraft.nbt.NBTTagCompound;

@@ -17,13 +17,17 @@ public class CapabilityHandler {
     // Garde statique pour empêcher le double-enregistrement
     private static boolean registered = false;
 
-    /** Doit être appelé une seule fois, depuis preInit() */
+    /** 
+     * Enregistre la capability pour les statistiques du joueur.
+     * Doit être appelé une seule fois pendant le pré-initialisation.
+     */
     public static void register() {
         if (registered) {
             return;  // déjà enregistré, on sort
         }
         registered = true;
 
+        // Enregistrement de la capability
         CapabilityManager.INSTANCE.register(
             IPlayerStats.class,
             new PlayerStatsStorage(),
@@ -32,7 +36,10 @@ public class CapabilityHandler {
         System.out.println("[WAKFU] Capability IPlayerStats enregistrée.");
     }
 
-    /** Clonage des stats à la mort */
+    /** 
+     * Clone les statistiques du joueur lorsqu'il meurt et se recrée.
+     * Cela permet de garder les mêmes stats entre la mort et la résurrection.
+     */
     @SubscribeEvent
     public static void clonePlayer(PlayerEvent.Clone event) {
         if (!event.isWasDeath()) return;
@@ -44,28 +51,43 @@ public class CapabilityHandler {
         IPlayerStats newStats = newPlayer.getCapability(StatsProvider.PLAYER_STATS, null);
 
         if (oldStats != null && newStats != null) {
+            // Clonage des statistiques de base
             newStats.setForce(oldStats.getForce());
             newStats.setStamina(oldStats.getStamina());
             newStats.setWakfu(oldStats.getWakfu());
             newStats.setAgility(oldStats.getAgility());
+            // Ajouter ici d'autres stats si nécessaire
         }
     }
 
-    /** Attache la capability au joueur */
+    /** 
+     * Attache la capability aux entités de type joueur.
+     * Cela permet de lier les statistiques aux entités de type joueur (EntityPlayer).
+     */
     @SubscribeEvent
     public static void attachCapabilities(AttachCapabilitiesEvent<Entity> event) {
         if (!(event.getObject() instanceof EntityPlayer)) return;
 
+        // Attache la capability
         System.out.println("[WAKFU] Attachement de la capability PlayerStats.");
         event.addCapability(STATS_CAP, new StatsProvider());
     }
+
+    /** 
+     * Gère la régénération des stats à chaque tick du joueur.
+     * Cela permet d'appliquer des effets de régénération pendant le jeu.
+     */
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END || event.player.world.isRemote) return;
+
+        // Récupère les stats du joueur
         IPlayerStats stats = event.player.getCapability(StatsProvider.PLAYER_STATS, null);
         if (stats == null) return;
-        // Applique la regen multipliée
+
+        // Applique la régénération des statistiques
         ((PlayerStats) stats).tickRegen();
-        // synchroniser si besoin...
+
+        // Si des synchronisations sont nécessaires avec le client, il faut les gérer ici.
     }
 }

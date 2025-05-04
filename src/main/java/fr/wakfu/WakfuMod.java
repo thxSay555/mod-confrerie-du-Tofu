@@ -33,6 +33,7 @@ public class WakfuMod {
     public void preInit(FMLPreInitializationEvent event) {
         // Capability registration moved to CommonProxy.preInit
         WakfuNetwork.init();
+        proxy.preInit(event);
     }
 
     @Mod.EventHandler
