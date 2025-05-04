@@ -1,7 +1,11 @@
-// SyncStatsMessage.java
 package fr.wakfu.network;
 
+import fr.wakfu.client.PlayerStatsScreen;
+import fr.wakfu.stats.IPlayerStats;
+import fr.wakfu.stats.StatsProvider;
 import io.netty.buffer.ByteBuf;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
@@ -12,7 +16,6 @@ import net.minecraftforge.fml.relauncher.Side;
 public class SyncStatsMessage implements IMessage {
     private NBTTagCompound nbt;
 
-    // Constructeur vide requis par Forge
     public SyncStatsMessage() { }
 
     public SyncStatsMessage(NBTTagCompound nbt) {
@@ -21,13 +24,11 @@ public class SyncStatsMessage implements IMessage {
 
     @Override
     public void toBytes(ByteBuf buf) {
-        // Sérialisation du NBT dans le buffer
         ByteBufUtils.writeTag(buf, nbt);
     }
 
     @Override
     public void fromBytes(ByteBuf buf) {
-        // Désérialisation du NBT depuis le buffer
         this.nbt = ByteBufUtils.readTag(buf);
     }
 
@@ -35,22 +36,17 @@ public class SyncStatsMessage implements IMessage {
         return nbt;
     }
 
-    // Handler statique
     public static class Handler implements IMessageHandler<SyncStatsMessage, IMessage> {
         @Override
         public IMessage onMessage(SyncStatsMessage msg, MessageContext ctx) {
-            // Côté client uniquement
             if (ctx.side == Side.CLIENT) {
-                // Planifier la tâche sur le thread client
-                net.minecraft.client.Minecraft.getMinecraft().addScheduledTask(() -> {
-                    // Récupère le joueur client et sa capability
-                    net.minecraft.entity.player.EntityPlayer player =
-                        net.minecraft.client.Minecraft.getMinecraft().player;
-                    fr.wakfu.stats.IPlayerStats stats =
-                        player.getCapability(fr.wakfu.stats.StatsProvider.PLAYER_STATS, null);
+                Minecraft.getMinecraft().addScheduledTask(() -> {
+                    EntityPlayer player = Minecraft.getMinecraft().player;
+                    IPlayerStats stats = player.getCapability(StatsProvider.PLAYER_STATS, null);
                     if (stats == null) return;
 
                     NBTTagCompound tag = msg.getTag();
+                    // Mise à jour complète des stats
                     stats.setForce(tag.getInteger("Force"));
                     stats.setStamina(tag.getInteger("Stamina"));
                     stats.setWakfu(tag.getInteger("Wakfu"));
@@ -59,10 +55,15 @@ public class SyncStatsMessage implements IMessage {
                     stats.setSkillPoints(tag.getInteger("SkillPoints"));
                     stats.setXp(tag.getInteger("Xp"));
                     stats.setXpToNextLevel(tag.getInteger("XpToNext"));
-                    stats.setIntensity(tag.getInteger("Intensity")); // Ajoutez cette ligne
+                    stats.setIntensity(tag.getInteger("Intensity"));
+
+                    // Rafraîchissement de l'interface si ouverte
+                    if (Minecraft.getMinecraft().currentScreen instanceof PlayerStatsScreen) {
+                        Minecraft.getMinecraft().displayGuiScreen(new PlayerStatsScreen());
+                    }
                 });
             }
-            return null; // pas de réponse
+            return null;
         }
     }
 }

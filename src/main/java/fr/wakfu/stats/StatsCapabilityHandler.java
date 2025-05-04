@@ -1,7 +1,11 @@
 package fr.wakfu.stats;
 
+import fr.wakfu.network.SyncStatsMessage;
+import fr.wakfu.network.WakfuNetwork;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
@@ -9,6 +13,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent.Clone;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 @Mod.EventBusSubscriber
@@ -27,10 +32,41 @@ public class StatsCapabilityHandler {
             }
         }
     }
+    @SubscribeEvent
+    public void onPlayerRespawn(PlayerEvent.PlayerRespawnEvent event) {
+        syncStats(event.player);
+    }
+
+    @SubscribeEvent
+    public void onDimensionChange(PlayerEvent.PlayerChangedDimensionEvent event) {
+        syncStats(event.player);
+    }
+
+    private void syncStats(EntityPlayer player) {
+        if (!player.world.isRemote) { // Côté serveur uniquement
+            IPlayerStats stats = player.getCapability(StatsProvider.PLAYER_STATS, null);
+            if (stats != null) {
+                NBTTagCompound tag = new NBTTagCompound();
+                tag.setInteger("Level", stats.getLevel());
+                tag.setInteger("Xp", stats.getXp());
+                tag.setInteger("Force", stats.getForce());
+                tag.setInteger("Stamina", stats.getStamina());
+                tag.setInteger("Wakfu", stats.getWakfu());
+                tag.setInteger("Agility", stats.getAgility());
+                tag.setInteger("SkillPoints", stats.getSkillPoints());
+                tag.setInteger("XpToNext", stats.getXpToNextLevel());
+                tag.setInteger("Intensity", stats.getIntensity());
+                tag.setFloat("CurrentWakfu", stats.getCurrentWakfu());
+                tag.setFloat("CurrentStamina", stats.getCurrentStamina());
+               
+                // ... autres données ...
+                WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), (EntityPlayerMP) player);
+            }
+        }
+    }
 
     @SubscribeEvent
     public void onPlayerClone(Clone event) {
-        if (!event.isWasDeath()) return;
 
         IPlayerStats oldStats = event.getOriginal().getCapability(StatsProvider.PLAYER_STATS, null);
         IPlayerStats newStats = event.getEntityPlayer().getCapability(StatsProvider.PLAYER_STATS, null);
