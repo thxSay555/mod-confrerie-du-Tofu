@@ -59,6 +59,7 @@ public class SyncStatsMessage implements IMessage {
                     stats.setSkillPoints(tag.getInteger("SkillPoints"));
                     stats.setXp(tag.getInteger("Xp"));
                     stats.setXpToNextLevel(tag.getInteger("XpToNext"));
+                    stats.setIntensity(tag.getInteger("Intensity")); // Ajoutez cette ligne
                 });
             }
             return null; // pas de réponse

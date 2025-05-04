@@ -21,7 +21,6 @@ public class CommonProxy {
     public void init() {
         MinecraftForge.EVENT_BUS.register(new StatsCapabilityHandler());
         MinecraftForge.EVENT_BUS.register(new LevelHandler());
-        MinecraftForge.EVENT_BUS.register(new XpGainHandler());
     }
 
     public void onServerStarting(FMLServerStartingEvent event) {

@@ -59,13 +59,11 @@ public class StatsCapabilityHandler {
     }
 
     // Récupérer la logique de tick
+ // StatsCapabilityHandler.java
     @SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END || event.player.world.isRemote) return;
-        
         IPlayerStats stats = event.player.getCapability(StatsProvider.PLAYER_STATS, null);
-        if (stats instanceof PlayerStats) {
-            ((PlayerStats) stats).tickRegen();
-        }
+        if (stats != null) stats.tickRegen(); // Utilise la méthode de l'interface
     }
 }
