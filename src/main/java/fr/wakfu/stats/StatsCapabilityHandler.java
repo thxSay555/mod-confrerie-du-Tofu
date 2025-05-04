@@ -53,7 +53,7 @@ public class StatsCapabilityHandler {
     public void preInit(FMLPreInitializationEvent event) {
         CapabilityManager.INSTANCE.register(
             IPlayerStats.class, 
-            new PlayerStatsStorage(), 
+            new StatsStorage(), 
             PlayerStats::new
         );
     }
