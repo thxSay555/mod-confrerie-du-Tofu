@@ -50,9 +50,7 @@ public class PlayerStatsScreen extends GuiScreen {
         super.initGui();
         buttonList.clear();
 
-        // Demande de synchronisation au serveur
-        WakfuNetwork.INSTANCE.sendToServer(new UpdateStatsMessage(new NBTTagCompound()));
-
+        // Récupération des stats client
         EntityPlayer player = mc.player;
         IPlayerStats stats = player.getCapability(StatsProvider.PLAYER_STATS, null);
         if (stats != null) {
@@ -63,8 +61,27 @@ public class PlayerStatsScreen extends GuiScreen {
             pendingPoints = stats.getSkillPoints();
         }
 
-        // ... reste du code d'initialisation des boutons ...
+        // --- Code pour les boutons ---
+        ScaledResolution res = new ScaledResolution(mc);
+        int xBase = res.getScaledWidth() / 2 - 100;
+        int yBase = res.getScaledHeight() / 2 - 80;
+        int lineHeight = 20;
+
+        String[] labels = { "Force", "Stamina", "Wakfu", "Agilité" };
+        for (int i = 0; i < labels.length; i++) {
+            String txt = labels[i] + ": " + getPendingStatValue(i);
+            int textWidth = mc.fontRenderer.getStringWidth(txt);
+            int btnX = xBase + textWidth + 5;
+            int btnY = yBase + 40 + lineHeight * i;
+            buttonList.add(new GuiButton(i, btnX, btnY, 20, 20, "+"));
+        }
+
+        // Bouton Valider
+        int btnValX = xBase + 200 - 40;
+        int btnValY = yBase + 4;
+        buttonList.add(new GuiButton(BUTTON_VALIDATE, btnValX, btnValY, 40, 20, "Valider"));
     }
+    
 
     @Override
     protected void actionPerformed(GuiButton button) {
@@ -95,7 +112,9 @@ public class PlayerStatsScreen extends GuiScreen {
         mc.player.sendMessage(new TextComponentString(
             "\u00a7aStat modifiée ! SP restants : \u00a7e" + pendingPoints
         ));
+        
     }
+    
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {

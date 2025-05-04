@@ -1,124 +1,169 @@
 package fr.wakfu.stats;
 
+import net.minecraft.nbt.NBTTagCompound;
+
 public class PlayerStats implements IPlayerStats {
+    // Statistiques de base
+    private int force;
+    private int stamina;
+    private int wakfu;
+    private int agility;
+    private int intensity;
+    
+    // Niveau et XP
+    private int level = 1;
+    private int skillPoints;
+    private int xp;
+    private int xpToNextLevel = getXpForNextLevel(level);
+    
+    // Valeurs actuelles
     private float currentWakfu;
     private float currentStamina;
-
+    
+    // Multiplicateurs
     private float regenMultiplier = 1.0f;
-    private int force = 0;
-    private int stamina = 0;
-    private int wakfu = 0;
-    private int agility = 0;
-
-    private float wakfuRegen = 0.1f;
-    private float staminaRegen = 0.2f;
-
     private float wakfuMultiplier = 10.0f;
     private float staminaMultiplier = 5.0f;
+    
+    // Régénération
+    private float wakfuRegen = 0.1f;
+    private float staminaRegen = 0.2f;
+    private float wakfuAccum;
+    private float staminaAccum;
 
-    private float wakfuAccum = 0f;
-    private float staminaAccum = 0f;
+    @Override
+    public NBTTagCompound serializeNBT() {
+        NBTTagCompound tag = new NBTTagCompound();
+        // Stats de base
+        tag.setInteger("Force", force);
+        tag.setInteger("Stamina", stamina);
+        tag.setInteger("Wakfu", wakfu);
+        tag.setInteger("Agility", agility);
+        tag.setInteger("Intensity", intensity);
+        
+        // Leveling
+        tag.setInteger("Level", level);
+        tag.setInteger("SkillPoints", skillPoints);
+        tag.setInteger("Xp", xp);
+        tag.setInteger("XpToNext", xpToNextLevel);
+        
+        // Valeurs actuelles
+        tag.setFloat("CurrentWakfu", currentWakfu);
+        tag.setFloat("CurrentStamina", currentStamina);
+        
+        return tag;
+    }
 
-    private int intensity = 0;
+    @Override
+    public void deserializeNBT(NBTTagCompound nbt) {
+        // Stats de base
+        force = nbt.getInteger("Force");
+        stamina = nbt.getInteger("Stamina");
+        wakfu = nbt.getInteger("Wakfu");
+        agility = nbt.getInteger("Agility");
+        intensity = nbt.getInteger("Intensity");
+        
+        // Leveling
+        level = nbt.getInteger("Level");
+        skillPoints = nbt.getInteger("SkillPoints");
+        xp = nbt.getInteger("Xp");
+        xpToNextLevel = nbt.getInteger("XpToNext");
+        
+        // Valeurs actuelles
+        currentWakfu = nbt.getFloat("CurrentWakfu");
+        currentStamina = nbt.getFloat("CurrentStamina");
+    }
 
-    // ----- Leveling and XP -----
-    private int level = 1;
-    private int skillPoints = 0;
-    private int xp = 0;
-    private int xpToNextLevel = getXpForNextLevel(level);
+    @Override
+    public void tickRegen() {
+        // Régénération Wakfu
+        float wRegen = wakfuRegen * regenMultiplier;
+        wakfuAccum += wRegen;
+        if (wakfuAccum >= 1.0f) {
+            int add = (int) wakfuAccum;
+            setCurrentWakfu(currentWakfu + add);
+            wakfuAccum -= add;
+        }
+        
+        // Régénération Stamina
+        float sRegen = staminaRegen * regenMultiplier;
+        staminaAccum += sRegen;
+        if (staminaAccum >= 1.0f) {
+            int add = (int) staminaAccum;
+            setCurrentStamina(currentStamina + add);
+            staminaAccum -= add;
+        }
+    }
 
+    // Getters/Setters
     @Override public int getForce() { return force; }
-    @Override public void setForce(int v) { this.force = v; }
-    @Override public void addForce(int a) { this.force += a; }
+    @Override public void setForce(int v) { force = v; }
+    @Override public void addForce(int a) { force += a; }
 
     @Override public int getStamina() { return stamina; }
-    @Override public void setStamina(int v) {
-        this.stamina = v;
-        this.currentStamina = Math.min(currentStamina, getStaminaMax());
+    @Override public void setStamina(int v) { 
+        stamina = v;
+        currentStamina = Math.min(currentStamina, getStaminaMax());
     }
-    @Override public void addStamina(int a) { this.stamina += a; }
+    @Override public void addStamina(int a) { stamina += a; }
 
     @Override public int getWakfu() { return wakfu; }
-    @Override public void setWakfu(int v) {
-        this.wakfu = v;
-        this.currentWakfu = Math.min(currentWakfu, getWakfuMax());
+    @Override public void setWakfu(int v) { 
+        wakfu = v;
+        currentWakfu = Math.min(currentWakfu, getWakfuMax());
     }
-    @Override public void addWakfu(int a) { this.wakfu += a; }
+    @Override public void addWakfu(int a) { wakfu += a; }
 
     @Override public int getAgility() { return agility; }
-    @Override public void setAgility(int v) { this.agility = v; }
-    @Override public void addAgility(int a) { this.agility += a; }
+    @Override public void setAgility(int v) { agility = v; }
+    @Override public void addAgility(int a) { agility += a; }
 
     @Override public float getWakfuRegeneration() { return wakfuRegen; }
-    @Override public void setWakfuRegeneration(float v) { this.wakfuRegen = v; }
+    @Override public void setWakfuRegeneration(float v) { wakfuRegen = v; }
 
     @Override public float getStaminaRegeneration() { return staminaRegen; }
-    @Override public void setStaminaRegeneration(float v) { this.staminaRegen = v; }
+    @Override public void setStaminaRegeneration(float v) { staminaRegen = v; }
 
     @Override public float getWakfuMultiplier() { return wakfuMultiplier; }
-    @Override public void setWakfuMultiplier(float v) { this.wakfuMultiplier = v; }
+    @Override public void setWakfuMultiplier(float v) { wakfuMultiplier = v; }
 
     @Override public float getStaminaMultiplier() { return staminaMultiplier; }
-    @Override public void setStaminaMultiplier(float v) { this.staminaMultiplier = v; }
+    @Override public void setStaminaMultiplier(float v) { staminaMultiplier = v; }
 
     @Override public float getRegenMultiplier() { return regenMultiplier; }
-    @Override public void setRegenMultiplier(float v) { this.regenMultiplier = v; }
+    @Override public void setRegenMultiplier(float v) { regenMultiplier = v; }
 
     @Override public float getCurrentWakfu() { return currentWakfu; }
-    @Override public void setCurrentWakfu(float value) {
-        this.currentWakfu = Math.max(0, Math.min(value, getWakfuMax()));
+    @Override public void setCurrentWakfu(float v) { 
+        currentWakfu = Math.max(0, Math.min(v, getWakfuMax()));
     }
 
     @Override public float getCurrentStamina() { return currentStamina; }
-    @Override public void setCurrentStamina(float value) {
-        this.currentStamina = Math.max(0, Math.min(value, getStaminaMax()));
+    @Override public void setCurrentStamina(float v) { 
+        currentStamina = Math.max(0, Math.min(v, getStaminaMax()));
     }
 
-    public float getWakfuMax() { return wakfu * wakfuMultiplier; }
-    public float getStaminaMax() { return stamina * staminaMultiplier; }
-
-    // Regen tick
-    @Override
-    public void tickRegen() {
-        float wRegen = wakfuRegen * regenMultiplier;
-        float sRegen = staminaRegen * regenMultiplier;
-
-        wakfuAccum += wRegen;
-        int addW = (int) wakfuAccum;
-        if (addW > 0) {
-            setCurrentWakfu(currentWakfu + addW);
-            wakfuAccum -= addW;
-        }
-
-        staminaAccum += sRegen;
-        int addS = (int) staminaAccum;
-        if (addS > 0) {
-            setCurrentStamina(currentStamina + addS);
-            staminaAccum -= addS;
-        }
-    }
+    @Override public float getWakfuMax() { return wakfu * wakfuMultiplier; }
+    @Override public float getStaminaMax() { return stamina * staminaMultiplier; }
 
     @Override public int getIntensity() { return intensity; }
-    @Override public void setIntensity(int value) { this.intensity = Math.max(0, Math.min(100, value)); }
-    @Override public void addIntensity(int amount) { setIntensity(this.intensity + amount); }
+    @Override public void setIntensity(int v) { intensity = Math.max(0, Math.min(100, v)); }
+    @Override public void addIntensity(int a) { setIntensity(intensity + a); }
 
-    // ----- Level & XP methods -----
     @Override public int getLevel() { return level; }
-    @Override public void setLevel(int lvl) { this.level = Math.max(1, lvl); }
+    @Override public void setLevel(int lvl) { level = Math.max(1, lvl); }
 
     @Override public int getSkillPoints() { return skillPoints; }
-    @Override public void setSkillPoints(int pts) { this.skillPoints = Math.max(0, pts); }
-    @Override public void addSkillPoints(int amt) { this.skillPoints = Math.max(0, this.skillPoints + amt); }
+    @Override public void setSkillPoints(int pts) { skillPoints = Math.max(0, pts); }
+    @Override public void addSkillPoints(int amt) { skillPoints = Math.max(0, skillPoints + amt); }
 
     @Override public int getXp() { return xp; }
     @Override public void setXp(int xp) { this.xp = Math.max(0, xp); }
 
     @Override public int getXpToNextLevel() { return xpToNextLevel; }
-    @Override public void setXpToNextLevel(int xpNext) { this.xpToNextLevel = Math.max(1, xpNext); }
+    @Override public void setXpToNextLevel(int xpNext) { xpToNextLevel = Math.max(1, xpNext); }
 
-    // Utility: calculate needed XP (exponential +10%)
     private int getXpForNextLevel(int currentLevel) {
-        double base = 50 * Math.pow(1.1, currentLevel - 1);
-        return (int) Math.round(base);
+        return (int) Math.round(50 * Math.pow(1.1, currentLevel - 1));
     }
 }

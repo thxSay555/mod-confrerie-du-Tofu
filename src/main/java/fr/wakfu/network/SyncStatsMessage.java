@@ -46,7 +46,7 @@ public class SyncStatsMessage implements IMessage {
                     if (stats == null) return;
 
                     NBTTagCompound tag = msg.getTag();
-                    // Mise à jour complète des stats
+                    // Met à jour les stats CLIENT
                     stats.setForce(tag.getInteger("Force"));
                     stats.setStamina(tag.getInteger("Stamina"));
                     stats.setWakfu(tag.getInteger("Wakfu"));
@@ -56,14 +56,12 @@ public class SyncStatsMessage implements IMessage {
                     stats.setXp(tag.getInteger("Xp"));
                     stats.setXpToNextLevel(tag.getInteger("XpToNext"));
                     stats.setIntensity(tag.getInteger("Intensity"));
-                    
-                    // AJOUTER CES DEUX LIGNES :
-                    stats.setCurrentWakfu(tag.getFloat("CurrentWakfu"));
-                    stats.setCurrentStamina(tag.getFloat("CurrentStamina"));
+                    stats.setCurrentWakfu(tag.getFloat("CurrentWakfu"));   // GARANTI
+                    stats.setCurrentStamina(tag.getFloat("CurrentStamina")); // GARANTI
 
-                    // Rafraîchissement de l'interface sans la recréer
+                    // Rafraîchit l'interface si elle est ouverte
                     if (Minecraft.getMinecraft().currentScreen instanceof PlayerStatsScreen) {
-                        ((PlayerStatsScreen) Minecraft.getMinecraft().currentScreen).refreshData();
+                        ((PlayerStatsScreen) Minecraft.getMinecraft().currentScreen).initGui();
                     }
                 });
             }

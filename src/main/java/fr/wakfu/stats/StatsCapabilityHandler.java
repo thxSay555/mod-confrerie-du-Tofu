@@ -84,6 +84,8 @@ public class StatsCapabilityHandler {
         newStats.setIntensity(oldStats.getIntensity());
         newStats.setCurrentWakfu(oldStats.getCurrentWakfu());
         newStats.setCurrentStamina(oldStats.getCurrentStamina());
+           // AJOUT
+        newStats.deserializeNBT(oldStats.serializeNBT());
     }
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {

@@ -1,5 +1,7 @@
 package fr.wakfu.stats;
 
+import net.minecraft.nbt.NBTTagCompound;
+
 public interface IPlayerStats {
 	void tickRegen();
 
@@ -64,6 +66,14 @@ public interface IPlayerStats {
     void setXp(int xp);
     int getXpToNextLevel();
     void setXpToNextLevel(int xp);
+    
+    NBTTagCompound serializeNBT();
+    void deserializeNBT(NBTTagCompound nbt);
 
+	float getWakfuMax();
 
+	float getStaminaMax();
 }
+
+
+
