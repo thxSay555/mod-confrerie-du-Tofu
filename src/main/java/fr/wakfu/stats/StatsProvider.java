@@ -13,7 +13,7 @@ public class StatsProvider implements ICapabilitySerializable<NBTTagCompound> {
     @CapabilityInject(IPlayerStats.class)
     public static Capability<IPlayerStats> PLAYER_STATS = null;
 
-    private final IPlayerStats instance = new PlayerStats();
+    private final IPlayerStats instance = PLAYER_STATS.getDefaultInstance();
 
     @Override
     public boolean hasCapability(Capability<?> cap, @Nullable EnumFacing side) {
