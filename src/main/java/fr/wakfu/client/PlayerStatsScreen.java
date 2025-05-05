@@ -158,7 +158,7 @@ public class PlayerStatsScreen extends GuiScreen {
             mc.fontRenderer.drawString(txt, xBase, yBase + 40 + lineHeight * i, 0xAAAAAA);
         }
 
-        mc.fontRenderer.drawString(I18n.format("gui.wakfu.skillpoints", pendingPoints),
+        mc.fontRenderer.drawString("SP: " + pendingPoints,
             xBase, yBase + 40 + lineHeight * labels.length + 4, 0xFFFFAA00);
 
         super.drawScreen(mouseX, mouseY, partialTicks);
