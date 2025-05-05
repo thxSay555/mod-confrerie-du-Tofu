@@ -131,6 +131,8 @@ public class LevelHandler {
         tag.setInteger("Wakfu", stats.getWakfu());
         tag.setInteger("Agility", stats.getAgility());
         tag.setInteger("Intensity", stats.getIntensity()); // Ajout de l'intensité
+        tag.setFloat("CurrentWakfu", stats.getCurrentWakfu());
+        tag.setFloat("CurrentStamina", stats.getCurrentStamina());
         
         WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), player);
     }

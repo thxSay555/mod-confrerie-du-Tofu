@@ -1,7 +1,6 @@
 package fr.wakfu.client;
 
 import org.lwjgl.input.Keyboard;
-
 import fr.wakfu.network.UpdateStatsMessage;
 import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.stats.IPlayerStats;
@@ -86,12 +85,22 @@ public class PlayerStatsScreen extends GuiScreen {
     @Override
     protected void actionPerformed(GuiButton button) {
         if (button.id == BUTTON_VALIDATE) {
+            // Récupère les stats du joueur
+            EntityPlayer player = mc.player;
+            IPlayerStats stats = player.getCapability(StatsProvider.PLAYER_STATS, null);
+            if (stats == null) return;
+
             NBTTagCompound out = new NBTTagCompound();
             out.setInteger("Force", pendingForce);
             out.setInteger("Stamina", pendingStamina);
             out.setInteger("Wakfu", pendingWakfu);
             out.setInteger("Agility", pendingAgility);
             out.setInteger("SkillPoints", pendingPoints);
+            
+            // Ajout des valeurs actuelles
+            out.setFloat("CurrentWakfu", stats.getCurrentWakfu());
+            out.setFloat("CurrentStamina", stats.getCurrentStamina());
+            
             WakfuNetwork.INSTANCE.sendToServer(new UpdateStatsMessage(out));
             mc.player.closeScreen();
             return;
