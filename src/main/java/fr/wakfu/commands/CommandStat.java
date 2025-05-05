@@ -89,6 +89,10 @@ public class CommandStat extends CommandBase {
         tag.setInteger("Wakfu",     stats.getWakfu());
         tag.setInteger("Agility",   stats.getAgility());
         tag.setInteger("Intensity", stats.getIntensity());
+        tag.setInteger("Level", stats.getLevel());
+        tag.setInteger("Xp", stats.getXp());
+        tag.setInteger("XpToNext", stats.getXpToNextLevel());
+        tag.setInteger("SkillPoints", stats.getSkillPoints());
 
         // Envoie au client
         WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), target);
