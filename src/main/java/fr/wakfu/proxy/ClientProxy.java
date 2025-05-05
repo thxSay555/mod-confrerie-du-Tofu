@@ -10,7 +10,6 @@ public class ClientProxy extends CommonProxy {
     public void init() {
         super.init();
         ClientRegistry.registerKeyBinding(PlayerStatsScreen.KEY_STATS);
-        MinecraftForge.EVENT_BUS.register(new WakfuHUDOverlay());
-        MinecraftForge.EVENT_BUS.register(PlayerStatsScreen.class); // RÉACTIVER CETTE LIGNE
+        MinecraftForge.EVENT_BUS.register(new WakfuHUDOverlay());// RÉACTIVER CETTE LIGNE
     }
 }

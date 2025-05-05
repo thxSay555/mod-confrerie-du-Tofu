@@ -9,6 +9,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.text.TextComponentString;
@@ -101,6 +102,12 @@ public class PlayerStatsScreen extends GuiScreen {
             out.setFloat("CurrentWakfu", stats.getCurrentWakfu());
             out.setFloat("CurrentStamina", stats.getCurrentStamina());
             
+            IPlayerStats currentStats = mc.player.getCapability(StatsProvider.PLAYER_STATS, null);
+            if (currentStats != null) {
+                out.setInteger("Level", currentStats.getLevel());
+                out.setInteger("Xp", currentStats.getXp());
+                out.setInteger("XpToNext", currentStats.getXpToNextLevel());
+            }
             WakfuNetwork.INSTANCE.sendToServer(new UpdateStatsMessage(out));
             mc.player.closeScreen();
             return;
@@ -151,7 +158,7 @@ public class PlayerStatsScreen extends GuiScreen {
             mc.fontRenderer.drawString(txt, xBase, yBase + 40 + lineHeight * i, 0xAAAAAA);
         }
 
-        mc.fontRenderer.drawString("SP: " + pendingPoints,
+        mc.fontRenderer.drawString(I18n.format("gui.wakfu.skillpoints", pendingPoints),
             xBase, yBase + 40 + lineHeight * labels.length + 4, 0xFFFFAA00);
 
         super.drawScreen(mouseX, mouseY, partialTicks);

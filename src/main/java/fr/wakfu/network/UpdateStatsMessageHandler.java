@@ -27,6 +27,12 @@ public class UpdateStatsMessageHandler implements IMessageHandler<UpdateStatsMes
                 stats.setWakfu(tag.getInteger("Wakfu"));
                 stats.setAgility(tag.getInteger("Agility"));
                 stats.setSkillPoints(tag.getInteger("SkillPoints"));
+                stats.setForce(tag.getInteger("Force"));
+                stats.setStamina(tag.getInteger("Stamina"));
+                
+             // Ne pas écraser Level/XP s'ils ne sont pas dans le tag
+                if (tag.hasKey("Level")) stats.setLevel(tag.getInteger("Level"));
+                if (tag.hasKey("Xp")) stats.setXp(tag.getInteger("Xp"));
 
                 // Envoi de la synchronisation au client
                 WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), player);

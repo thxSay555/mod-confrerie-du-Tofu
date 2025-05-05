@@ -58,8 +58,7 @@ public class StatsCapabilityHandler {
                 tag.setInteger("Intensity", stats.getIntensity());
                 tag.setFloat("CurrentWakfu", stats.getCurrentWakfu());
                 tag.setFloat("CurrentStamina", stats.getCurrentStamina());
-                tag.setFloat("CurrentWakfu", stats.getCurrentWakfu());
-                tag.setFloat("CurrentStamina", stats.getCurrentStamina());
+               
                
                 // ... autres données ...
                 WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), (EntityPlayerMP) player);
