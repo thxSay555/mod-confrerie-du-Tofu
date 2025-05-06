@@ -107,6 +107,7 @@ public class PlayerStatsScreen extends GuiScreen {
                 out.setInteger("Level", currentStats.getLevel());
                 out.setInteger("Xp", currentStats.getXp());
                 out.setInteger("XpToNext", currentStats.getXpToNextLevel());
+                out.setInteger("Intensity", currentStats.getIntensity());
             }
             WakfuNetwork.INSTANCE.sendToServer(new UpdateStatsMessage(out));
             mc.player.closeScreen();

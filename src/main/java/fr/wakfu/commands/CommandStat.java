@@ -93,6 +93,8 @@ public class CommandStat extends CommandBase {
         tag.setInteger("Xp", stats.getXp());
         tag.setInteger("XpToNext", stats.getXpToNextLevel());
         tag.setInteger("SkillPoints", stats.getSkillPoints());
+        tag.setFloat("CurrentWakfu", stats.getCurrentWakfu());
+        tag.setFloat("CurrentStamina", stats.getCurrentStamina());
 
         // Envoie au client
         WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), target);
