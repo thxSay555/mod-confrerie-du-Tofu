@@ -1,6 +1,7 @@
 package fr.wakfu.client;
 
 import org.lwjgl.input.Keyboard;
+
 import fr.wakfu.network.UpdateStatsMessage;
 import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.stats.IPlayerStats;
@@ -9,7 +10,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.text.TextComponentString;
