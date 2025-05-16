@@ -24,12 +24,9 @@ public class LevelHandler {
     private static class PlayerSyncData {
         int xp;
         int level;
-        boolean leveledUp;
-
         PlayerSyncData(int xp, int level, boolean leveledUp) {
             this.xp = xp;
             this.level = level;
-            this.leveledUp = leveledUp;
         }
     }
 

@@ -38,7 +38,7 @@ public class WakfuMod {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        // recipes, compatibility
+        proxy.init(event); // ← APPEL INDISPENSABLE !
     }
 
     @Mod.EventHandler

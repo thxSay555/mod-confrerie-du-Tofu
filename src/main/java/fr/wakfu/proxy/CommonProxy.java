@@ -4,6 +4,7 @@ package fr.wakfu.proxy;
 import fr.wakfu.stats.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.CapabilityManager;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import fr.wakfu.commands.CommandWakfuLevel;
@@ -26,4 +27,9 @@ public class CommonProxy {
     public void onServerStarting(FMLServerStartingEvent event) {
         event.registerServerCommand(new CommandWakfuLevel());
     }
+
+	public void init(FMLInitializationEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
 }
