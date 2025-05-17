@@ -1,46 +1,41 @@
 package fr.wakfu.client.model;
 
-import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 public class PlayerModel extends ModelPlayer {
 
-	public PlayerModel(float modelSize, boolean smallArms) {
-        super(modelSize, smallArms);
+    private final ModelRenderer debugCube;
 
-        // Remplace le corps par un modèle simple ici
-        this.bipedHead = new ModelRenderer(this, 0, 0);
-        this.bipedHead.addBox(-4F, -8F, -4F, 8, 8, 8);
-        this.bipedHead.setRotationPoint(0F, 0F, 0F);
+    public PlayerModel(float modelSize, boolean smallArmsIn) {
+        super(modelSize, smallArmsIn);
 
-        this.bipedBody = new ModelRenderer(this, 16, 16);
-        this.bipedBody.addBox(-4F, 0F, -2F, 8, 12, 4);
-        this.bipedBody.setRotationPoint(0F, 0F, 0F);
+        // Ajouter un cube au-dessus de la tête (offset Y négatif = vers le haut)
+        debugCube = new ModelRenderer(this, 32, 0);
+        debugCube.addBox(-0.5F, -9.5F, -0.5F, 1, 1, 1);  // 1x1x1 cube
 
-        this.bipedRightArm = new ModelRenderer(this, 40, 16);
-        this.bipedRightArm.addBox(-3F, -2F, -2F, 4, 12, 4);
-        this.bipedRightArm.setRotationPoint(-5F, 2F, 0F);
-
-        this.bipedLeftArm = new ModelRenderer(this, 40, 16);
-        this.bipedLeftArm.mirror = true;
-        this.bipedLeftArm.addBox(-1F, -2F, -2F, 4, 12, 4);
-        this.bipedLeftArm.setRotationPoint(5F, 2F, 0F);
-
-        this.bipedRightLeg = new ModelRenderer(this, 0, 16);
-        this.bipedRightLeg.addBox(-2F, 0F, -2F, 4, 12, 4);
-        this.bipedRightLeg.setRotationPoint(-2F, 12F, 0F);
-
-        this.bipedLeftLeg = new ModelRenderer(this, 0, 16);
-        this.bipedLeftLeg.mirror = true;
-        this.bipedLeftLeg.addBox(-2F, 0F, -2F, 4, 12, 4);
-        this.bipedLeftLeg.setRotationPoint(2F, 12F, 0F);
+        // Le point de rotation est le même que pour la tête, pour suivre ses mouvements
+        debugCube.setRotationPoint(this.bipedHead.rotationPointX, this.bipedHead.rotationPointY, this.bipedHead.rotationPointZ);
     }
 
     @Override
     public void render(Entity entity, float limbSwing, float limbSwingAmount,
-            float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+                       float ageInTicks, float netHeadYaw, float headPitch, float scale) {
         super.render(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
+
+        // Affiche le cube debug après la tête
+        debugCube.render(scale);
+    }
+
+    @Override
+    public void setRotationAngles(float limbSwing, float limbSwingAmount,
+                                  float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
+        super.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor, entityIn);
+
+        // Synchroniser la rotation du cube avec celle de la tête
+        debugCube.rotateAngleX = bipedHead.rotateAngleX;
+        debugCube.rotateAngleY = bipedHead.rotateAngleY;
+        debugCube.rotateAngleZ = bipedHead.rotateAngleZ;
     }
 }
