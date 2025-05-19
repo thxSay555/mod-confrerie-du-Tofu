@@ -8,6 +8,7 @@ import fr.wakfu.client.WakfuHUDOverlay;
 import fr.wakfu.client.model.CustomRenderPlayer;
 import fr.wakfu.client.model.LayerEliatropeHat;
 import fr.wakfu.client.model.ModelSwitcher;
+import fr.wakfu.common.event.RaceEventHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.entity.RenderPlayer;
@@ -30,6 +31,8 @@ public class ClientProxy extends CommonProxy {
 
         // Initialise le modèle personnalisé (GeckoLib, etc.)
         ModelSwitcher.init();
+     // Dans ClientProxy.init(FMLInitializationEvent event) :
+        MinecraftForge.EVENT_BUS.register(RaceEventHandler.class);
 
         // HUD et raccourcis
         ClientRegistry.registerKeyBinding(PlayerStatsScreen.KEY_STATS);

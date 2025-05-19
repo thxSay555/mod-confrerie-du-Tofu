@@ -2,6 +2,7 @@ package fr.wakfu;
 
 import fr.wakfu.commands.CommandStat;
 import fr.wakfu.commands.CommandWakfuLevel;
+import fr.wakfu.common.capabilities.RaceCapability;
 import fr.wakfu.items.GoultardItem;
 import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.proxy.CommonProxy;
@@ -31,9 +32,10 @@ public class WakfuMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        // Capability registration moved to CommonProxy.preInit
+    	  RaceCapability.register();
         WakfuNetwork.init();
         proxy.preInit(event);
+      
     }
 
     @Mod.EventHandler
