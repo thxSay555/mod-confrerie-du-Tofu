@@ -15,6 +15,7 @@ import net.minecraftforge.fml.relauncher.Side;
 public class RaceEventHandler {
 
     private static boolean raceGuiOpened = false;
+    
 
     @SubscribeEvent
     public static void onAttachCapabilities(AttachCapabilitiesEvent event) {

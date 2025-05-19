@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import org.lwjgl.opengl.GL11;
+
 import fr.wakfu.WakfuMod;
 import fr.wakfu.common.network.PacketSetRace;
 import fr.wakfu.network.WakfuNetwork;
@@ -12,7 +14,10 @@ import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
@@ -21,22 +26,26 @@ import net.minecraftforge.fml.client.config.GuiUtils;
 
 public class GuiRaceSelection extends GuiScreen {
     private static final ResourceLocation BACKGROUND = new ResourceLocation(WakfuMod.MODID, "textures/gui/class_select.png");
-    private static final ResourceLocation RACE_ICONS = new ResourceLocation(WakfuMod.MODID, "textures/gui/class_icons.png");
+    private static final ResourceLocation CLASS_ICONS = new ResourceLocation(WakfuMod.MODID, "textures/gui/class_icons.png");
     
     // Configuration UI
+    private static final int ICON_SIZE = 32;
+    private static final int TEXTURE_WIDTH = 128;
+    private static final int TEXTURE_HEIGHT = 32;
     private static final int BUTTON_WIDTH = 150;
     private static final int BUTTON_HEIGHT = 40;
-    private static final int ICON_SIZE = 32;
     private static final int BUTTON_RADIUS = 120;
     private static final int CONFIRM_BUTTON_WIDTH = 120;
     
     // Données des races
-    private static final String[] RACE_NAMES = {"Cra", "Iop", "Sadida", "Eliatrope"};
+    private static final String[] RACE_NAMES = {"Eliatrope","Sadida","Cra", "Iop",  };
     private static final String[] RACE_DESCRIPTIONS = {
-        "Tireur d'élite, domination à distance\n§6Force: §f4\n§bWakfu: §f8\n§aStamina: §f12\n§eAgilité: §f8",
+    	"Contrôleur de portails, manieur du wakfu\n§6Force: §f5\n§bWakfu: §f12\n§aStamina: §f8\n§eAgilité: §f10",
+    	"Protecteur de la nature, invocateur rusé\n§6Force: §f8\n§bWakfu: §f10\n§aStamina: §f10\n§eAgilité: §f6",
+        "Tireur d'élite, domination à distance\n§6Force: §f6\n§bWakfu: §f9\n§aStamina: §f10\n§eAgilité: §f8",
         "Guerrier fonceur, maître du corps à corps\n§6Force: §f10\n§bWakfu: §f6\n§aStamina: §f18\n§eAgilité: §f8",
-        "Protecteur de la nature, invocateur rusé\n§6Force: §f10\n§bWakfu: §f10\n§aStamina: §f10\n§eAgilité: §f5",
-        "Contrôleur de portails, manieur du wakfu\n§6Force: §f5\n§bWakfu: §f12\n§aStamina: §f8\n§eAgilité: §f8"
+      
+        
     };
     
     private int hoveredRace = -1;
@@ -219,14 +228,27 @@ public class GuiRaceSelection extends GuiScreen {
         }
         
         private void drawRaceIcon(Minecraft mc) {
-            mc.getTextureManager().bindTexture(RACE_ICONS);
+            mc.getTextureManager().bindTexture(CLASS_ICONS);
             GlStateManager.enableBlend();
             GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-            drawTexturedModalRect(
-                x + 10, y + (height - ICON_SIZE)/2,
-                raceIndex * ICON_SIZE, 0,
-                ICON_SIZE, ICON_SIZE
-            );
+
+            int u = raceIndex * ICON_SIZE;
+            int v = 0;
+
+            float texU = u / (float) TEXTURE_WIDTH;
+            float texV = v / (float) TEXTURE_HEIGHT;
+            float texUSize = ICON_SIZE / (float) TEXTURE_WIDTH;
+            float texVSize = ICON_SIZE / (float) TEXTURE_HEIGHT;
+
+            Tessellator tessellator = Tessellator.getInstance();
+            BufferBuilder buffer = tessellator.getBuffer();
+            buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+            buffer.pos(x + 10, y + (height - ICON_SIZE) / 2 + ICON_SIZE, zLevel).tex(texU, texV + texVSize).endVertex();
+            buffer.pos(x + 10 + ICON_SIZE, y + (height - ICON_SIZE) / 2 + ICON_SIZE, zLevel).tex(texU + texUSize, texV + texVSize).endVertex();
+            buffer.pos(x + 10 + ICON_SIZE, y + (height - ICON_SIZE) / 2, zLevel).tex(texU + texUSize, texV).endVertex();
+            buffer.pos(x + 10, y + (height - ICON_SIZE) / 2, zLevel).tex(texU, texV).endVertex();
+            tessellator.draw();
+
             GlStateManager.disableBlend();
         }
         

@@ -54,9 +54,9 @@ public class PacketSetRace implements IMessage {
             if (stats != null) {
                 switch(race) {
                     case "Cra":
-                        stats.setWakfu(8);
-                        stats.setStamina(12);
-                        stats.setForce(4);
+                        stats.setWakfu(9);
+                        stats.setStamina(10);
+                        stats.setForce(6);
                         stats.setAgility(8);
                         break;
                     case "Iop":
@@ -68,14 +68,14 @@ public class PacketSetRace implements IMessage {
                     case "Sadida":
                         stats.setWakfu(10);
                         stats.setStamina(10);
-                        stats.setForce(10);
-                        stats.setAgility(5);
+                        stats.setForce(8);
+                        stats.setAgility(6);
                         break;
                     case "Eliatrope":
                         stats.setWakfu(12);
                         stats.setStamina(8);
                         stats.setForce(5);
-                        stats.setAgility(8);
+                        stats.setAgility(10);
                         break;
                 }
                
