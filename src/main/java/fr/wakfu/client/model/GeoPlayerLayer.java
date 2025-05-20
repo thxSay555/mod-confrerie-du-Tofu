@@ -1,61 +1,72 @@
 package fr.wakfu.client.model;
 
-import net.minecraft.client.renderer.entity.RenderPlayer;
 import software.bernie.geckolib3.core.util.Color;
+import software.bernie.geckolib3.geo.render.built.GeoModel;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
+import software.bernie.geckolib3.model.provider.GeoModelProvider;
 import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
+import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
-/**
- * GeoPlayerLayer pour Forge 1.12.2 + GeckoLib 3.0.31.
- */
 public class GeoPlayerLayer extends GeoLayerRenderer<AnimatablePlayer> {
-    private final ModelPlayerRaceA modelA = new ModelPlayerRaceA();
-    private final ModelPlayerRaceB modelB = new ModelPlayerRaceB();
+    private final AnimatedGeoModel<AnimatablePlayer> modelA = new ModelPlayerRaceA();
+    private final AnimatedGeoModel<AnimatablePlayer> modelB = new ModelPlayerRaceB();
 
-    /**
-     * Seul constructeur disponible en 1.12.2 / GeckoLib 3.0.31
-     */
-    public GeoPlayerLayer(RenderPlayer renderer) {
-        super(renderer);
+    // Correct constructor: takes IGeoRenderer<AnimatablePlayer>
+    public GeoPlayerLayer(IGeoRenderer<AnimatablePlayer> geoRenderer) {
+        super(geoRenderer);
     }
 
+    // Implement doRenderLayer (LayerRenderer stub)
     @Override
     public void doRenderLayer(
         AnimatablePlayer player,
-        float limbSwing,
-        float limbSwingAmount,
-        float partialTicks,
-        float ageInTicks,
-        float netHeadYaw,
-        float headPitch,
-        float scale  // ce paramètre est ignoré ici : GeoLib ne le passe pas à render()
+        float limbSwing, float limbSwingAmount,
+        float partialTicks, float ageInTicks,
+        float netHeadYaw, float headPitch,
+        float scaleIn
     ) {
-        // Choix du modèle selon le tag NBT "raceA"
-        AnimatedGeoModel<AnimatablePlayer> model =
-            player.getEntityData().getBoolean("raceA") ? modelA : modelB;
-
-        // Appel à la méthode protégée render() de GeoLayerRenderer
-        super.render(
-            model,
+        // Delegate to abstract render(...)
+        render(
             player,
-            limbSwing,
-            limbSwingAmount,
-            partialTicks,
-            ageInTicks,
-            netHeadYaw,
-            headPitch
+            limbSwing, limbSwingAmount,
+            partialTicks, ageInTicks,
+            netHeadYaw, headPitch,
+            Color.WHITE
         );
     }
 
+    // Implement abstract render(...) from GeoLayerRenderer
+    @Override
+    public void render(
+        AnimatablePlayer player,
+        float limbSwing, float limbSwingAmount,
+        float partialTicks, float ageInTicks,
+        float netHeadYaw, float headPitch,
+        Color renderColor
+    ) {
+        // Choose model based on NBT tag "raceA"
+        AnimatedGeoModel<AnimatablePlayer> agm =
+            player.getEntityData().getBoolean("raceA") ? modelA : modelB;
+
+        // Retrieve baked GeoModel (bones + hierarchy)
+        GeoModelProvider<AnimatablePlayer> provider = getEntityModel();
+        GeoModel model = provider.getModel(agm.getModelLocation(player));
+
+        // Call IGeoRenderer.render(model, animatable, partialTicks, r,g,b,a)
+        getRenderer().render(
+            model,
+            player,
+            partialTicks,
+            renderColor.getRed(),
+            renderColor.getGreen(),
+            renderColor.getBlue(),
+            renderColor.getAlpha()
+        );
+    }
+
+    // Stub required by LayerRenderer<T>
     @Override
     public boolean shouldCombineTextures() {
         return false;
     }
-
-	@Override
-	public void render(AnimatablePlayer entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks,
-			float ageInTicks, float netHeadYaw, float headPitch, Color renderColor) {
-		// TODO Auto-generated method stub
-		
-	}
 }
