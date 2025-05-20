@@ -1,7 +1,6 @@
 package fr.wakfu.client;
 
 import org.lwjgl.input.Keyboard;
-
 import fr.wakfu.network.UpdateStatsMessage;
 import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.stats.IPlayerStats;
