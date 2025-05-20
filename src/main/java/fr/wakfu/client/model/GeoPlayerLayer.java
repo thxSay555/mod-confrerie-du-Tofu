@@ -1,57 +1,61 @@
 package fr.wakfu.client.model;
 
-import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.entity.RenderPlayer;
+import software.bernie.geckolib3.core.util.Color;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
 
 /**
- * GeoPlayerLayer for Minecraft 1.12.2 + GeckoLib 3.0.31
+ * GeoPlayerLayer pour Forge 1.12.2 + GeckoLib 3.0.31.
  */
-public class GeoPlayerLayer extends GeoLayerRenderer<AbstractClientPlayer> {
+public class GeoPlayerLayer extends GeoLayerRenderer<AnimatablePlayer> {
     private final ModelPlayerRaceA modelA = new ModelPlayerRaceA();
     private final ModelPlayerRaceB modelB = new ModelPlayerRaceB();
 
-    public GeoPlayerLayer(RenderPlayer playerRenderer) {
-        super(playerRenderer);
+    /**
+     * Seul constructeur disponible en 1.12.2 / GeckoLib 3.0.31
+     */
+    public GeoPlayerLayer(RenderPlayer renderer) {
+        super(renderer);
     }
 
     @Override
     public void doRenderLayer(
-            AbstractClientPlayer player,
-            float limbSwing,
-            float limbSwingAmount,
-            float partialTicks,
-            float ageInTicks,
-            float netHeadYaw,
-            float headPitch,
-            float scale
+        AnimatablePlayer player,
+        float limbSwing,
+        float limbSwingAmount,
+        float partialTicks,
+        float ageInTicks,
+        float netHeadYaw,
+        float headPitch,
+        float scale  // ce paramètre est ignoré ici : GeoLib ne le passe pas à render()
     ) {
-        // Sélection du modèle selon le tag NBT "raceA"
-        if (player.getEntityData().getBoolean("raceA")) {
-            super.render(
-                modelA,
-                player,
-                limbSwing,
-                limbSwingAmount,
-                partialTicks,
-                ageInTicks,
-                netHeadYaw,
-                headPitch,
-                scale
-            );
-        } else {
-            super.render(
-                modelB,
-                player,
-                limbSwing,
-                limbSwingAmount,
-                partialTicks,
-                ageInTicks,
-                netHeadYaw,
-                headPitch,
-                scale
-            );
-        }
+        // Choix du modèle selon le tag NBT "raceA"
+        AnimatedGeoModel<AnimatablePlayer> model =
+            player.getEntityData().getBoolean("raceA") ? modelA : modelB;
+
+        // Appel à la méthode protégée render() de GeoLayerRenderer
+        super.render(
+            model,
+            player,
+            limbSwing,
+            limbSwingAmount,
+            partialTicks,
+            ageInTicks,
+            netHeadYaw,
+            headPitch
+        );
     }
+
+    @Override
+    public boolean shouldCombineTextures() {
+        return false;
+    }
+
+	@Override
+	public void render(AnimatablePlayer entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks,
+			float ageInTicks, float netHeadYaw, float headPitch, Color renderColor) {
+		// TODO Auto-generated method stub
+		
+	}
 }
