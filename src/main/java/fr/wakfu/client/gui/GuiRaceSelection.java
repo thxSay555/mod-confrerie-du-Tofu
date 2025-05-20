@@ -32,18 +32,21 @@ public class GuiRaceSelection extends GuiScreen {
     private static final int ICON_SIZE = 32;
     private static final int TEXTURE_WIDTH = 128;
     private static final int TEXTURE_HEIGHT = 32;
-    private static final int BUTTON_WIDTH = 150;
+    private static final int BUTTON_WIDTH = 14*8;
     private static final int BUTTON_HEIGHT = 40;
     private static final int BUTTON_RADIUS = 120;
     private static final int CONFIRM_BUTTON_WIDTH = 120;
     
     // Données des races
-    private static final String[] RACE_NAMES = {"Eliatrope","Sadida","Cra", "Iop",  };
+    private static final String[] RACE_NAMES = {"Sadida","Eliatrope","Cra", "Iop", "Huppermage",  "Steamer" };
     private static final String[] RACE_DESCRIPTIONS = {
-    	"Contrôleur de portails, manieur du wakfu\n§6Force: §f5\n§bWakfu: §f12\n§aStamina: §f8\n§eAgilité: §f10",
     	"Protecteur de la nature, invocateur rusé\n§6Force: §f8\n§bWakfu: §f10\n§aStamina: §f10\n§eAgilité: §f6",
+    	"Contrôleur de portails, manieur du wakfu\n§6Force: §f5\n§bWakfu: §f12\n§aStamina: §f8\n§eAgilité: §f10",
         "Tireur d'élite, domination à distance\n§6Force: §f6\n§bWakfu: §f9\n§aStamina: §f10\n§eAgilité: §f8",
         "Guerrier fonceur, maître du corps à corps\n§6Force: §f10\n§bWakfu: §f6\n§aStamina: §f18\n§eAgilité: §f8",
+        "Maître des arcanes, \n§6Force: §f10\n§bWakfu: §f6\n§aStamina: §f18\n§eAgilité: §f8",
+        "Puissant ingénieur, \n§6Force: §f10\n§bWakfu: §f6\n§aStamina: §f18\n§eAgilité: §f8",
+        
       
         
     };
@@ -55,7 +58,7 @@ public class GuiRaceSelection extends GuiScreen {
     @Override
     public void initGui() {
         this.initTime = System.currentTimeMillis();
-        int centerX = this.width / 2;
+        int centerX = this.width / 2 ;
         int centerY = this.height / 2;
         
         this.buttonList.clear();
@@ -63,7 +66,7 @@ public class GuiRaceSelection extends GuiScreen {
         // Boutons des races en cercle
         for (int i = 0; i < RACE_NAMES.length; i++) {
             double angle = Math.toRadians(i * (360f / RACE_NAMES.length));
-            int x = (int) (centerX + BUTTON_RADIUS * Math.cos(angle) - BUTTON_WIDTH/2);
+            int x = (int) (centerX + BUTTON_RADIUS * Math.cos(angle) - BUTTON_WIDTH/2 );
             int y = (int) (centerY + BUTTON_RADIUS * Math.sin(angle) - BUTTON_HEIGHT/2);
             
             this.buttonList.add(new RaceButton(

@@ -65,18 +65,32 @@ public class PacketSetRace implements IMessage {
                         stats.setForce(10);
                         stats.setAgility(8);
                         break;
-                    case "Sadida":
-                        stats.setWakfu(10);
-                        stats.setStamina(10);
-                        stats.setForce(8);
-                        stats.setAgility(6);
-                        break;
+                    
                     case "Eliatrope":
                         stats.setWakfu(12);
                         stats.setStamina(8);
                         stats.setForce(5);
                         stats.setAgility(10);
                         break;
+                    case "Sadida":
+                        stats.setWakfu(10);
+                        stats.setStamina(10);
+                        stats.setForce(8);
+                        stats.setAgility(6);
+                        break;
+                    case "Huppermage":
+                    	stats.setWakfu(10);
+                    	stats.setStamina(10);
+                    	stats.setForce(8);
+                    	stats.setAgility(6);
+                    	break;
+                    
+                    case "Steamer":
+                    	stats.setWakfu(10);
+                    	stats.setStamina(10);
+                    	stats.setForce(8);
+                    	stats.setAgility(6);
+                    	break;
                 }
                
             
