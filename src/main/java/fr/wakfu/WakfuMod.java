@@ -4,6 +4,7 @@ import fr.wakfu.commands.CommandStat;
 import fr.wakfu.commands.CommandWakfuLevel;
 import fr.wakfu.common.capabilities.RaceCapability;
 import fr.wakfu.items.GoultardItem;
+import fr.wakfu.network.UpdateStatsMessage;
 import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.proxy.CommonProxy;
 import net.minecraft.item.Item;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
 
 @Mod(modid = WakfuMod.MODID, name = WakfuMod.NAME, version = WakfuMod.VERSION)
 @Mod.EventBusSubscriber
@@ -28,12 +30,15 @@ public class WakfuMod {
     public static CommonProxy proxy;
 
     public static Item itemGoultardSword;
-    public static final ToolMaterial TOFU_MATERIAL = EnumHelper.addToolMaterial("TOFU", 1, 100, 4.0F, 1.0F, 10);
+    public static final ToolMaterial TOFU_MATERIAL = EnumHelper.addToolMaterial("TOFU", 1, 100, 4.0F, 12/5.0F, 10);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-    	  RaceCapability.register();
+    	  
+    	
         WakfuNetwork.init();
+        RaceCapability.register();
+    
         proxy.preInit(event);
       
     }

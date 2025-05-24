@@ -35,20 +35,16 @@ public class GuiRaceSelection extends GuiScreen {
     private static final int BUTTON_WIDTH = 14*8;
     private static final int BUTTON_HEIGHT = 40;
     private static final int BUTTON_RADIUS = 120;
-    private static final int CONFIRM_BUTTON_WIDTH = 120;
     
     // Données des races
-    private static final String[] RACE_NAMES = {"Sadida","Eliatrope","Cra", "Iop", "Huppermage",  "Steamer" };
+    private static final String[] RACE_NAMES = {"Eliatrope","Sadida","Cra", "Iop", "Huppermage",  "Steamer" };
     private static final String[] RACE_DESCRIPTIONS = {
-    	"Protecteur de la nature, invocateur rusé\n§6Force: §f8\n§bWakfu: §f10\n§aStamina: §f10\n§eAgilité: §f6",
-    	"Contrôleur de portails, manieur du wakfu\n§6Force: §f5\n§bWakfu: §f12\n§aStamina: §f8\n§eAgilité: §f10",
+        "Contrôleur de portails, manieur du wakfu\n§6Force: §f5\n§bWakfu: §f12\n§aStamina: §f8\n§eAgilité: §f10",
+        "Protecteur de la nature, invocateur rusé\n§6Force: §f8\n§bWakfu: §f10\n§aStamina: §f10\n§eAgilité: §f6",
         "Tireur d'élite, domination à distance\n§6Force: §f6\n§bWakfu: §f9\n§aStamina: §f10\n§eAgilité: §f8",
         "Guerrier fonceur, maître du corps à corps\n§6Force: §f10\n§bWakfu: §f6\n§aStamina: §f18\n§eAgilité: §f8",
-        "Maître des arcanes, \n§6Force: §f10\n§bWakfu: §f6\n§aStamina: §f18\n§eAgilité: §f8",
-        "Puissant ingénieur, \n§6Force: §f10\n§bWakfu: §f6\n§aStamina: §f18\n§eAgilité: §f8",
-        
-      
-        
+        "Maître des arcanes, \n§6Force: §f8\n§bWakfu: §f12\n§aStamina: §f10\n§eAgilité: §f9",
+        "Puissant ingénieur, \n§6Force: §f4\n§bWakfu: §f6\n§aStamina: §f8\n§eAgilité: §f6",
     };
     
     private int hoveredRace = -1;
@@ -75,19 +71,6 @@ public class GuiRaceSelection extends GuiScreen {
                 RACE_NAMES[i], i
             ));
         }
-        
-        // Bouton de confirmation
-        GuiButton confirmButton = new GuiButton(
-            RACE_NAMES.length,
-            centerX - CONFIRM_BUTTON_WIDTH/2,
-            centerY + BUTTON_RADIUS + 20,
-            CONFIRM_BUTTON_WIDTH, 20,
-            "Confirmer la race"
-        );
-        
-        confirmButton.visible = false;
-        this.buttonList.add(confirmButton);
-        
     }
 
     @Override
@@ -107,11 +90,11 @@ public class GuiRaceSelection extends GuiScreen {
             0xFFFFFF
         );
         
-        // Description au survol
-        drawHoverText(mouseX, mouseY);
-        
-        // Boutons
+        // Dessiner les boutons d'abord
         super.drawScreen(mouseX, mouseY, partialTicks);
+        
+        // Description au survol (par dessus les boutons)
+        drawHoverText(mouseX, mouseY);
     }
 
     private void drawCustomBackground() {
@@ -129,11 +112,23 @@ public class GuiRaceSelection extends GuiScreen {
     private void drawHoverText(int mouseX, int mouseY) {
         if (hoveredRace >= 0 && hoveredRace < RACE_DESCRIPTIONS.length) {
             List<String> lines = Arrays.asList(RACE_DESCRIPTIONS[hoveredRace].split("\n"));
+            
+            // Positionnement dynamique par rapport à la souris
+            int posX = mouseX + 8; // Décalage horizontal
+            int posY = mouseY - 16; // Décalage vertical
+            
+            // Vérification des bords de l'écran
+            if(posX + 120 > width) posX = width - 120;
+            if(posY - lines.size() * 10 < 0) posY = mouseY + 16;
+            
+            GlStateManager.pushMatrix();
+            GlStateManager.translate(0, 0, 500); // Assurance d'être au-dessus des éléments
             GuiUtils.drawHoveringText(
-                lines, mouseX, mouseY, 
+                lines, posX, posY, 
                 width, height, -1, 
                 fontRenderer
             );
+            GlStateManager.popMatrix();
         }
     }
 
@@ -141,22 +136,14 @@ public class GuiRaceSelection extends GuiScreen {
     protected void actionPerformed(GuiButton button) throws IOException {
         if (button.id < RACE_NAMES.length) {
             handleRaceSelection(button.id);
-        } else if (button.id == RACE_NAMES.length) {
-            confirmSelection();
         }
     }
 
     private void handleRaceSelection(int raceId) {
+        if (isClosing) return;
+        
         hoveredRace = raceId;
         playSound(SoundEvents.BLOCK_ANVIL_LAND);
-        
-        // Active le bouton de confirmation
-        GuiButton confirmButton = buttonList.get(buttonList.size() - 1);
-        confirmButton.visible = true;
-    }
-
-    private void confirmSelection() {
-        if (hoveredRace == -1 || isClosing) return;
         
         isClosing = true;
         playSound(SoundEvents.ENTITY_PLAYER_LEVELUP);
@@ -166,7 +153,7 @@ public class GuiRaceSelection extends GuiScreen {
             new PacketSetRace(RACE_NAMES[hoveredRace])
         );
         
-        // Fermeture
+        // Fermeture immédiate
         Minecraft.getMinecraft().displayGuiScreen(null);
     }
 

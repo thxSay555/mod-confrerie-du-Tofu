@@ -1,5 +1,6 @@
 package fr.wakfu.common.network;
 
+import fr.wakfu.client.gui.GuiRaceSelection;
 import fr.wakfu.common.capabilities.RaceCapability;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
@@ -25,6 +26,7 @@ public class SyncRaceCapability implements IMessage {
         ByteBufUtils.writeUTF8String(buf, race);
     }
 
+    // Correction : Utiliser SyncRaceCapability comme type de message
     public static class Handler implements IMessageHandler<SyncRaceCapability, IMessage> {
         @Override
         public IMessage onMessage(SyncRaceCapability message, MessageContext ctx) {
@@ -33,7 +35,7 @@ public class SyncRaceCapability implements IMessage {
                 RaceCapability.IRace raceCap = player.getCapability(RaceCapability.RACE_CAPABILITY, null);
                 if (raceCap != null) {
                     raceCap.setRace(message.race);
-                    System.out.println("[Client] Race synchronized: " + message.race);
+                    System.out.println("[Client] Race synchronisée : " + message.race);
                 }
             });
             return null;

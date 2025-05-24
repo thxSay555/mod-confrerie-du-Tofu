@@ -1,5 +1,7 @@
 package fr.wakfu.common.capabilities;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
@@ -8,8 +10,6 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
-
-import javax.annotation.Nullable;
 
 public class RaceCapability {
     public static final ResourceLocation RACE_CAPABILITY_ID = new ResourceLocation("wakfu", "race");
@@ -49,7 +49,7 @@ public class RaceCapability {
 
         @Override
         public void setRace(String race) {
-            this.race = race;
+            this.race = race != null ? race : "";
         }
 
         @Override
@@ -59,7 +59,7 @@ public class RaceCapability {
     }
 
     public static class Provider implements ICapabilitySerializable<NBTTagCompound> {
-        private final IRace instance = RACE_CAPABILITY.getDefaultInstance();
+        private final IRace instance = new Implementation(); // Création directe
 
         @Override
         public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing) {
@@ -70,6 +70,7 @@ public class RaceCapability {
         public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing) {
             return capability == RACE_CAPABILITY ? RACE_CAPABILITY.cast(instance) : null;
         }
+
 
         @Override
         public NBTTagCompound serializeNBT() {

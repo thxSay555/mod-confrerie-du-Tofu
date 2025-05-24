@@ -1,6 +1,7 @@
 // WakfuNetwork.java
 package fr.wakfu.network;
 
+import fr.wakfu.common.network.PacketRequestRaceSelection;
 import fr.wakfu.common.network.PacketSetRace;
 import fr.wakfu.common.network.SyncRaceCapability;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -21,7 +22,7 @@ public class WakfuNetwork {
         );
 
         INSTANCE.registerMessage(
-            UpdateStatsMessageHandler.class,
+            UpdateStatsMessage.Handler.class,
             UpdateStatsMessage.class,
             packetId++,
             Side.SERVER
@@ -40,6 +41,19 @@ public class WakfuNetwork {
                 packetId++,
                 Side.CLIENT
             );
-            // ... autres packets
+       
+     
+
+  
+
+        INSTANCE.registerMessage(
+                PacketRequestRaceSelection.Handler.class,
+                PacketRequestRaceSelection.class,
+                packetId++,
+                Side.CLIENT
+            );
+        
+
+            System.out.println("[Network] Paquet PacketRequestRaceSelection enregistré (ID: " + (packetId - 1) + ")");
         }
 }

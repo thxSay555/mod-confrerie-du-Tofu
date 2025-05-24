@@ -16,6 +16,7 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 
+
 public class PlayerStatsScreen extends GuiScreen {
     private static final Minecraft mc = Minecraft.getMinecraft();
     public static final net.minecraft.client.settings.KeyBinding KEY_STATS =

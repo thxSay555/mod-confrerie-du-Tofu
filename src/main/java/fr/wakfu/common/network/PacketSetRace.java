@@ -6,13 +6,14 @@ import fr.wakfu.stats.IPlayerStats;
 import fr.wakfu.stats.StatsProvider;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
 public class PacketSetRace implements IMessage {
-    private String race;
+    String race;
 
     public PacketSetRace() {}
     
@@ -30,26 +31,34 @@ public class PacketSetRace implements IMessage {
         ByteBufUtils.writeUTF8String(buf, race);
     }
 
+ // PacketSetRace.java (côté serveur)
+ // PacketSetRace.java
     public static class Handler implements IMessageHandler<PacketSetRace, IMessage> {
         @Override
         public IMessage onMessage(PacketSetRace message, MessageContext ctx) {
             EntityPlayerMP player = ctx.getServerHandler().player;
             player.getServerWorld().addScheduledTask(() -> {
                 RaceCapability.IRace raceCap = player.getCapability(RaceCapability.RACE_CAPABILITY, null);
-                if (raceCap != null && !raceCap.hasRace()) {
+                if (raceCap != null) {
                     raceCap.setRace(message.race);
+                    // Sauvegarde explicite dans les données du joueur
+                    NBTTagCompound data = player.getEntityData();
+                    data.setTag("RaceData", RaceCapability.RACE_CAPABILITY.getStorage().writeNBT(
+                        RaceCapability.RACE_CAPABILITY, 
+                        raceCap, 
+                        null
+                    ));
+                    // Applique les stats immédiatement
                     applyRaceStats(player, message.race);
-                    
-                    // Envoi au client
                     WakfuNetwork.INSTANCE.sendTo(new SyncRaceCapability(message.race), player);
-                    System.out.println("[Server] Race set: " + message.race);
-                
                 }
             });
             return null;
         }
+    }
+        
 
-        private void applyRaceStats(EntityPlayerMP player, String race) {
+        private static  void applyRaceStats(EntityPlayerMP player, String race) {
             IPlayerStats stats = player.getCapability(StatsProvider.PLAYER_STATS, null);
             if (stats != null) {
                 switch(race) {
@@ -67,7 +76,7 @@ public class PacketSetRace implements IMessage {
                         break;
                     
                     case "Eliatrope":
-                        stats.setWakfu(12);
+                        stats.setWakfu(14);
                         stats.setStamina(8);
                         stats.setForce(5);
                         stats.setAgility(10);
@@ -79,16 +88,16 @@ public class PacketSetRace implements IMessage {
                         stats.setAgility(6);
                         break;
                     case "Huppermage":
-                    	stats.setWakfu(10);
+                    	stats.setWakfu(12);
                     	stats.setStamina(10);
                     	stats.setForce(8);
-                    	stats.setAgility(6);
+                    	stats.setAgility(9);
                     	break;
                     
                     case "Steamer":
-                    	stats.setWakfu(10);
-                    	stats.setStamina(10);
-                    	stats.setForce(8);
+                    	stats.setWakfu(6);
+                    	stats.setStamina(8);
+                    	stats.setForce(4);
                     	stats.setAgility(6);
                     	break;
                 }
@@ -97,4 +106,3 @@ public class PacketSetRace implements IMessage {
             }
         }
     }
-}
