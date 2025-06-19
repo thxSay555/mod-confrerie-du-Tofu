@@ -1,5 +1,6 @@
 package test;
 
+import fr.wakfu.WakfuMod;
 import fr.wakfu.common.capabilities.RaceCapability;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
@@ -67,12 +68,12 @@ public class RaceLayer extends GeoLayerRenderer<PlayerWrapper> {
 
     private ResourceLocation getRaceTexture(String race) {
         switch(race.toLowerCase()) {
-            case "eliatrope": return new ResourceLocation("wakfu:textures/layers/race_eliatrope.png");
-            case "sadida": return new ResourceLocation("wakfu:textures/layers/race_sadida.png");
-            case "cra": return new ResourceLocation("wakfu:textures/layers/race_cra.png");
-            case "iop": return new ResourceLocation("wakfu:textures/layers/race_iop.png");
-            case "huppermage": return new ResourceLocation("wakfu:textures/layers/race_huppermage.png");
-            case "steamer": return new ResourceLocation("wakfu:textures/layers/race_steamer.png");
+            case "eliatrope": return new ResourceLocation(WakfuMod.MODID,"textures/layers/race_eliatrope.png");
+            case "sadida": return new ResourceLocation(WakfuMod.MODID,"textures/layers/race_sadida.png");
+            case "cra": return new ResourceLocation(WakfuMod.MODID,"textures/layers/race_cra.png");
+            case "iop": return new ResourceLocation(WakfuMod.MODID,"textures/layers/race_iop.png");
+            case "huppermage": return new ResourceLocation(WakfuMod.MODID,"textures/layers/race_huppermage.png");
+            case "steamer": return new ResourceLocation(WakfuMod.MODID,"textures/layers/race_steamer.png");
             default: return null;
         }
     }
