@@ -14,11 +14,23 @@ import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import software.bernie.geckolib3.GeckoLib;
+import test.GeoPlayerRenderer;
+import test.PlayerRenderHandler;
+import test.PlayerWrapper;
+import test.RaceLayer;
 
 public class ClientProxy extends CommonProxy {
+	@Override
+    public void preInit(FMLPreInitializationEvent event) {
+        super.preInit(event);
+        GeckoLib.initialize(); // Initialisation de GeckoLib
+        System.out.println("GeckoLib initialisé !");
+    }
 
     @Override
     public void init(FMLInitializationEvent event) {
@@ -29,7 +41,12 @@ public class ClientProxy extends CommonProxy {
         
      // Dans ClientProxy.init(FMLInitializationEvent event) :
         MinecraftForge.EVENT_BUS.register(RaceEventHandler.class);
-
+        MinecraftForge.EVENT_BUS.register(new PlayerRenderHandler());
+        // Enregistrement des couches
+        GeoPlayerRenderer renderer = new GeoPlayerRenderer(Minecraft.getMinecraft().getRenderManager());
+        renderer.addLayer(new RaceLayer(renderer));
+        // [...] Autres couches
+    
         // HUD et raccourcis
         ClientRegistry.registerKeyBinding(PlayerStatsScreen.KEY_STATS);
         MinecraftForge.EVENT_BUS.register(new WakfuHUDOverlay());
@@ -73,17 +90,20 @@ public class ClientProxy extends CommonProxy {
      */
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
-    public static void onRenderPlayer(RenderPlayerEvent.Specials.Pre event) {
-        RenderPlayer renderer = event.getRenderer();
-        List<LayerRenderer<AbstractClientPlayer>> layers = getLayerRenderers(renderer);
-        if (layers == null) return;
-
-    
-
+    public void onRenderPlayer(RenderPlayerEvent.Pre event) {
+        PlayerWrapper wrapper = new PlayerWrapper(event.getEntityPlayer());
+        GeoPlayerRenderer renderer = new GeoPlayerRenderer(event.getRenderer().getRenderManager());
         
-        // Tu peux ajouter d'autres layers ici
-        // if (!hasLayer(renderer, LayerAutre.class)) {
-        //     layers.add(new LayerAutre(renderer));
-        // }
+        // Annule le rendu vanilla
+        event.setCanceled(true);
+        
+        // Effectue le rendu Geckolib
+        renderer.doRender(wrapper, 
+            event.getEntityPlayer().posX, 
+            event.getEntityPlayer().posY, 
+            event.getEntityPlayer().posZ, 
+            event.getEntityPlayer().rotationYaw, 
+            event.getPartialRenderTick()
+        );
     }
 }
