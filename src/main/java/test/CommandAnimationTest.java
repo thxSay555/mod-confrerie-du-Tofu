@@ -1,16 +1,9 @@
 package test;
 
-import java.util.List;
-
-import net.minecraft.command.CommandException;
-import net.minecraft.command.ICommand;
+import fr.wakfu.WakfuMod;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.math.BlockPos;
-
 import net.minecraft.command.CommandBase;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
 
 /**
@@ -34,7 +27,7 @@ public class CommandAnimationTest extends CommandBase {
             return;
         }
         String name = args[0];
-        WakfuAnimationMod.animationManager.startAnimation(sender.getName(), name);
+        WakfuMod.animationManager.startAnimation(sender.getName(), name);
         sender.sendMessage(new TextComponentString("Playing animation: " + name));
     }
 }

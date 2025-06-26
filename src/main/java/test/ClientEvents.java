@@ -2,6 +2,7 @@ package test;
 
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderPlayer;
+import fr.wakfu.WakfuMod;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -17,7 +18,7 @@ public class ClientEvents {
     @SubscribeEvent
     public void onRenderPlayer(RenderPlayerEvent.Pre event) {
         String name = event.getEntityPlayer().getName();
-        AnimationInstance inst = WakfuAnimationMod.animationManager.getInstance(name);
+        AnimationInstance inst = WakfuMod.animationManager.getInstance(name);
         if (inst == null) return;
 
         Animation anim = inst.getAnimation();
@@ -47,6 +48,6 @@ public class ClientEvents {
         GlStateManager.popMatrix();
 
         // Faire avancer le temps après application
-        WakfuAnimationMod.animationManager.tickAll();
+        WakfuMod.animationManager.tickAll();
     }
 }
