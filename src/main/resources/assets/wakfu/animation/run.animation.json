@@ -1,0 +1,28 @@
+// resources/animations/run.animation.json
+{
+  "format_version": "1.0",
+  "animations": {
+    "run": {
+      "loop": true,
+      "animation_length": 1.0,
+      "bones": {
+        "RightArm": {
+          "rotation": {
+            "0.0": { "vector": [10, 0, 0] },
+            "0.5": { "vector": [-10, 0, 0] }
+          },
+          "position": {
+            "0.0": { "vector": [0.1, 0, 0] },
+            "0.5": { "vector": [-0.1, 0, 0] }
+          }
+        },
+        "LeftLeg": {
+          "rotation": {
+            "0.0": { "vector": [-15, 0, 0] },
+            "0.5": { "vector": [15, 0, 0] }
+          }
+        }
+      }
+    }
+  }
+}
