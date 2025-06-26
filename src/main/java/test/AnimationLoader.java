@@ -29,7 +29,7 @@ import java.util.jar.JarFile;
 public class AnimationLoader {
     private static final Logger LOGGER = LogManager.getLogger("WakfuAnimation");
     private static final Map<String, Animation> animations = new HashMap<>();
-    private static final String ANIM_DIR = "assets/wakfu/animations/";
+    private static final String ANIM_DIR = "assets/wakfu/animation/";
 
     static {
         loadAll();
@@ -79,7 +79,7 @@ public class AnimationLoader {
     /** Charge une ressource via ResourceManager et GSON */
     private static void loadResource(String assetPath, String fileName) {
         try {
-            ResourceLocation loc = new ResourceLocation("wakfu", "animations/" + fileName);
+            ResourceLocation loc = new ResourceLocation("wakfu", "animation/" + fileName);
             IResourceManager rm = Minecraft.getMinecraft().getResourceManager();
             try (InputStreamReader in = new InputStreamReader(
                     rm.getResource(loc).getInputStream())) {

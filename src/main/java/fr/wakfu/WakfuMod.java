@@ -18,7 +18,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import test.AnimationManager;
-import test.ClientEvents;
 import test.CommandAnimationTest;
 
 /**
@@ -60,7 +59,7 @@ public class WakfuMod {
 
         // Initialize and register the animation system
         animationManager = new AnimationManager();
-        MinecraftForge.EVENT_BUS.register(new ClientEvents());
+      
     }
 
     // ----------------------

@@ -15,6 +15,7 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import software.bernie.geckolib3.GeckoLib;
+import test.ClientEvents;
 
 public class ClientProxy extends CommonProxy {
 	@Override
@@ -26,6 +27,7 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void init(FMLInitializationEvent event) {
+    	new ClientEvents();
         System.out.println("ClientProxy init");
         super.init(event);
 
@@ -45,10 +47,6 @@ public class ClientProxy extends CommonProxy {
         RenderPlayer renderPlayerSlim = (RenderPlayer) Minecraft.getMinecraft().getRenderManager().getSkinMap().get("slim");
 
     
-   
-
-        // Enregistre les événements liés au rendu du joueur
-        MinecraftForge.EVENT_BUS.register(this);
     }
 
     /**

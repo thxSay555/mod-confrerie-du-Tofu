@@ -26,4 +26,10 @@ public class AnimationManager {
             inst.tick();
         }
     }
+
+    public void stopAnimation(String playerName) {
+        players.remove(playerName);
+    }
+
+	
 }
