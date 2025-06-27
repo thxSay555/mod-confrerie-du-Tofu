@@ -6,9 +6,9 @@ import fr.wakfu.common.capabilities.RaceCapability;
 import fr.wakfu.items.GoultardItem;
 import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.proxy.CommonProxy;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,11 +26,12 @@ import test.CommandAnimationTest;
 @Mod(modid = WakfuMod.MODID, name = WakfuMod.NAME, version = WakfuMod.VERSION)
 @Mod.EventBusSubscriber
 public class WakfuMod {
-    public static final String MODID = "wakfu";
-    public static final String NAME = "Wakfu Mod";
+    public static final String MODID   = "wakfu";
+    public static final String NAME    = "Wakfu Mod";
     public static final String VERSION = "1.0";
 
-    @SidedProxy(clientSide = "fr.wakfu.proxy.ClientProxy", serverSide = "fr.wakfu.proxy.CommonProxy")
+    @SidedProxy(clientSide = "fr.wakfu.proxy.ClientProxy",
+                serverSide = "fr.wakfu.proxy.CommonProxy")
     public static CommonProxy proxy;
 
     public static Item itemGoultardSword;
@@ -56,10 +57,7 @@ public class WakfuMod {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
-
-        // Initialize and register the animation system
         animationManager = new AnimationManager();
-      
     }
 
     // ----------------------
@@ -68,12 +66,8 @@ public class WakfuMod {
     @Mod.EventHandler
     public void serverStarting(FMLServerStartingEvent event) {
         proxy.init();
-
-        // Core Wakfu commands
         event.registerServerCommand(new CommandStat());
         event.registerServerCommand(new CommandWakfuLevel());
-
-        // Animation test command
         event.registerServerCommand(new CommandAnimationTest());
     }
 
@@ -84,5 +78,14 @@ public class WakfuMod {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         itemGoultardSword = new GoultardItem();
         event.getRegistry().register(itemGoultardSword);
+    }
+
+    /**
+     * Utilisée par l’ASM ou Obfuscate pour savoir si un joueur
+     * a une animation en cours.
+     */
+    public static boolean hasActiveAnimation(EntityPlayer player) {
+        return animationManager != null
+            && animationManager.getInstance(player.getName()) != null;
     }
 }
