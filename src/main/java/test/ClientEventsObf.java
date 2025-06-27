@@ -7,10 +7,17 @@ import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
+import org.apache.commons.lang3.tuple.Pair;
+
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import java.util.Map;
 
+/**
+ * Injecte les animations JSON juste après la pose vanilla,
+ * en déréglant (reset) uniquement les bones que l'on remplace.
+ */
 @SideOnly(Side.CLIENT)
 public class ClientEventsObf {
 
@@ -20,21 +27,34 @@ public class ClientEventsObf {
         AnimationInstance inst = WakfuMod.animationManager.getInstance(player.getName());
         if (inst == null) return;
 
+        // Récupère le modèle et ta structure d'animation
         ModelPlayer model = event.getModelPlayer();
         Animation anim = inst.getAnimation();
         float t      = inst.getTime();
         float len    = anim.getLength();
         boolean loop = anim.isLoop();
 
-        // Rotation additive pour chaque bone
-        applyBone(anim.getBones().get("Head"),     model.bipedHead,     t, len, loop);
-        applyBone(anim.getBones().get("Body"),     model.bipedBody,     t, len, loop);
-        applyBone(anim.getBones().get("RightArm"), model.bipedRightArm, t, len, loop);
-        applyBone(anim.getBones().get("LeftArm"),  model.bipedLeftArm,  t, len, loop);
-        applyBone(anim.getBones().get("RightLeg"), model.bipedRightLeg, t, len, loop);
-        applyBone(anim.getBones().get("LeftLeg"),  model.bipedLeftLeg,  t, len, loop);
+        // Parcours tous les os que ton JSON définit
+        for (Map.Entry<String, BoneAnimation> entry : anim.getBones().entrySet()) {
+            String boneKey = entry.getKey();
+            BoneAnimation bone = entry.getValue();
+            // Mappe la clé JSON en champ ModelRenderer
+            ModelRenderer part = getPartForBone(model, boneKey);
+            if (part == null || bone == null) continue;
 
-        // Translation pour un os "Item", si présent
+            // 1) reset de la rotation vanilla pour CE bone uniquement
+            part.rotateAngleX = 0f;
+            part.rotateAngleY = 0f;
+            part.rotateAngleZ = 0f;
+
+            // 2) applique ensuite ta rotation custom
+            float[] rot = bone.getRotationAt(t, len, loop);
+            part.rotateAngleX += (float) Math.toRadians(rot[0]);
+            part.rotateAngleY += (float) Math.toRadians(rot[1]);
+            part.rotateAngleZ += (float) Math.toRadians(rot[2]);
+        }
+
+        // Pour un os de position (ex : translation d'item)
         BoneAnimation itemBone = anim.getBones().get("Item");
         if (itemBone != null) {
             float[] pos = itemBone.getPositionAt(t, len, loop);
@@ -43,16 +63,22 @@ public class ClientEventsObf {
             GlStateManager.popMatrix();
         }
 
-        // Incrémente le temps
         inst.tick();
     }
 
-    private void applyBone(BoneAnimation bone, ModelRenderer part,
-                           float time, float totalLength, boolean loop) {
-        if (bone == null || part == null) return;
-        float[] rot = bone.getRotationAt(time, totalLength, loop);
-        part.rotateAngleX += (float) Math.toRadians(rot[0]);
-        part.rotateAngleY += (float) Math.toRadians(rot[1]);
-        part.rotateAngleZ += (float) Math.toRadians(rot[2]);
+    /**
+     * Retourne le bon ModelRenderer du ModelPlayer
+     * selon la clé utilisée dans tes JSON (Head, Body, RightArm...)
+     */
+    private ModelRenderer getPartForBone(ModelPlayer model, String boneKey) {
+        switch (boneKey) {
+            case "Head":     return model.bipedHead;
+            case "Body":     return model.bipedBody;
+            case "RightArm": return model.bipedRightArm;
+            case "LeftArm":  return model.bipedLeftArm;
+            case "RightLeg": return model.bipedRightLeg;
+            case "LeftLeg":  return model.bipedLeftLeg;
+            default:         return null;
+        }
     }
 }
