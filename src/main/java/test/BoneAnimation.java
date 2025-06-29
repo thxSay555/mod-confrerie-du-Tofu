@@ -1,70 +1,56 @@
 package test;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
+import java.util.NavigableMap;
+import java.util.TreeMap;
 
-import java.util.Map;
-import java.util.HashMap;
-
-/**
- * Contient les key-frames de rotation et position pour un os.
- */
+/** Stocke keyframes de rotation et de position pour un os. */
 public class BoneAnimation {
-    private final String boneName;
-    private final Map<Float, float[]> rotations;
-    private final Map<Float, float[]> positions;
+    // timestamp → rotation [x,y,z] en degrés
+    private final NavigableMap<Float, float[]> rotationKeyframes = new TreeMap<>();
+    // timestamp → position [x,y,z] en blocs / unité
+    private final NavigableMap<Float, float[]> positionKeyframes = new TreeMap<>();
 
-    private BoneAnimation(String boneName, Map<Float, float[]> rotations, Map<Float, float[]> positions) {
-        this.boneName = boneName;
-        this.rotations = rotations;
-        this.positions = positions;
+    public void addRotationKeyframe(float time, float[] rot) {
+        rotationKeyframes.put(time, rot);
+    }
+    public void addPositionKeyframe(float time, float[] pos) {
+        positionKeyframes.put(time, pos);
     }
 
-    public static BoneAnimation fromJson(String boneName, JsonObject obj) {
-        Map<Float, float[]> rotMap = new HashMap<>();
-        Map<Float, float[]> posMap = new HashMap<>();
-
-        if (obj.has("rotation")) {
-            for (Map.Entry<String, JsonElement> e : obj.getAsJsonObject("rotation").entrySet()) {
-                float t = Float.parseFloat(e.getKey());
-                JsonArray vec = e.getValue().getAsJsonObject().getAsJsonArray("vector");
-                rotMap.put(t, new float[]{vec.get(0).getAsFloat(), vec.get(1).getAsFloat(), vec.get(2).getAsFloat()});
-            }
-        }
-        if (obj.has("position")) {
-            for (Map.Entry<String, JsonElement> e : obj.getAsJsonObject("position").entrySet()) {
-                float t = Float.parseFloat(e.getKey());
-                JsonArray vec = e.getValue().getAsJsonObject().getAsJsonArray("vector");
-                posMap.put(t, new float[]{vec.get(0).getAsFloat(), vec.get(1).getAsFloat(), vec.get(2).getAsFloat()});
-            }
-        }
-        return new BoneAnimation(boneName, rotMap, posMap);
+    /** Interpole de façon linéaire la rotation à `t` (avec loop si demandé). */
+    public float[] getRotationAt(float t, float length, boolean loop) {
+        return interpolate(rotationKeyframes, t, length, loop);
     }
 
-    public float[] getRotationAt(float time, float totalLength, boolean loop) {
-        return interpolate(rotations, time, totalLength, loop);
+    /** Interpole de façon linéaire la position à `t` (avec loop si demandé). */
+    public float[] getPositionAt(float t, float length, boolean loop) {
+        return interpolate(positionKeyframes, t, length, loop);
     }
 
-    public float[] getPositionAt(float time, float totalLength, boolean loop) {
-        return interpolate(positions, time, totalLength, loop);
-    }
-
-    private float[] interpolate(Map<Float, float[]> map, float time, float length, boolean loop) {
-        if (map.isEmpty()) return new float[]{0,0,0};
+    private float[] interpolate(NavigableMap<Float, float[]> map,
+                                float t, float length, boolean loop) {
+        if (map.isEmpty()) return new float[]{0f,0f,0f};
+        float time = t;
         if (loop) time %= length;
-        Float prev = 0f, next = length;
-        for (Float k : map.keySet()) {
-            if (k <= time && k > prev) prev = k;
-            if (k >= time && k < next) next = k;
+        // si on est avant la première keyframe
+        Float first = map.firstKey();
+        if (time <= first) return map.get(first);
+        // si on est après la dernière keyframe
+        Float last = map.lastKey();
+        if (time >= last) return map.get(last);
+
+        // on récupère l’intervalle
+        Float lower = map.floorKey(time);
+        Float upper = map.ceilingKey(time);
+        float[] a = map.get(lower);
+        float[] b = map.get(upper);
+        float span = upper - lower;
+        float fraction = (time - lower) / span;
+        // interpolation linéaire
+        float[] out = new float[3];
+        for (int i = 0; i < 3; i++) {
+            out[i] = a[i] + (b[i] - a[i]) * fraction;
         }
-        float[] a = map.get(prev), b = map.get(next);
-        if (prev.equals(next) || b == null) return a;
-        float t = (time - prev) / (next - prev);
-        return new float[]{
-            a[0] + (b[0]-a[0])*t,
-            a[1] + (b[1]-a[1])*t,
-            a[2] + (b[2]-a[2])*t
-        };
+        return out;
     }
 }
