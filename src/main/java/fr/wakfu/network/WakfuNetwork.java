@@ -25,6 +25,12 @@ public class WakfuNetwork {
             packetId++,
             Side.CLIENT
         );
+        INSTANCE.registerMessage(
+        		PacketAnimationControl.ClientHandler.class,
+        		PacketAnimationControl.class,
+        		packetId++,
+        		Side.SERVER
+        		);
 
         // === Stat packets ===
         INSTANCE.registerMessage(
