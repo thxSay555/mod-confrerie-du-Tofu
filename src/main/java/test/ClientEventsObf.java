@@ -54,7 +54,7 @@ public class ClientEventsObf {
             //    Blockbench exporte en "pixels" → on convertit en blocs (1 bloc = 16 px)
             float[] pos = bone.getPositionAt(t, len, loop);
             part.offsetX = pos[0] / 16f;
-            part.offsetY = pos[1] / 16f;
+            part.offsetY = -pos[1] / 16f;
             part.offsetZ = pos[2] / 16f;
         }
 
