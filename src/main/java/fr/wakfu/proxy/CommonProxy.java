@@ -22,7 +22,7 @@ public class CommonProxy {
         );
     }
 
-    public void init() {
+    public void init(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new StatsCapabilityHandler());
         MinecraftForge.EVENT_BUS.register(new LevelHandler());
     }
@@ -31,10 +31,6 @@ public class CommonProxy {
         event.registerServerCommand(new CommandWakfuLevel());
     }
 
-	public void init(FMLInitializationEvent event) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	public AnimationManager getAnimationManager() {
         return animationManager;
