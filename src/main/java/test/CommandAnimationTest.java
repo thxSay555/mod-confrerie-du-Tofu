@@ -1,10 +1,12 @@
 package test;
 
 import fr.wakfu.WakfuMod;
+import fr.wakfu.network.WakfuNetwork;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentString;
+import test.PacketAnimationControl.Type;
 
 /**
  * /animation_test <animName>
@@ -14,6 +16,7 @@ public class CommandAnimationTest extends CommandBase {
     @Override public String getUsage(ICommandSender sender) {
         return "/animation_test <animationName>";
     }
+    
 
     @Override
     public void execute(MinecraftServer server,
@@ -38,6 +41,7 @@ public class CommandAnimationTest extends CommandBase {
             ));
             return;
         }
+
         String player = sender.getName();
         AnimationInstance inst =
             WakfuMod.proxy.getAnimationManager()
@@ -47,6 +51,11 @@ public class CommandAnimationTest extends CommandBase {
                 "Impossible de lancer: " + name
             ));
         } else {
+            // 1️⃣ On diffuse le START à tous les clients
+            WakfuNetwork.sendToAll(
+                new PacketAnimationControl(player, name, Type.START)
+            );
+
             sender.sendMessage(new TextComponentString(
                 "Playing animation: " + name
             ));
