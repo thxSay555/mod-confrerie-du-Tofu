@@ -65,7 +65,24 @@ public class WakfuNetwork {
             packetId++,
             Side.CLIENT
         );
+  
+        
+
+     
 
         System.out.println("[Network] Total packets registered: " + packetId);
     }
+    /** Helpers d’envoi */
+    public static void sendToServer(PacketAnimationControl msg) {
+        INSTANCE.sendToServer(msg);
+    }
+
+    public static void sendToAll(PacketAnimationControl msg) {
+        INSTANCE.sendToAll(msg);
+    }
+
+    public static void sendTo(PacketAnimationControl msg, net.minecraft.entity.player.EntityPlayerMP player) {
+        INSTANCE.sendTo(msg, player);
+    }
 }
+
