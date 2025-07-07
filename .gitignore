@@ -20,3 +20,13 @@ build
 # other
 eclipse
 run
+options.txt
+logs/latest.log
+logs/debug.log
+logs/debug-1.log.gz
+logs/2025-07-07-1.log.gz
+logs/2025-07-06-1.log.gz
+crash-reports/crash-2025-07-07_00.04.42-client.txt
+config/splash.properties
+config/forgeChunkLoading.cfg
+config/forge.cfg
