@@ -30,3 +30,33 @@ crash-reports/crash-2025-07-07_00.04.42-client.txt
 config/splash.properties
 config/forgeChunkLoading.cfg
 config/forge.cfg
+logs/2025-07-07-2.log.gz
+logs/2025-07-07-3.log.gz
+logs/debug-2.log.gz
+logs/debug-3.log.gz
+saves/New World/advancements/2763a802-4ebc-31bf-af2b-f198e4d4325c.json
+saves/New World/data/capabilities.dat
+saves/New World/data/Mineshaft.dat
+saves/New World/data/Temple.dat
+saves/New World/data/villages.dat
+saves/New World/DIM-1/data/capabilities.dat
+saves/New World/DIM-1/data/villages_nether.dat
+saves/New World/DIM-1/forcedchunks.dat
+saves/New World/DIM1/data/capabilities.dat
+saves/New World/DIM1/data/villages_end.dat
+saves/New World/DIM1/forcedchunks.dat
+saves/New World/forcedchunks.dat
+saves/New World/icon.png
+saves/New World/level.dat
+saves/New World/level.dat_old
+saves/New World/playerdata/2763a802-4ebc-31bf-af2b-f198e4d4325c.dat
+saves/New World/region/r.-1.-1.mca
+saves/New World/region/r.-1.0.mca
+saves/New World/region/r.-2.-1.mca
+saves/New World/region/r.-2.0.mca
+saves/New World/region/r.0.-1.mca
+saves/New World/region/r.0.0.mca
+saves/New World/session.lock
+saves/New World/stats/2763a802-4ebc-31bf-af2b-f198e4d4325c.json
+usercache.json
+usernamecache.json
