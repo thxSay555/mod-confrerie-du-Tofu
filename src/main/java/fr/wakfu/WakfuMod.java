@@ -6,9 +6,12 @@ import fr.wakfu.common.capabilities.RaceCapability;
 import fr.wakfu.items.GoultardItem;
 import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.proxy.CommonProxy;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -17,6 +20,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import test.AnimationManager;
 import test.CommandAnimationTest;
 
@@ -57,6 +62,18 @@ public class WakfuMod {
         event.registerServerCommand(new CommandWakfuLevel());
         event.registerServerCommand(new CommandAnimationTest());
     }
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent
+    public static void registerModels(ModelRegistryEvent event) {
+        if(itemGoultardSword != null) {
+            ModelLoader.setCustomModelResourceLocation(
+                itemGoultardSword,
+                0,
+                new ModelResourceLocation(itemGoultardSword.getRegistryName(), "inventory")
+            );
+        }
+    }
+
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
