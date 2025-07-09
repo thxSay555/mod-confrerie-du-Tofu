@@ -37,7 +37,7 @@ public class WakfuMod {
 
     public static Item itemGoultardSword;
     public static final ToolMaterial TOFU_MATERIAL =
-        EnumHelper.addToolMaterial("TOFU", 1, 100, 4.0F, 12/5.0F, 10);
+        EnumHelper.addToolMaterial("TOFU", 1, 100, 4.0F, 8.0F, 10);
 
     public static AnimationManager animationManager;
 
