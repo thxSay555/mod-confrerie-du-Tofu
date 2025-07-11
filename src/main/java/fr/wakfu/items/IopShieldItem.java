@@ -2,7 +2,6 @@ package fr.wakfu.items;
 
 import com.google.common.collect.Multimap;
 
-import fr.wakfu.WakfuMod;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -11,13 +10,12 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemShield;
-public class GoultardItem extends ItemSword { // Au lieu de Item
-    public GoultardItem() {
-        super(WakfuMod.TOFU_MATERIAL); // Utilisez le ToolMaterial
-        setRegistryName("goultard");
-        setUnlocalizedName("goultard");
+public class IopShieldItem extends ItemShield { // Au lieu de Item
+    public IopShieldItem() {
+        super(); // Utilisez le ToolMaterial
+        setRegistryName("iopshield");
+        setUnlocalizedName("iopshield");
         setCreativeTab(CreativeTabs.COMBAT);
         // setMaxDamage(8000); // INUTILE : La durabilité vient de TOFU_MATERIAL
     }
@@ -25,7 +23,7 @@ public class GoultardItem extends ItemSword { // Au lieu de Item
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
         stack.damageItem(1, attacker);
-        target.knockBack(attacker, 2.0F, attacker.posX - target.posX, attacker.posZ - target.posZ);
+        target.setFire((int) attacker.getHealth());
         return true;
     }
 
@@ -36,7 +34,7 @@ public class GoultardItem extends ItemSword { // Au lieu de Item
 
     @Override
     public float getDestroySpeed(ItemStack stack, net.minecraft.block.state.IBlockState state) {
-        return 0.5F;
+        return 4.5F;
     }
 
     @Override
@@ -49,5 +47,15 @@ public class GoultardItem extends ItemSword { // Au lieu de Item
         return true; // Pour bien l'afficher comme une vraie épée à la 3e personne
     }
 
-  
+    @Override
+    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot slot) {
+        Multimap<String, AttributeModifier> modifiers = super.getItemAttributeModifiers(slot);
+        if (slot == EntityEquipmentSlot.MAINHAND) {
+            modifiers.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
+                new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", 2.0, 0));
+            modifiers.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
+                new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", 1, 0)); // 
+        }
+        return modifiers;
+    }
 }

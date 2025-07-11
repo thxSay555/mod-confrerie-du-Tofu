@@ -1,0 +1,6 @@
+{
+  "parent": "wakfu:models/item/iopshield",
+  "textures": {
+    "0": "wakfu:items/iopshield"
+  }
+}

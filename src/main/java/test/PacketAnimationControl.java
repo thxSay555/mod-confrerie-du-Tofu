@@ -4,7 +4,6 @@ import fr.wakfu.WakfuMod;
 import io.netty.buffer.ByteBuf;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.common.network.simpleimpl.*;
-import net.minecraftforge.fml.relauncher.Side;
 
 public class PacketAnimationControl implements IMessage {
     public enum Type { START, STOP }

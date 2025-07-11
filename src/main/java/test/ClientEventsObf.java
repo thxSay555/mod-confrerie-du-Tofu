@@ -2,17 +2,27 @@ package test;
 
 import com.mrcrayfish.obfuscate.client.event.ModelPlayerEvent;
 import fr.wakfu.WakfuMod;
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.client.renderer.entity.RenderLivingBase;
+import net.minecraft.client.renderer.entity.RenderPlayer;
+import net.minecraft.client.renderer.entity.layers.LayerArmorBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 @SideOnly(Side.CLIENT)
 public class ClientEventsObf {
 
+    // 1) Animation appliquée au ModelPlayer (couches wear incluses)
     @SubscribeEvent
     public void onSetupAngles(ModelPlayerEvent.SetupAngles.Post event) {
         EntityPlayer player = event.getEntityPlayer();
@@ -23,45 +33,137 @@ public class ClientEventsObf {
             return;
         }
 
-        ModelPlayer model = event.getModelPlayer();
+        applyToBiped(event.getModelPlayer(), inst);
+        inst.tick();
+    }
+
+    // 2) Animation appliquée aux LayerArmorBase (armure vanilla)
+    @SubscribeEvent
+    public void onRenderPlayerPre(RenderPlayerEvent.Pre event) {
+        EntityPlayer player = event.getEntityPlayer();
+        AnimationInstance inst = WakfuMod.proxy
+                                         .getAnimationManager()
+                                         .getInstance(player.getName());
+        if (inst == null) {
+            return;
+        }
+
+        RenderLivingBase<?> renderer = (RenderPlayer) event.getRenderer();
+        List<?> layers;
+
+        // 1) Récupère la liste des layers (dev / SRG / OBF)
+        try {
+            Field layersField = getField(
+                RenderLivingBase.class,
+                "layerRenderers",     // nom MCP (dev)
+                "field_177097_h",     // nom SRG
+                "iLayerRenderers"     // nom obfusqué (à ajuster)
+            );
+            layersField.setAccessible(true);
+            System.out.println("[WakfuMod] Found layers field: " + layersField.getName());
+            layers = (List<?>) layersField.get(renderer);
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Debug: afficher tous les champs disponibles
+            System.out.println("[WakfuMod] Available fields in RenderLivingBase:");
+            for (Field f : RenderLivingBase.class.getDeclaredFields()) {
+                System.out.println(" - " + f.getName());
+            }
+            return;
+        }
+
+        // 2) Pour chaque LayerArmorBase, on applique l'animation
+        for (Object layer : layers) {
+            if (!(layer instanceof LayerArmorBase)) continue;
+            LayerArmorBase<?> armorLayer = (LayerArmorBase<?>) layer;
+            try {
+                Field fArmor = getField(
+                    LayerArmorBase.class,
+                    "modelArmor",        // nom MCP
+                    "field_188355_b",    // nom SRG
+                    "field_78115_e"      // nom obfusqué (à ajuster)
+                );
+                Field fLegs = getField(
+                    LayerArmorBase.class,
+                    "modelLeggings",     // nom MCP
+                    "field_188356_c",    // nom SRG
+                    "field_78116_c"      // nom obfusqué (à ajuster)
+                );
+                fArmor.setAccessible(true);
+                fLegs.setAccessible(true);
+                System.out.println("[WakfuMod] Found armor fields: " + fArmor.getName() + ", " + fLegs.getName());
+
+                ModelBiped armorModel = (ModelBiped) fArmor.get(armorLayer);
+                ModelBiped legsModel  = (ModelBiped) fLegs.get(armorLayer);
+
+                applyToBiped(armorModel, inst);
+                applyToBiped(legsModel, inst);
+            } catch (Exception e) {
+                e.printStackTrace();
+                // Debug: afficher tous les champs de LayerArmorBase
+                System.out.println("[WakfuMod] Available fields in LayerArmorBase:");
+                for (Field f : LayerArmorBase.class.getDeclaredFields()) {
+                    System.out.println(" - " + f.getName());
+                }
+            }
+        }
+    }
+
+    /** Applique rotation + translation à TOUTES les parties d’un ModelBiped (Player ou Armor). */
+    private void applyToBiped(ModelBiped model, AnimationInstance inst) {
         Animation anim     = inst.getAnimation();
         float t            = inst.getTime();
         float len          = anim.getLength();
         boolean loop       = anim.isLoop();
 
-        // Pour chaque os animé...
         for (Map.Entry<String, BoneAnimation> entry : anim.getBones().entrySet()) {
-            String boneKey  = entry.getKey();
-            BoneAnimation bone = entry.getValue();
+            String boneKey      = entry.getKey();
+            BoneAnimation bone  = entry.getValue();
+
             ModelRenderer part  = getPart(model, boneKey);
-            if (part == null) continue;
+            ModelRenderer wear  = getPartWear(model, boneKey);
+            if (part == null && wear == null) continue;
 
-            // 1) Reset angles + offsets
-            part.rotateAngleX = 0.0F;
-            part.rotateAngleY = 0.0F;
-            part.rotateAngleZ = 0.0F;
-            part.offsetX     = 0.0F;
-            part.offsetY     = 0.0F;
-            part.offsetZ     = 0.0F;
-
-            // 2) Appliquer la rotation
             float[] rot = bone.getRotationAt(t, len, loop);
-            part.rotateAngleX += Math.toRadians(rot[0]);
-            part.rotateAngleY += Math.toRadians(rot[1]);
-            part.rotateAngleZ += Math.toRadians(rot[2]);
-
-            // 3) Appliquer la translation directement sur le ModelRenderer
-            //    Blockbench exporte en "pixels" → on convertit en blocs (1 bloc = 16 px)
             float[] pos = bone.getPositionAt(t, len, loop);
-            part.offsetX = pos[0] / 16f;
-            part.offsetY = -pos[1] / 16f;
-            part.offsetZ = pos[2] / 16f;
-        }
+            float dx = pos[0] / 16f, dy = -pos[1] / 16f, dz = pos[2] / 16f;
 
-        inst.tick();
+            for (ModelRenderer mr : new ModelRenderer[]{part, wear}) {
+                if (mr == null) continue;
+
+                // Reset
+                mr.rotateAngleX = 0;
+                mr.rotateAngleY = 0;
+                mr.rotateAngleZ = 0;
+                mr.offsetX      = 0;
+                mr.offsetY      = 0;
+                mr.offsetZ      = 0;
+
+                // Rotation
+                mr.rotateAngleX += Math.toRadians(rot[0]);
+                mr.rotateAngleY += Math.toRadians(rot[1]);
+                mr.rotateAngleZ += Math.toRadians(rot[2]);
+
+                // Translation
+                mr.offsetX += dx;
+                mr.offsetY += dy;
+                mr.offsetZ += dz;
+            }
+        }
     }
 
-    private ModelRenderer getPart(ModelPlayer model, String boneKey) {
+    /** Tente successivement plusieurs noms de champ (MCP, SRG, OBF). */
+    private Field getField(Class<?> cls, String... names) throws NoSuchFieldException {
+        for (String name : names) {
+            try {
+                Field f = cls.getDeclaredField(name);
+                return f;
+            } catch (NoSuchFieldException ignored) {}
+        }
+        throw new NoSuchFieldException("Aucun champ trouvé dans " + cls.getName());
+    }
+
+    private ModelRenderer getPart(ModelBiped model, String boneKey) {
         switch (boneKey) {
             case "Head":     return model.bipedHead;
             case "Body":     return model.bipedBody;
@@ -71,5 +173,21 @@ public class ClientEventsObf {
             case "LeftLeg":  return model.bipedLeftLeg;
             default:         return null;
         }
+    }
+
+    private ModelRenderer getPartWear(ModelBiped model, String boneKey) {
+        if (model instanceof ModelPlayer) {
+            ModelPlayer playerModel = (ModelPlayer) model;
+            switch (boneKey) {
+                case "Head":     return playerModel.bipedHeadwear;
+                case "Body":     return playerModel.bipedBodyWear;
+                case "RightArm": return playerModel.bipedRightArmwear;
+                case "LeftArm":  return playerModel.bipedLeftArmwear;
+                case "RightLeg": return playerModel.bipedRightLegwear;
+                case "LeftLeg":  return playerModel.bipedLeftLegwear;
+            }
+        }
+        // ModelBiped d'armure vanilla n'ont pas de wear
+        return null;
     }
 }

@@ -10,6 +10,7 @@ import org.apache.logging.log4j.*;
 import java.io.*;
 import java.net.URL;
 import java.net.JarURLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.jar.JarFile;
 
@@ -35,7 +36,7 @@ public class AnimationLoader {
     /** Scan file:// et jar:// pour tous les .animation.json sous assets/wakfu/animations/ */
     private static void loadAll() {
         try {
-            Enumeration<URL> urls = 
+            Enumeration<URL> urls =
                 AnimationLoader.class.getClassLoader().getResources(ANIM_DIR);
             while (urls.hasMoreElements()) {
                 URL url = urls.nextElement();
@@ -80,8 +81,11 @@ public class AnimationLoader {
             IResourceManager rm = Minecraft.getMinecraft().getResourceManager();
             IResource res = rm.getResource(rl);
             JsonObject root;
-            try (InputStreamReader in = new InputStreamReader(res.getInputStream())) {
-                root = JsonParser.parseReader(in).getAsJsonObject();
+            try (InputStreamReader in = new InputStreamReader(
+                        res.getInputStream(), StandardCharsets.UTF_8)) {
+                // API legacy pour compatibilité avec la version de Gson de Forge
+                JsonParser parser = new JsonParser();
+                root = parser.parse(in).getAsJsonObject();
             }
 
             JsonObject group = root.getAsJsonObject("animations");
@@ -179,12 +183,13 @@ public class AnimationLoader {
                     LOGGER.info("Animation chargée : {}", animName);
 
                 } catch (Exception eAnim) {
-                    LOGGER.error("Échec parse animation « {} » dans {} -- on continue", animName, fileName, eAnim);
+                    LOGGER.error("Échec parse animation « {} » dans {} -- on continue",
+                                 animName, fileName, eAnim);
                 }
             }
 
         } catch (Exception ex) {
-            LOGGER.error("Impossible de charger assets/wakfu/animations/{} :", fileName, ex);
+            LOGGER.error("Impossible de charger assets/wakfu/animations/{} :", fileName, ex);
         }
     }
 
