@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"player.animation.run": {
+		"run": {
 			"loop": true,
 			"animation_length": 1,
 			"override_previous_animation": true,
@@ -185,7 +185,7 @@
 				}
 			}
 		},
-		"player.animation.jump": {
+		"jump": {
 			"loop": true,
 			"bones": {
 				"RightArm": {
@@ -216,7 +216,7 @@
 				}
 			}
 		},
-		"player.animation.dash": {
+		"dash": {
 			"loop": "hold_on_last_frame",
 			"animation_length": 0.375,
 			"bones": {

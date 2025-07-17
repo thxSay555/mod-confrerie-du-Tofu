@@ -60,14 +60,14 @@ public class ClientEventsObf {
                 "iLayerRenderers"     // nom obfusqué (à ajuster)
             );
             layersField.setAccessible(true);
-            System.out.println("[WakfuMod] Found layers field: " + layersField.getName());
+       
             layers = (List<?>) layersField.get(renderer);
         } catch (Exception e) {
             e.printStackTrace();
             // Debug: afficher tous les champs disponibles
-            System.out.println("[WakfuMod] Available fields in RenderLivingBase:");
+
             for (Field f : RenderLivingBase.class.getDeclaredFields()) {
-                System.out.println(" - " + f.getName());
+  
             }
             return;
         }
@@ -91,8 +91,7 @@ public class ClientEventsObf {
                 );
                 fArmor.setAccessible(true);
                 fLegs.setAccessible(true);
-                System.out.println("[WakfuMod] Found armor fields: " + fArmor.getName() + ", " + fLegs.getName());
-
+    
                 ModelBiped armorModel = (ModelBiped) fArmor.get(armorLayer);
                 ModelBiped legsModel  = (ModelBiped) fLegs.get(armorLayer);
 
@@ -101,10 +100,8 @@ public class ClientEventsObf {
             } catch (Exception e) {
                 e.printStackTrace();
                 // Debug: afficher tous les champs de LayerArmorBase
-                System.out.println("[WakfuMod] Available fields in LayerArmorBase:");
-                for (Field f : LayerArmorBase.class.getDeclaredFields()) {
-                    System.out.println(" - " + f.getName());
-                }
+
+             
             }
         }
     }

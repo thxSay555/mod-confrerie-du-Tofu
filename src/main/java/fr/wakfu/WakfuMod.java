@@ -5,6 +5,7 @@ import fr.wakfu.commands.CommandWakfuLevel;
 import fr.wakfu.common.capabilities.RaceCapability;
 import fr.wakfu.items.GoultardItem;
 import fr.wakfu.items.IopShieldItem;
+import fr.wakfu.items.IopSword;
 import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.proxy.CommonProxy;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -38,8 +39,9 @@ public class WakfuMod {
 
     public static Item itemGoultardSword;
     public static Item itemiopshield;
+    public static Item itemiopsword;
     public static final ToolMaterial TOFU_MATERIAL =
-        EnumHelper.addToolMaterial("TOFU", 1, 5000000, 4.0F, 8.0F, 10);
+        EnumHelper.addToolMaterial("TOFU", 1, 2000, 4.0F, 8.0F, 10);
 
     public static AnimationManager animationManager;
 
@@ -81,6 +83,13 @@ public class WakfuMod {
         			new ModelResourceLocation(itemiopshield.getRegistryName(), "inventory")
         			);
         }
+        if(itemiopsword != null) {
+        	ModelLoader.setCustomModelResourceLocation(
+        			itemiopsword,
+        			0,
+        			new ModelResourceLocation(itemiopsword.getRegistryName(), "inventory")
+        			);
+        }
     }
 
 
@@ -91,6 +100,9 @@ public class WakfuMod {
         
         itemiopshield = new IopShieldItem();
         event.getRegistry().register(itemiopshield);
+        
+        itemiopsword = new IopSword();
+        event.getRegistry().register(itemiopsword);
     }
 
     public static boolean hasActiveAnimation(EntityPlayer player) {
