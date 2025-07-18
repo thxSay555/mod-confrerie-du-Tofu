@@ -4,11 +4,15 @@ package fr.wakfu.proxy;
 import fr.wakfu.stats.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.CapabilityManager;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import test.AnimationManager;
 import fr.wakfu.commands.CommandWakfuLevel;
 
 public class CommonProxy {
+	protected AnimationManager animationManager;
+
     public void preInit(FMLPreInitializationEvent event) {
         // register capability once
         CapabilityManager.INSTANCE.register(
@@ -18,12 +22,21 @@ public class CommonProxy {
         );
     }
 
-    public void init() {
+    public void init(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new StatsCapabilityHandler());
         MinecraftForge.EVENT_BUS.register(new LevelHandler());
     }
 
     public void onServerStarting(FMLServerStartingEvent event) {
         event.registerServerCommand(new CommandWakfuLevel());
+    }
+
+
+	public AnimationManager getAnimationManager() {
+        return animationManager;
+    }
+
+    public void setAnimationManager(AnimationManager mgr) {
+        this.animationManager = mgr;
     }
 }

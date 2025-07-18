@@ -17,6 +17,7 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 
+
 public class PlayerStatsScreen extends GuiScreen {
 	@Override
 	public boolean doesGuiPauseGame() {

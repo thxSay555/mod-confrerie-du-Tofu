@@ -1,34 +1,28 @@
 package fr.wakfu.items;
 
-import java.util.UUID;
-
-import com.google.common.collect.Multimap;
-
 import fr.wakfu.WakfuMod;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-
-
 public class GoultardItem extends ItemSword { // Au lieu de Item
+	
     public GoultardItem() {
+    	
         super(WakfuMod.TOFU_MATERIAL); // Utilisez le ToolMaterial
         setRegistryName("goultard");
         setUnlocalizedName("goultard");
         setCreativeTab(CreativeTabs.COMBAT);
+        
         // setMaxDamage(8000); // INUTILE : La durabilité vient de TOFU_MATERIAL
     }
     
 
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-        stack.damageItem(1, attacker);
+        stack.damageItem(0, attacker);
         target.knockBack(attacker, 2.0F, attacker.posX - target.posX, attacker.posZ - target.posZ);
         return true;
     }
@@ -38,10 +32,7 @@ public class GoultardItem extends ItemSword { // Au lieu de Item
         return false;
     }
 
-    @Override
-    public float getDestroySpeed(ItemStack stack, net.minecraft.block.state.IBlockState state) {
-        return 4.5F;
-    }
+  
 
     @Override
     public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
