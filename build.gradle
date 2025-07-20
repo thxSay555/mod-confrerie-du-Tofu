@@ -65,7 +65,7 @@ processResources {
 
 shadowJar {
     classifier = ''   // supprime le “-all” :contentReference[oaicite:4]{index=4}
-
+	exclude 'META-INF/versions/**/module-info.class'
     relocate 'software.bernie.geckolib', 'fr.wakfu.WakfuMod.shaded.geckolib'
     mergeServiceFiles()
     transform(com.github.jengelman.gradle.plugins.shadow.transformers.AppendingTransformer) {

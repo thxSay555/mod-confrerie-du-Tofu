@@ -1,8 +1,8 @@
 [
   {
-    "modid": "wakfu",
+    "modid": "WakfuMod",
     "name": "Wakfu Mod",
-    "description": "L’univers du Wakfu infusé dans Minecraft. Tofus, portails, nations et chaos primordiaux au menu.",
+    "description": "L’univers de Wakfu infusé dans Minecraft. Aventure de légende au menu.",
     "version": "1.0",
     "mcversion": "1.12.2",
     "logoFile": "",

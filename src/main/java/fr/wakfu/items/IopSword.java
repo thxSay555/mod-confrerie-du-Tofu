@@ -1,5 +1,7 @@
 package fr.wakfu.items;
 
+import java.util.UUID;
+
 import com.google.common.collect.Multimap;
 
 import fr.wakfu.WakfuMod;
@@ -14,7 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 public class IopSword extends ItemSword { // Au lieu de Item
     public IopSword() {
-        super(WakfuMod.TOFU_MATERIAL); // Utilisez le ToolMaterial
+        super(WakfuMod.iop_sword_MATERIAL); // Utilisez le ToolMaterial
         setRegistryName("iop_sword");
         setUnlocalizedName("iop_sword");
         setCreativeTab(CreativeTabs.COMBAT);
@@ -22,18 +24,36 @@ public class IopSword extends ItemSword { // Au lieu de Item
         // setMaxDamage(8000); // INUTILE : La durabilité vient de TOFU_MATERIAL
     }
     
+    private static final UUID ATTACK_DAMAGE_CUSTOM_UUID = UUID.fromString("a0a1a2a3-a4a5-a6a7-a8a9-aaabacadaeaf");
+    private static final UUID ATTACK_SPEED_CUSTOM_UUID = UUID.fromString("b0b1b2b3-b4b5-b6b7-b8b9-babbbcbdbebf");
+
     @Override
-    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot)
-    {
-        Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
+    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot slot) {
+        Multimap<String, AttributeModifier> modifiers = super.getItemAttributeModifiers(slot);
+        if (slot == EntityEquipmentSlot.MAINHAND) {
+            // Dégâts totaux = 12 ❤️
+            modifiers.put(
+                SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
+                new AttributeModifier(
+                    ATTACK_DAMAGE_CUSTOM_UUID, // UUID unique
+                    "Custom Damage", 
+                    5.0, 
+                    0
+                )
+            );
 
-        if (equipmentSlot == EntityEquipmentSlot.MAINHAND)
-        {
-            multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", 1.0, 1));
-            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", 1.4000000953674316D, 0));
+            // Vitesse d'attaque = 4.5 (calcul correct)
+            modifiers.put(
+                SharedMonsterAttributes.ATTACK_SPEED.getName(),
+                new AttributeModifier(
+                    ATTACK_SPEED_CUSTOM_UUID, // UUID unique
+                    "Custom Speed", 
+                    0.0, // 4.0 (base) + 0.5 = 4.5
+                    0
+                )
+            );
         }
-
-        return multimap;
+        return modifiers;
     }
 
     @Override

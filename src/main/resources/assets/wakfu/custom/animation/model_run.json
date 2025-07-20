@@ -1,1 +1,127 @@
-{"length":1,"animations":[{"bone":"chapeau_eliatrope","target":"rotation","keyframes":[{"timestamp":0,"target":[45,0,0],"interpolation":"linear"},{"timestamp":1,"target":[45,0,0],"interpolation":"linear"}]},{"bone":"2eme","target":"rotation","keyframes":[{"timestamp":0,"target":[35.0767330166,-9.9615580981,-0.8804470158],"interpolation":"linear"},{"timestamp":0.5,"target":[16.25,0,0],"interpolation":"linear"},{"timestamp":1,"target":[35.0767330166,-9.9615580981,-0.8804470158],"interpolation":"linear"}]},{"bone":"3eme","target":"position","keyframes":[{"timestamp":0,"target":[0,1,-1],"interpolation":"linear"},{"timestamp":1,"target":[0,1,-1],"interpolation":"linear"}]},{"bone":"3eme","target":"rotation","keyframes":[{"timestamp":0,"target":[0,0,0],"interpolation":"linear"},{"timestamp":0.5,"target":[-22.2110325757,24.7874948642,-7.915118916],"interpolation":"linear"},{"timestamp":1,"target":[0,0,0],"interpolation":"linear"}]},{"bone":"1er","target":"rotation","keyframes":[{"timestamp":0,"target":[0,-10,0],"interpolation":"linear"},{"timestamp":0.5,"target":[12.0675389138,7.6442700563,-6.4663543942],"interpolation":"linear"},{"timestamp":1,"target":[0,-10,0],"interpolation":"linear"}]},{"bone":"oreilR","target":"rotation","keyframes":[{"timestamp":0,"target":[0,-10,0],"interpolation":"linear"},{"timestamp":0.5,"target":[0,10,0],"interpolation":"linear"},{"timestamp":1,"target":[0,-10,0],"interpolation":"linear"}]},{"bone":"oreilL","target":"rotation","keyframes":[{"timestamp":0,"target":[0,15,0],"interpolation":"linear"},{"timestamp":0.5,"target":[0,0,0],"interpolation":"linear"},{"timestamp":1,"target":[0,15,0],"interpolation":"linear"}]}],"loop":true}
+{
+	"length": 1,
+	"animations": [
+		{
+			"bone": "2eme",
+			"target": "rotation",
+			"keyframes": [
+				{
+					"timestamp": 0,
+					"target": [35.07673, -9.96156, -0.88045],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 0.5,
+					"target": [16.25, 0, 0],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 1,
+					"target": [35.07673, -9.96156, -0.88045],
+					"interpolation": "linear"
+				}
+			]
+		},
+		{
+			"bone": "3eme",
+			"target": "position",
+			"keyframes": [
+				{
+					"timestamp": 0,
+					"target": [0, 1, -1],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 1,
+					"target": [0, 1, -1],
+					"interpolation": "linear"
+				}
+			]
+		},
+		{
+			"bone": "3eme",
+			"target": "rotation",
+			"keyframes": [
+				{
+					"timestamp": 0,
+					"target": [0, 0, 0],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 0.5,
+					"target": [-22.21103, 24.78749, -7.91512],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 1,
+					"target": [0, 0, 0],
+					"interpolation": "linear"
+				}
+			]
+		},
+		{
+			"bone": "1er",
+			"target": "rotation",
+			"keyframes": [
+				{
+					"timestamp": 0,
+					"target": [0, -10, 0],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 0.5,
+					"target": [12.06754, 7.64427, -6.46635],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 1,
+					"target": [0, -10, 0],
+					"interpolation": "linear"
+				}
+			]
+		},
+		{
+			"bone": "oreilR",
+			"target": "rotation",
+			"keyframes": [
+				{
+					"timestamp": 0,
+					"target": [0, -10, 0],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 0.5,
+					"target": [0, 10, 0],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 1,
+					"target": [0, -10, 0],
+					"interpolation": "linear"
+				}
+			]
+		},
+		{
+			"bone": "oreilL",
+			"target": "rotation",
+			"keyframes": [
+				{
+					"timestamp": 0,
+					"target": [0, 15, 0],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 0.5,
+					"target": [0, 0, 0],
+					"interpolation": "linear"
+				},
+				{
+					"timestamp": 1,
+					"target": [0, 15, 0],
+					"interpolation": "linear"
+				}
+			]
+		}
+	],
+	"loop": true
+}

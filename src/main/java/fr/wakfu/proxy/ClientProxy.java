@@ -20,8 +20,8 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void init(FMLInitializationEvent event) {
         super.init(event);
-
-        // Enregistre le handler Obfuscate
+       // Enregistre le handler Obfuscate
+        
         MinecraftForge.EVENT_BUS.register(new ClientEventsObf());
 
         // Tes autres listeners/couches HUD, etc.

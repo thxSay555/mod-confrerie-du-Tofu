@@ -1,23 +1,27 @@
 package test;
 
+import java.lang.reflect.Field;
+import java.util.List;
+import java.util.Map;
+
 import com.mrcrayfish.obfuscate.client.event.ModelPlayerEvent;
+import com.mrcrayfish.obfuscate.client.event.RenderItemEvent;
 import fr.wakfu.WakfuMod;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLivingBase;
 import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.client.renderer.entity.layers.LayerArmorBase;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.EnumHandSide;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import java.lang.reflect.Field;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 
 @SideOnly(Side.CLIENT)
 public class ClientEventsObf {
@@ -105,6 +109,75 @@ public class ClientEventsObf {
             }
         }
     }
+ 
+        
+    @SubscribeEvent
+    public void onRenderHeldItemPre(RenderItemEvent.Held.Pre event) {
+        EntityLivingBase entity = event.getEntity();
+        if (!(entity instanceof EntityPlayer)) {
+            return;
+        }
+        EntityPlayer player = (EntityPlayer) entity;
+        AnimationInstance inst = WakfuMod.proxy.getAnimationManager()
+                                             .getInstance(player.getName());
+        if (inst == null) {
+            return;
+        }
+
+        // Détermine la clé de bone selon la main
+        EnumHandSide side   = event.getHandSide();
+        String      boneKey = (side == EnumHandSide.RIGHT)
+                              ? "Selected_Item"
+                              : "Item_Offhand";
+        BoneAnimation bone  = inst.getAnimation().getBones().get(boneKey);
+        if (bone == null) {
+            return;
+        }
+
+        // Interpolation temps / keyframes
+        float t    = inst.getTime();
+        float len  = inst.getAnimation().getLength();
+        boolean lp = inst.getAnimation().isLoop();
+        float[] rot = bone.getRotationAt(t, len, lp);
+        float[] pos = bone.getPositionAt(   t, len, lp);
+ // si tu veux gérer le scale
+
+        // Conversion JSON → repère Minecraft
+        float rx = -rot[0];
+        float ry = -rot[2];
+        float rz = -rot[1];
+
+        float px = -pos[0] / 16f;
+        float py = -pos[2] / 16f;
+        float pz = -pos[1] / 16f;
+
+        // Appliquer transforms
+        GlStateManager.pushMatrix();
+
+        // Scale éventuel
+   
+
+        GlStateManager.translate(px, py, pz);
+        GlStateManager.rotate(rx, 1f, 0f, 0f);
+        GlStateManager.rotate(ry, 0f, 1f, 0f);
+        GlStateManager.rotate(rz, 0f, 0f, 1f);
+    }
+
+    @SubscribeEvent
+    public void onRenderHeldItemPost(RenderItemEvent.Held.Post event) {
+        // Restaurer la matrice et avancer l’animation
+        GlStateManager.popMatrix();
+        EntityLivingBase entity = event.getEntity();
+        if (entity instanceof EntityPlayer) {
+            AnimationInstance inst = WakfuMod.proxy.getAnimationManager()
+                                                 .getInstance(((EntityPlayer) entity).getName());
+            if (inst != null) {
+                inst.tick();
+            }
+        }
+    }
+
+
 
     /** Applique rotation + translation à TOUTES les parties d’un ModelBiped (Player ou Armor). */
     private void applyToBiped(ModelBiped model, AnimationInstance inst) {

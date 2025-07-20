@@ -40,14 +40,22 @@ public class WakfuMod {
     public static Item itemGoultardSword;
     public static Item itemiopshield;
     public static Item itemiopsword;
-    public static final ToolMaterial TOFU_MATERIAL = EnumHelper.addToolMaterial(
-    	    "TOFU", 
+    public static final ToolMaterial goultard_MATERIAL = EnumHelper.addToolMaterial(
+    	    "goultard", 
     	    1,       // Niveau de récolte (1 = pierre)
-    	    100000,     // Durabilité
+    	    2000,     // Durabilité
     	    0.0F,    // Vitesse de minage (inutile pour une épée)
-    	    0.0F,    // Dégâts de base (à 0, car vous gérez tout via les attributs)
+    	    8.0F,    // Dégâts de base (à 0, car vous gérez tout via les attributs)
     	    10       // Enchantabilité
     	);
+    public static final ToolMaterial iop_sword_MATERIAL = EnumHelper.addToolMaterial(
+    		"iop_sword", 
+    		1,       // Niveau de récolte (1 = pierre)
+    		2000,     // Durabilité
+    		0.0F,    // Vitesse de minage (inutile pour une épée)
+    		5.0F,    // Dégâts de base (à 0, car vous gérez tout via les attributs)
+    		10       // Enchantabilité
+    		);
 
     public static AnimationManager animationManager;
 
@@ -65,18 +73,7 @@ public class WakfuMod {
         // inject manager into proxy
         proxy.setAnimationManager(animationManager);
     }
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent
-    public static void registerModels(ModelRegistryEvent event) {
-        // Vérifiez que l'item existe avant de l'enregistrer
-        if(itemGoultardSword != null) {
-            ModelLoader.setCustomModelResourceLocation(
-                itemGoultardSword,
-                0,
-                new ModelResourceLocation(itemGoultardSword.getRegistryName(), "inventory")
-            );
-        }
-    }
+
 
     @Mod.EventHandler
     public void serverStarting(FMLServerStartingEvent event) {

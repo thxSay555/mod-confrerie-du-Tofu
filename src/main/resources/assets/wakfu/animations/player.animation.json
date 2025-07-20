@@ -5,7 +5,6 @@
 			"loop": true,
 			"animation_length": 1,
 			"override_previous_animation": true,
-			"start_delay": 0,
 			"bones": {
 				"premier": {
 					"rotation": {
@@ -187,6 +186,7 @@
 		},
 		"jump": {
 			"loop": true,
+			"animation_length": 1,
 			"bones": {
 				"RightArm": {
 					"rotation": {
@@ -200,7 +200,7 @@
 				},
 				"RightLeg": {
 					"position": {
-						"vector": [0, 7, -5]
+						"vector": [0, 7, -4.175]
 					}
 				},
 				"LeftLeg": {
@@ -212,6 +212,16 @@
 					},
 					"scale": {
 						"vector": [1, 1, 1]
+					}
+				},
+				"Selected_Item": {
+					"rotation": {
+						"vector": [87.27465, 47.44052, 86.30232]
+					}
+				},
+				"Item_Offhand": {
+					"rotation": {
+						"vector": [52.5, 0, 0]
 					}
 				}
 			}
@@ -395,6 +405,90 @@
 						},
 						"0.375": {
 							"vector": [0, 2, 8]
+						}
+					}
+				},
+				"Selected_Item": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.375": {
+							"vector": [102.5, 0, 0]
+						}
+					}
+				},
+				"Item_Offhand": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.375": {
+							"vector": [95, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"new": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 10,
+			"bones": {
+				"Head": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.3333": {
+							"vector": [0, 0, 0]
+						},
+						"1.5": {
+							"vector": [-35, 0, 0]
+						}
+					}
+				},
+				"RightArm": {
+					"rotation": {
+						"0.0": {
+							"vector": [2.5, 0, 0]
+						},
+						"1.5": {
+							"vector": [-128.95658, 24.1782, -18.32252]
+						}
+					}
+				},
+				"Selected_Item": {
+					"rotation": {
+						"0.0": {
+							"vector": [34.9, 2.87, -34.1]
+						},
+						"0.75": {
+							"vector": [-34.97435, 1.43347, -207.952360]
+						},
+						"1.5": {
+							"vector": [-34.97435, 1.43347, -207232]
+						},
+						"10.0": {
+							"vector": [-1.74938, 34.96181, 596.9487],
+							"easing": "easeInQuad"
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.5": {
+							"vector": [18.77783, 1.47585, -2.86618]
+						}
+					}
+				},
+				"LeftArm": {
+					"rotation": {
+						"0.0": {
+							"vector": [-2.5, 0, 0]
+						},
+						"1.5": {
+							"vector": [-134.06091, -28.6665, 25.28669]
 						}
 					}
 				}

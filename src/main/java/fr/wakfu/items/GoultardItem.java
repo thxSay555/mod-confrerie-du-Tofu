@@ -1,17 +1,24 @@
 package fr.wakfu.items;
 
+import java.util.UUID;
+
+import com.google.common.collect.Multimap;
+
 import fr.wakfu.WakfuMod;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 public class GoultardItem extends ItemSword { // Au lieu de Item
 	
     public GoultardItem() {
     	
-        super(WakfuMod.TOFU_MATERIAL); // Utilisez le ToolMaterial
+        super(WakfuMod.goultard_MATERIAL); // Utilisez le ToolMaterial
         setRegistryName("goultard");
         setUnlocalizedName("goultard");
         setCreativeTab(CreativeTabs.COMBAT);
@@ -56,7 +63,7 @@ public class GoultardItem extends ItemSword { // Au lieu de Item
                 new AttributeModifier(
                     ATTACK_DAMAGE_CUSTOM_UUID, // UUID unique
                     "Custom Damage", 
-                    12.0, 
+                    1.0, 
                     0
                 )
             );
@@ -67,7 +74,7 @@ public class GoultardItem extends ItemSword { // Au lieu de Item
                 new AttributeModifier(
                     ATTACK_SPEED_CUSTOM_UUID, // UUID unique
                     "Custom Speed", 
-                    0.5, // 4.0 (base) + 0.5 = 4.5
+                    1.5, // 4.0 (base) + 0.5 = 4.5
                     0
                 )
             );
