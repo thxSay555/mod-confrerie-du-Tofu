@@ -35,7 +35,7 @@ minecraft {
 }
 
 dependencies {
-    compile files('libs/geckolib-forge-1.12.2-3.0.30.jar')
+    compile files('libs/geckolib-forge-1.12.2-3.0.31.jar')
     compile 'com.google.code.gson:gson:2.10.1'  // ou dernière version disponible
 }
 // Pour le code principal
@@ -66,7 +66,7 @@ processResources {
 shadowJar {
     classifier = ''   // supprime le “-all” :contentReference[oaicite:4]{index=4}
 	exclude 'META-INF/versions/**/module-info.class'
-    relocate 'software.bernie.geckolib', 'fr.wakfu.WakfuMod.shaded.geckolib'
+    relocate 'software.bernie.geckolib', 'software.bernie.geckolib'
     mergeServiceFiles()
     transform(com.github.jengelman.gradle.plugins.shadow.transformers.AppendingTransformer) {
         resource = 'META-INF/mods.toml'
