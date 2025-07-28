@@ -26,7 +26,6 @@ public class IntensityControls {
 
     public static void register() {
         ClientRegistry.registerKeyBinding(INCREASE_INTENSITY);
-        ClientRegistry.registerKeyBinding(DECREASE_INTENSITY);
         MinecraftForge.EVENT_BUS.register(new IntensityControls());
     }
 

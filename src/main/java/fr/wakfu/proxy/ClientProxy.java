@@ -1,5 +1,6 @@
 package fr.wakfu.proxy;
 
+import fr.wakfu.IntensityControls;
 import fr.wakfu.client.PlayerStatsScreen;
 import fr.wakfu.client.WakfuHUDOverlay;
 import fr.wakfu.common.event.RaceEventHandler;
@@ -29,5 +30,6 @@ public class ClientProxy extends CommonProxy {
         MinecraftForge.EVENT_BUS.register(new WakfuHUDOverlay());
         MinecraftForge.EVENT_BUS.register(PlayerStatsScreen.class);
         ClientRegistry.registerKeyBinding(PlayerStatsScreen.KEY_STATS);
+        MinecraftForge.EVENT_BUS.register(new IntensityControls());
     }
 }
