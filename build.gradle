@@ -1,71 +1,95 @@
 buildscript {
     repositories {
+        // ForgeGradle and Mojang mappings
+        maven { url = 'https://maven.minecraftforge.net/' }
+        // Gradle Plugin Portal (for Shadow, if you need it)
+        maven { url = 'https://plugins.gradle.org/m2/' }
+        mavenCentral()
         jcenter()
-        maven { url = "https://nexus.velocitypowered.com/repository/maven-public/" }
-        maven { url = "http://files.minecraftforge.net/maven" }
-        maven { url = "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3.4'
+        // Only ForgeGradle 3.x — pick the latest 3.0.xxx version you want
+        classpath 'net.minecraftforge.gradle:ForgeGradle:3.0.197'
+        // Shadow plugin for fat‐jaring
         classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
     }
 }
 
-apply plugin: 'net.minecraftforge.gradle.forge'
-apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
 
+// Standard Java/Groovy settings
+sourceCompatibility = targetCompatibility = '1.8'
 version = "1.0"
-group = "fr.wakfu.WakfuMod"
+group   = "fr.wakfu.WakfuMod"
 archivesBaseName = "Wakfu_mod_By_SAYLIE"
 
-sourceCompatibility = targetCompatibility = '1.8'
-compileJava { sourceCompatibility = targetCompatibility = '1.8' }
-
 minecraft {
-    version = "1.12.2-14.23.5.2768"
-    runDir = "run"
-    // Gpt used pour le fonctionnement du model change et de l'animation
-    // the mappings can be changed at any time, and must be in the following format.
-    // snapshot_YYYYMMDD   snapshot are built nightly.
-    // stable_#            stables are built at the discretion of the MCP team.
-    // Use non-default mappings at your own risk. they may not always work.
-    // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "snapshot_20171003"
+    // MCP mappings snapshot for 1.12.2
+    mappings channel: 'snapshot', version: '20171003-1.12'
+
+    // Creates the client & server IDE run configurations
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+    }
+}
+
+repositories {
+    // You still need these for your other dependencies
+    maven { url = 'https://nexus.velocitypowered.com/repository/maven-public/' }
+    maven { url = 'http://files.minecraftforge.net/maven' }
+    mavenCentral()
+    jcenter()
 }
 
 dependencies {
+    // Forge for Minecraft 1.12.2
+    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
+    // Your libs
     compile files('libs/geckolib-forge-1.12.2-3.0.31.jar')
-    compile 'com.google.code.gson:gson:2.10.1'  // ou dernière version disponible
+    compile 'com.google.code.gson:gson:2.10.1'
 }
-// Pour le code principal
+
+processResources {
+    inputs.property "version", project.version
+
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+
+    }
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
 compileJava {
-    options.encoding = 'UTF-8'    // force la compilation en UTF‑8 :contentReference[oaicite:1]{index=1}
+    options.encoding = 'UTF-8'
 }
-// Pour les tests (si vous en avez)
+
 compileTestJava {
     options.encoding = 'UTF-8'
 }
-// Pour la génération de javadoc (le cas échéant)
+
 javadoc {
     options.encoding = 'UTF-8'
 }
 
-
-processResources {
-    inputs.property "version",   project.version
-    inputs.property "mcversion", project.minecraft.version
-
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-        expand 'version':project.version, 'mcversion':project.minecraft.version
-    }
-    from(sourceSets.main.resources.srcDirs) { exclude 'mcmod.info' }
-}
-
 shadowJar {
-    classifier = ''   // supprime le “-all” :contentReference[oaicite:4]{index=4}
-	exclude 'META-INF/versions/**/module-info.class'
+    classifier = ''   // remove “-all”
+    exclude 'META-INF/versions/**/module-info.class'
     relocate 'software.bernie.geckolib', 'software.bernie.geckolib'
     mergeServiceFiles()
     transform(com.github.jengelman.gradle.plugins.shadow.transformers.AppendingTransformer) {
