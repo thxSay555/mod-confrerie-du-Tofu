@@ -73,7 +73,8 @@ public class AnimationLoader {
     }
 
     /** Charge et parse un seul fichier <fileName>.animation.json */
-    private static void loadFile(String fileName) {
+    @SuppressWarnings("deprecation")
+	private static void loadFile(String fileName) {
         String resourcePath = "animations/" + fileName;
         ResourceLocation rl = new ResourceLocation("wakfu", resourcePath);
 

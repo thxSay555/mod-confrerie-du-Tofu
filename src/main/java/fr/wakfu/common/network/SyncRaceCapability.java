@@ -1,6 +1,5 @@
 package fr.wakfu.common.network;
 
-import fr.wakfu.client.gui.GuiRaceSelection;
 import fr.wakfu.common.capabilities.RaceCapability;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;

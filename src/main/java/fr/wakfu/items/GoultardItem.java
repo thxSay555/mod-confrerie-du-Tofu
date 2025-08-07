@@ -19,7 +19,7 @@ public class GoultardItem extends ItemSword { // Au lieu de Item
     public GoultardItem() {
     	
         super(WakfuMod.goultard_MATERIAL); // Utilisez le ToolMaterial
-        setRegistryName("goultard");
+        setRegistryName(WakfuMod.MODID,"goultard");
         setUnlocalizedName("goultard");
         setCreativeTab(CreativeTabs.COMBAT);
         

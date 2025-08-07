@@ -17,7 +17,7 @@ import net.minecraft.item.ItemSword;
 public class IopSword extends ItemSword { // Au lieu de Item
     public IopSword() {
         super(WakfuMod.iop_sword_MATERIAL); // Utilisez le ToolMaterial
-        setRegistryName("iop_sword");
+        setRegistryName(WakfuMod.MODID,"iop_sword");
         setUnlocalizedName("iop_sword");
         setCreativeTab(CreativeTabs.COMBAT);
         

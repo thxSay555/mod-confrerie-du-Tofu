@@ -2,6 +2,7 @@ package fr.wakfu.items;
 
 import com.google.common.collect.Multimap;
 
+import fr.wakfu.WakfuMod;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -14,7 +15,7 @@ import net.minecraft.item.ItemShield;
 public class IopShieldItem extends ItemShield { // Au lieu de Item
     public IopShieldItem() {
         super(); // Utilisez le ToolMaterial
-        setRegistryName("iopshield");
+        setRegistryName(WakfuMod.MODID,"iopshield");
         setUnlocalizedName("iopshield");
         setCreativeTab(CreativeTabs.COMBAT);
         // setMaxDamage(8000); // INUTILE : La durabilité vient de TOFU_MATERIAL
@@ -47,7 +48,8 @@ public class IopShieldItem extends ItemShield { // Au lieu de Item
         return true; // Pour bien l'afficher comme une vraie épée à la 3e personne
     }
 
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot slot) {
         Multimap<String, AttributeModifier> modifiers = super.getItemAttributeModifiers(slot);
         if (slot == EntityEquipmentSlot.MAINHAND) {
