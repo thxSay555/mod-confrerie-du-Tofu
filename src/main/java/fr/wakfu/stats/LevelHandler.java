@@ -44,7 +44,7 @@ public class LevelHandler {
     }
 
     @SubscribeEvent
-    public void onXpPickup(PlayerPickupXpEvent event) {
+    public void sPickup(PlayerPickupXpEvent event) {
         EntityPlayerMP player = (EntityPlayerMP) event.getEntityPlayer();
         IPlayerStats stats = player.getCapability(StatsProvider.PLAYER_STATS, null);
         if (stats != null) stats.setXp(stats.getXp() + event.getOrb().xpValue);

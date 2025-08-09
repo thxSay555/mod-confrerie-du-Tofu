@@ -1,6 +1,7 @@
 package fr.wakfu.common.network;
 
 import fr.wakfu.common.capabilities.RaceCapability;
+import fr.wakfu.network.SyncStatsMessage;
 import fr.wakfu.network.WakfuNetwork;
 import fr.wakfu.stats.IPlayerStats;
 import fr.wakfu.stats.StatsProvider;
@@ -104,5 +105,24 @@ public class PacketSetRace implements IMessage {
                
             
             }
+            IPlayerStats stats1 = player.getCapability(StatsProvider.PLAYER_STATS, null);
+            if (stats1 != null) {
+                NBTTagCompound tag = new NBTTagCompound();
+                tag.setInteger("Level", stats1.getLevel());
+                tag.setInteger("Xp", stats1.getXp());
+                tag.setInteger("Force", stats1.getForce());
+                tag.setInteger("Stamina", stats1.getStamina());
+                tag.setInteger("Wakfu", stats1.getWakfu());
+                tag.setInteger("Agility", stats1.getAgility());
+                tag.setInteger("SkillPoints", stats1.getSkillPoints());
+                tag.setInteger("XpToNext", stats1.getXpToNextLevel());
+                tag.setInteger("Intensity", stats1.getIntensity());
+                tag.setFloat("CurrentWakfu", stats1.getCurrentWakfu());
+                tag.setFloat("CurrentStamina", stats1.getCurrentStamina());
+               
+               
+                // ... autres données ...
+                WakfuNetwork.INSTANCE.sendTo(new SyncStatsMessage(tag), (EntityPlayerMP) player);
+        }
         }
     }

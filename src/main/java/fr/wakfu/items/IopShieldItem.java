@@ -47,7 +47,8 @@ public class IopShieldItem extends ItemShield { // Au lieu de Item
         return true; // Pour bien l'afficher comme une vraie épée à la 3e personne
     }
 
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot slot) {
         Multimap<String, AttributeModifier> modifiers = super.getItemAttributeModifiers(slot);
         if (slot == EntityEquipmentSlot.MAINHAND) {

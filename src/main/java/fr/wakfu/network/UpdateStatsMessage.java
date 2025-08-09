@@ -1,5 +1,6 @@
 package fr.wakfu.network;
 
+import fr.wakfu.stats.StatsProvider;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
@@ -35,7 +36,7 @@ public class UpdateStatsMessage implements IMessage {
             Minecraft.getMinecraft().addScheduledTask(() -> {
                 EntityPlayer player = Minecraft.getMinecraft().player;
                 if (player != null) {
-                    player.getCapability(fr.wakfu.stats.StatsProvider.PLAYER_STATS, null)
+                    player.getCapability(StatsProvider.PLAYER_STATS, null)
                         .deserializeNBT(message.data);
                 }
             });

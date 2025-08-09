@@ -8,6 +8,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import test.AnimationManager;
+import fr.wakfu.allies.AllyEventHandler;
+import fr.wakfu.allies.AllyRegistry;
 import fr.wakfu.commands.CommandWakfuLevel;
 
 public class CommonProxy {
@@ -15,6 +17,11 @@ public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent event) {
         // register capability once
+    	 AllyRegistry.register();
+    	 System.out.println("[WakfuMod] AllyRegistry.ALLY_CAPABILITY après register = " + AllyRegistry.ALLY_CAPABILITY);
+
+         // REGISTER EVENT HANDLERS (attach capability)
+         MinecraftForge.EVENT_BUS.register(new AllyEventHandler());
         CapabilityManager.INSTANCE.register(
             IPlayerStats.class,
             new StatsStorage(),

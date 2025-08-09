@@ -2,6 +2,9 @@ package fr.wakfu;
 
 import fr.wakfu.commands.CommandStat;
 import fr.wakfu.commands.CommandWakfuLevel;
+import fr.wakfu.commands.CommandAlly;
+import fr.wakfu.commands.CommandRace;
+import fr.wakfu.commands.CommandSkills;
 import fr.wakfu.common.capabilities.RaceCapability;
 import fr.wakfu.items.GoultardItem;
 import fr.wakfu.items.IopShieldItem;
@@ -80,6 +83,10 @@ public class WakfuMod {
         event.registerServerCommand(new CommandStat());
         event.registerServerCommand(new CommandWakfuLevel());
         event.registerServerCommand(new CommandAnimationTest());
+        event.registerServerCommand(new CommandRace());
+        event.registerServerCommand(new CommandAlly());
+        event.registerServerCommand(new CommandSkills());
+        
     }
     @SideOnly(Side.CLIENT)
     @SubscribeEvent

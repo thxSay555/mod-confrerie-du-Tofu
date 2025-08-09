@@ -57,7 +57,7 @@ repositories {
 dependencies {
     // Forge for Minecraft 1.12.2
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
-    // Your libs
+    compile files('libs/obfuscate-0.4.2-1.12.2.jar')
     compile files('libs/geckolib-forge-1.12.2-3.0.31.jar')
     compile 'com.google.code.gson:gson:2.10.1'
 }
@@ -87,15 +87,4 @@ javadoc {
     options.encoding = 'UTF-8'
 }
 
-shadowJar {
-    classifier = ''   // remove “-all”
-    exclude 'META-INF/versions/**/module-info.class'
-    relocate 'software.bernie.geckolib', 'software.bernie.geckolib'
-    mergeServiceFiles()
-    transform(com.github.jengelman.gradle.plugins.shadow.transformers.AppendingTransformer) {
-        resource = 'META-INF/mods.toml'
-    }
-    configurations = [project.configurations.runtime]
-}
 
-assemble.dependsOn shadowJar

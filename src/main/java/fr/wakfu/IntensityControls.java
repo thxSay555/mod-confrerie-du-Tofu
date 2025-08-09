@@ -16,9 +16,7 @@ import org.lwjgl.input.Keyboard;
 
 public class IntensityControls {
     public static final KeyBinding INCREASE_INTENSITY = 
-        new KeyBinding("key.wakfu.increase_intensity", Keyboard.KEY_I, "key.categories.wakfu");
-    public static final KeyBinding DECREASE_INTENSITY = 
-        new KeyBinding("key.wakfu.decrease_intensity", Keyboard.KEY_U, "key.categories.wakfu");
+        new KeyBinding("key.wakfu.increase_intensity", Keyboard.KEY_I, "key.category.wakfu");
 
     private static final Minecraft mc = Minecraft.getMinecraft();
     private long lastChangeTime;
@@ -34,10 +32,8 @@ public class IntensityControls {
         boolean ctrlPressed = Keyboard.isKeyDown(Keyboard.KEY_LCONTROL) || Keyboard.isKeyDown(Keyboard.KEY_RCONTROL);
         
         if (INCREASE_INTENSITY.isPressed()) {
-            changeIntensity(ctrlPressed ? -1 : 1); // Ctrl+Inverse = diminue
-        } else if (DECREASE_INTENSITY.isPressed()) {
-            changeIntensity(ctrlPressed ? 1 : -1); // Ctrl+Inverse = augmente
-        }
+            changeIntensity(ctrlPressed ? -1 : 1);
+        }// Ctrl+Inverse = diminue
     }
 
     @SubscribeEvent
@@ -46,11 +42,9 @@ public class IntensityControls {
 
         boolean ctrlPressed = Keyboard.isKeyDown(Keyboard.KEY_LCONTROL) || Keyboard.isKeyDown(Keyboard.KEY_RCONTROL);
         boolean increaseHeld = Keyboard.isKeyDown(INCREASE_INTENSITY.getKeyCode());
-        boolean decreaseHeld = Keyboard.isKeyDown(DECREASE_INTENSITY.getKeyCode());
 
         int newDirection = 0;
         if (increaseHeld) newDirection = ctrlPressed ? -1 : 1;
-        else if (decreaseHeld) newDirection = ctrlPressed ? 1 : -1;
 
         if (newDirection != 0 && newDirection == changeDirection) {
             long currentTime = System.currentTimeMillis();
@@ -72,10 +66,21 @@ public class IntensityControls {
 
         int newValue = Math.max(0, Math.min(100, stats.getIntensity() + delta));
         if (newValue != stats.getIntensity()) {
-            stats.setIntensity(newValue);
+       
             
             NBTTagCompound tag = new NBTTagCompound();
+            tag.setInteger("Force",     stats.getForce());
+            tag.setInteger("Stamina",   stats.getStamina());
+            tag.setInteger("Wakfu",     stats.getWakfu());
+            tag.setInteger("Agility",   stats.getAgility());
             tag.setInteger("Intensity", newValue);
+            stats.setIntensity(newValue);
+            tag.setInteger("Level", stats.getLevel());
+            tag.setInteger("Xp", stats.getXp());
+            tag.setInteger("XpToNext", stats.getXpToNextLevel());
+            tag.setInteger("SkillPoints", stats.getSkillPoints());
+            tag.setFloat("CurrentWakfu", stats.getCurrentWakfu());
+            tag.setFloat("CurrentStamina", stats.getCurrentStamina());
             WakfuNetwork.INSTANCE.sendToServer(new UpdateStatsMessage(tag));
         }
     }

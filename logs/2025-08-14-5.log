@@ -1,0 +1,1679 @@
+[04:17:36] [main/INFO] [GradleStart]: username: hiraishin360
+[04:17:36] [main/INFO] [GradleStart]: Extra: [--gameDir, C:\Users\megam.PYROLIONUS\Documents\GitHub\HIRA]
+[04:17:36] [main/INFO] [GradleStart]: Found and added coremod: com.mrcrayfish.obfuscate.asm.ObfuscatePlugin
+[04:17:36] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/megam.PYROLIONUS/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --username, hiraishin360, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --gameDir, C:\Users\megam.PYROLIONUS\Documents\GitHub\HIRA, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[04:17:36] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[04:17:36] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[04:17:36] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[04:17:36] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[04:17:36] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2768 for Minecraft 1.12.2 loading
+[04:17:36] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
+[04:17:37] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[04:17:37] [main/ERROR] [FML]: Full: C:\Users\megam.PYROLIONUS\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[04:17:37] [main/ERROR] [FML]: Trimmed: c:/users/megam.pyrolionus/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[04:17:37] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[04:17:37] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[04:17:39] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[04:17:39] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[04:17:39] [main/INFO] [FML]: Found a command line coremod : com.mrcrayfish.obfuscate.asm.ObfuscatePlugin
+[04:17:39] [main/INFO] [FML]: Ignoring missing certificate for coremod ObfuscatePlugin (com.mrcrayfish.obfuscate.asm.ObfuscatePlugin), as this is probably a dev workspace
+[04:17:39] [main/INFO] [FML]: Searching C:\Users\megam.PYROLIONUS\Documents\GitHub\HIRA\mods for mods
+[04:17:39] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[04:17:39] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[04:17:39] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[04:17:39] [main/INFO] [GradleStart]: Injecting location in coremod com.mrcrayfish.obfuscate.asm.ObfuscatePlugin
+[04:17:39] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[04:17:39] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[04:17:39] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[04:17:39] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[04:17:39] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[04:17:39] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[04:17:42] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[04:17:42] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[04:17:42] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[04:17:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[04:17:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[04:17:43] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[04:17:43] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[04:17:43] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[04:17:44] [main/INFO] [net.minecraft.client.Minecraft]: Setting user: hiraishin360
+[04:17:53] [main/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[04:17:53] [main/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[04:17:55] [main/INFO] [FML]: -- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_202, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 94356120 bytes (89 MB) / 243793920 bytes (232 MB) up to 913833984 bytes (871 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+ObfuscatePlugin (obfuscate-0.4.2-1.12.2.jar)
+  com.mrcrayfish.obfuscate.asm.ObfuscateTransformer
+	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 30.0.100.9864' Renderer: 'Intel(R) UHD Graphics 605'
+[04:17:55] [main/INFO] [FML]: MinecraftForge v14.23.5.2768 Initialized
+[04:17:55] [main/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[04:17:56] [main/INFO] [FML]: Replaced 1036 ore ingredients
+[04:17:57] [main/INFO] [FML]: Searching C:\Users\megam.PYROLIONUS\Documents\GitHub\HIRA\mods for mods
+[04:17:58] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 251650200 nanos
+[04:18:03] [main/INFO] [FML]: Forge Mod Loader has identified 7 mods to load
+[04:18:04] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, obfuscate, wakfu, geckolib3] at CLIENT
+[04:18:04] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, obfuscate, wakfu, geckolib3] at SERVER
+[04:18:12] [main/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Wakfu Mod, FMLFileResourcePack:GeckoLib
+[04:18:12] [main/INFO] [Obfuscate]: Applying ASM to RenderItem
+[04:18:12] [main/INFO] [Obfuscate]: Successfully patched RenderItem
+[04:18:12] [main/INFO] [FML]: Processing ObjectHolder annotations
+[04:18:12] [main/INFO] [FML]: Found 1168 ObjectHolder annotations
+[04:18:12] [main/INFO] [FML]: Identifying ItemStackHolder annotations
+[04:18:12] [main/INFO] [FML]: Found 0 ItemStackHolder annotations
+[04:18:14] [main/INFO] [FML]: Configured a dormant chunk cache size of 0
+[04:18:14] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[04:18:14] [main/INFO] [Obfuscate]: Successfully injected SyncedPlayerData capability
+[04:18:14] [main/INFO] [STDOUT]: [fr.wakfu.network.WakfuNetwork:init:109]: [Network] Total packets registered: 15
+[04:18:15] [main/INFO] [STDOUT]: [fr.wakfu.proxy.CommonProxy:preInit:21]: [WakfuMod] AllyRegistry.ALLY_CAPABILITY après register = net.minecraftforge.common.capabilities.Capability@282506e1
+[04:18:20] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2859
+[04:18:36] [main/INFO] [FML]: Applying holder lookups
+[04:18:36] [main/INFO] [FML]: Holder lookups applied
+[04:18:36] [main/INFO] [FML]: Applying holder lookups
+[[04:18:38] [main/INFO] [GradleStart]: Found and added coremod: com.mrcrayfish.obfuscate.asm.ObfuscatePlugin
+[04:18:38] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/megam.PYROLIONUS/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --username, SAYLIE, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --gameDir, C:\Users\megam.PYROLIONUS\Documents\GitHub\SAYLIE, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[04:18:38] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[04:18:39] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[04:18:39] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[04:18:39] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[04:18:39] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2768 for Minecraft 1.12.2 loading
+[04:18:39] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_202, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_202\jre
+[04:18:40] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[04:18:40] [main/ERROR] [FML]: Full: C:\Users\megam.PYROLIONUS\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[04:18:40] [main/ERROR] [FML]: Trimmed: c:/users/megam.pyrolionus/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[04:18:40] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[04:18:40] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[04:18:51] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[04:18:51] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[04:18:51] [main/INFO] [FML]: Found a command line coremod : com.mrcrayfish.obfuscate.asm.ObfuscatePlugin
+[04:18:51] [main/INFO] [FML]: Ignoring missing certificate for coremod ObfuscatePlugin (com.mrcrayfish.obfuscate.asm.ObfuscatePlugin), as this is probably a dev workspace
+[04:18:51] [main/INFO] [FML]: Searching C:\Users\megam.PYROLIONUS\Documents\GitHub\SAYLIE\mods for mods
+[04:18:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[04:18:51] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[04:18:51] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[04:18:51] [main/INFO] [GradleStart]: Injecting location in coremod com.mrcrayfish.obfuscate.asm.ObfuscatePlugin
+[04:18:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[04:18:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[04:18:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[04:18:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[04:18:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[04:18:51] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[04:19:03] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[04:19:03] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[04:19:03] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[04:19:14] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[04:19:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[04:19:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[04:19:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[04:19:15] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[04:19:22] [main/INFO] [net.minecraft.client.Minecraft]: Setting user: SAYLIE
+[04:19:45] [main/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[04:19:49] [main/INFO] [FML]: Could not load splash.properties, will create a default one
+[04:19:49] [main/INFO] [FML]: -- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_202, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 120050440 bytes (114 MB) / 249036800 bytes (237 MB) up to 913833984 bytes (871 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+ObfuscatePlugin (obfuscate-0.4.2-1.12.2.jar)
+  com.mrcrayfish.obfuscate.asm.ObfuscateTransformer
+	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 30.0.100.9864' Renderer: 'Intel(R) UHD Graphics 605'
+[04:19:49] [main/INFO] [FML]: MinecraftForge v14.23.5.2768 Initialized
+[04:19:49] [main/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[04:19:52] [main/INFO] [FML]: Replaced 1036 ore ingredients
+[04:19:54] [main/INFO] [FML]: Searching C:\Users\megam.PYROLIONUS\Documents\GitHub\SAYLIE\mods for mods
+[04:19:54] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 763507400 nanos
+[04:20:05] [main/INFO] [FML]: Forge Mod Loader has identified 7 mods to load
+[04:20:07] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, obfuscate, wakfu, geckolib3] at CLIENT
+[04:20:07] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, obfuscate, wakfu, geckolib3] at SERVER
+[04:20:12] [main/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Wakfu Mod, FMLFileResourcePack:GeckoLib
+[04:20:13] [main/INFO] [Obfuscate]: Applying ASM to RenderItem
+[04:20:13] [main/INFO] [Obfuscate]: Successfully patched RenderItem
+[04:20:13] [main/INFO] [FML]: Processing ObjectHolder annotations
+[04:20:13] [main/INFO] [FML]: Found 1168 ObjectHolder annotations
+[04:20:13] [main/INFO] [FML]: Identifying ItemStackHolder annotations
+[04:20:13] [main/INFO] [FML]: Found 0 ItemStackHolder annotations
+[04:20:13] [main/INFO] [FML]: Configured a dormant chunk cache size of 0
+[04:20:13] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[04:20:14] [main/INFO] [Obfuscate]: Successfully injected SyncedPlayerData capability
+[04:20:15] [main/INFO] [STDOUT]: [fr.wakfu.network.WakfuNetwork:init:109]: [Network] Total packets registered: 15
+[04:20:15] [main/INFO] [STDOUT]: [fr.wakfu.proxy.CommonProxy:preInit:21]: [WakfuMod] AllyRegistry.ALLY_CAPABILITY après register = net.minecraftforge.common.capabilities.Capability@174e9ae8
+[04:20:24] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2859
+[04:20:51] [main/INFO] [FML]: Applying holder lookups
+[04:20:51] [main/INFO] [FML]: Holder lookups applied
+[04:20:51] [main/INFO] [FML]: Applying holder lookups
+[04:20:51] [main/INFO] [FML]: Holder lookups applied
+[04:20:51] [main/INFO] [FML]: Applying holder lookups
+[04:20:51] [main/INFO] [FML]: Holder lookups applied
+[04:20:51] [main/INFO] [FML]: Applying holder lookups
+[04:20:51] [main/INFO] [FML]: Holder lookups applied
+[04:20:51] [main/INFO] [FML]: Injecting itemstacks
+[04:20:51] [main/INFO] [FML]: Itemstack injection complete
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:ambient.cave
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.anvil.break
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.anvil.destroy
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.anvil.fall
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.anvil.hit
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.anvil.land
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.anvil.place
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.anvil.step
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.anvil.use
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.brewing_stand.brew
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.chest.close
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.chest.locked
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.chest.open
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.chorus_flower.death
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.chorus_flower.grow
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.cloth.break
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.cloth.fall
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.cloth.hit
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.cloth.place
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.cloth.step
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.comparator.click
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.dispenser.dispense
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.dispenser.fail
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.dispenser.launch
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.enchantment_table.use
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.end_gateway.spawn
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.end_portal.spawn
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.end_portal_frame.fill
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.enderchest.close
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.enderchest.open
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.fence_gate.close
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.fence_gate.open
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.fire.ambient
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.fire.extinguish
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.furnace.fire_crackle
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.glass.break
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.glass.fall
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.glass.hit
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.glass.place
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.glass.step
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.grass.break
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.grass.fall
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.grass.hit
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.grass.place
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.grass.step
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.gravel.break
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.gravel.fall
+[04:20:52] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.gravel.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.gravel.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.gravel.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.iron_door.close
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.iron_door.open
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.iron_trapdoor.close
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.iron_trapdoor.open
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.ladder.break
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.ladder.fall
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.ladder.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.ladder.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.ladder.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.lava.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.lava.extinguish
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.lava.pop
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.lever.click
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.metal.break
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.metal.fall
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.metal.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.metal.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.metal.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.metal_pressureplate.click_off
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.metal_pressureplate.click_on
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.basedrum
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.bass
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.bell
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.chime
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.flute
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.guitar
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.harp
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.hat
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.pling
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.snare
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.note.xylophone
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.piston.contract
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.piston.extend
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.portal.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.portal.travel
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.portal.trigger
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.redstone_torch.burnout
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.sand.break
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.sand.fall
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.sand.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.sand.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.sand.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.shulker_box.close
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.shulker_box.open
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.slime.break
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.slime.fall
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.slime.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.slime.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.slime.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.snow.break
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.snow.fall
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.snow.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.snow.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.snow.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.stone.break
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.stone.fall
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.stone.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.stone.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.stone.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.stone_button.click_off
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.stone_button.click_on
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.stone_pressureplate.click_off
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.stone_pressureplate.click_on
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.tripwire.attach
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.tripwire.click_off
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.tripwire.click_on
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.tripwire.detach
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.water.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.waterlily.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wood.break
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wood.fall
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wood.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wood.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wood.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wood_button.click_off
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wood_button.click_on
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wood_pressureplate.click_off
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wood_pressureplate.click_on
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wooden_door.close
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wooden_door.open
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wooden_trapdoor.close
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:block.wooden_trapdoor.open
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:enchant.thorns.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.armorstand.break
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.armorstand.fall
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.armorstand.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.armorstand.place
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.arrow.hit
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.arrow.hit_player
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.arrow.shoot
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.bat.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.bat.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.bat.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.bat.loop
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.bat.takeoff
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.blaze.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.blaze.burn
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.blaze.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.blaze.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.blaze.shoot
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.boat.paddle_land
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.boat.paddle_water
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.bobber.retrieve
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.bobber.splash
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.bobber.throw
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cat.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cat.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cat.hiss
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cat.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cat.purr
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cat.purreow
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.chicken.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.chicken.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.chicken.egg
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.chicken.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.chicken.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cow.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cow.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cow.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cow.milk
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.cow.step
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.creeper.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.creeper.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.creeper.primed
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.donkey.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.donkey.angry
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.donkey.chest
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.donkey.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.donkey.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.egg.throw
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.elder_guardian.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.elder_guardian.ambient_land
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.elder_guardian.curse
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.elder_guardian.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.elder_guardian.death_land
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.elder_guardian.flop
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.elder_guardian.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.elder_guardian.hurt_land
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.enderdragon.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.enderdragon.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.enderdragon.flap
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.enderdragon.growl
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.enderdragon.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.enderdragon.shoot
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.enderdragon_fireball.explode
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endereye.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endereye.launch
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermen.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermen.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermen.hurt
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermen.scream
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermen.stare
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermen.teleport
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermite.ambient
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermite.death
+[04:20:53] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermite.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.endermite.step
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.enderpearl.throw
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.evocation_fangs.attack
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.evocation_illager.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.evocation_illager.cast_spell
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.evocation_illager.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.evocation_illager.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.evocation_illager.prepare_attack
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.evocation_illager.prepare_summon
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.evocation_illager.prepare_wololo
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.experience_bottle.throw
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.experience_orb.pickup
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.firework.blast
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.firework.blast_far
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.firework.large_blast
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.firework.large_blast_far
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.firework.launch
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.firework.shoot
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.firework.twinkle
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.firework.twinkle_far
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.big_fall
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.burn
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.drink
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.eat
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.explode
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.extinguish_fire
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.small_fall
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.splash
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.generic.swim
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.ghast.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.ghast.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.ghast.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.ghast.scream
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.ghast.shoot
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.ghast.warn
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.guardian.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.guardian.ambient_land
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.guardian.attack
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.guardian.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.guardian.death_land
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.guardian.flop
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.guardian.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.guardian.hurt_land
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.angry
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.armor
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.breathe
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.eat
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.gallop
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.jump
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.land
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.saddle
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.step
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.horse.step_wood
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.hostile.big_fall
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.hostile.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.hostile.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.hostile.small_fall
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.hostile.splash
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.hostile.swim
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.husk.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.husk.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.husk.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.husk.step
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.illusion_illager.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.illusion_illager.cast_spell
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.illusion_illager.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.illusion_illager.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.illusion_illager.mirror_move
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.illusion_illager.prepare_blindness
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.illusion_illager.prepare_mirror
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.irongolem.attack
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.irongolem.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.irongolem.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.irongolem.step
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.item.break
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.item.pickup
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.itemframe.add_item
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.itemframe.break
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.itemframe.place
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.itemframe.remove_item
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.itemframe.rotate_item
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.leashknot.break
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.leashknot.place
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.lightning.impact
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.lightning.thunder
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.lingeringpotion.throw
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.llama.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.llama.angry
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.llama.chest
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.llama.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.llama.eat
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.llama.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.llama.spit
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.llama.step
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.llama.swag
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.magmacube.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.magmacube.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.magmacube.jump
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.magmacube.squish
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.minecart.inside
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.minecart.riding
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.mooshroom.shear
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.mule.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.mule.chest
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.mule.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.mule.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.painting.break
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.painting.place
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.eat
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.fly
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.blaze
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.creeper
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.elder_guardian
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.enderdragon
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.enderman
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.endermite
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.evocation_illager
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.ghast
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.husk
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.illusion_illager
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.magmacube
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.polar_bear
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.shulker
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.silverfish
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.skeleton
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.slime
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.spider
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.stray
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.vex
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.vindication_illager
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.witch
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.wither
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.wither_skeleton
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.wolf
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.zombie
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.zombie_pigman
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.imitate.zombie_villager
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.parrot.step
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.pig.ambient
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.pig.death
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.pig.hurt
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.pig.saddle
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.pig.step
+[04:20:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.attack.crit
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.attack.knockback
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.attack.nodamage
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.attack.strong
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.attack.sweep
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.attack.weak
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.big_fall
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.breath
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.burp
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.hurt_drown
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.hurt_on_fire
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.levelup
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.small_fall
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.splash
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.player.swim
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.polar_bear.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.polar_bear.baby_ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.polar_bear.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.polar_bear.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.polar_bear.step
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.polar_bear.warning
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.rabbit.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.rabbit.attack
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.rabbit.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.rabbit.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.rabbit.jump
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.sheep.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.sheep.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.sheep.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.sheep.shear
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.sheep.step
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker.close
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker.hurt_closed
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker.open
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker.shoot
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker.teleport
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker_bullet.hit
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.shulker_bullet.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.silverfish.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.silverfish.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.silverfish.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.silverfish.step
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.skeleton.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.skeleton.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.skeleton.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.skeleton.shoot
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.skeleton.step
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.skeleton_horse.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.skeleton_horse.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.skeleton_horse.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.slime.attack
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.slime.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.slime.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.slime.jump
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.slime.squish
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.small_magmacube.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.small_magmacube.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.small_magmacube.squish
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.small_slime.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.small_slime.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.small_slime.jump
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.small_slime.squish
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.snowball.throw
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.snowman.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.snowman.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.snowman.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.snowman.shoot
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.spider.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.spider.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.spider.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.spider.step
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.splash_potion.break
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.splash_potion.throw
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.squid.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.squid.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.squid.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.stray.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.stray.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.stray.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.stray.step
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.tnt.primed
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.vex.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.vex.charge
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.vex.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.vex.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.villager.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.villager.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.villager.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.villager.no
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.villager.trading
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.villager.yes
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.vindication_illager.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.vindication_illager.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.vindication_illager.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.witch.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.witch.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.witch.drink
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.witch.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.witch.throw
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither.break_block
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither.shoot
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither.spawn
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither_skeleton.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither_skeleton.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither_skeleton.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wither_skeleton.step
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wolf.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wolf.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wolf.growl
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wolf.howl
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wolf.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wolf.pant
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wolf.shake
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wolf.step
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.wolf.whine
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie.attack_door_wood
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie.attack_iron_door
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie.break_door_wood
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie.infect
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie.step
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_horse.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_horse.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_horse.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_pig.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_pig.angry
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_pig.death
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_pig.hurt
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_villager.ambient
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_villager.converted
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundManager]: Missing sound for event: minecraft:entity.zombie_villager.cure
+[04:20:56] [main/WARN] [net.minecraft.client.audio.SoundMana[04:22:44] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
+[04:22:44] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
+[04:22:46] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[04:22:47] [Server thread/INFO] [FML]: Applying holder lookups
+[04:22:47] [Server thread/INFO] [FML]: Holder lookups applied
+[04:22:48] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@14344d9f)
+[04:22:52] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
+[04:22:53] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@14344d9f)
+[04:22:54] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@14344d9f)
+[04:22:54] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[04:22:55] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 2%
+[04:22:56] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 5%
+[04:22:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 6%
+[04:22:58] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 7%
+[04:22:59] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 10%
+[04:23:00] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 11%
+[04:23:01] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 13%
+[04:23:02] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 14%
+[04:23:03] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 15%
+[04:23:04] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 17%
+[04:23:05] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 19%
+[04:23:06] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 21%
+[04:23:07] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 23%
+[04:23:08] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 26%
+[04:23:10] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 29%
+[04:23:11] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 31%
+[04:23:12] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 33%
+[04:23:13] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 36%
+[04:23:14] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 39%
+[04:23:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 41%
+[04:23:16] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 44%
+[04:23:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 46%
+[04:23:18] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 47%
+[04:23:19] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 49%
+[04:23:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 51%
+[04:23:21] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 54%
+[04:23:22] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 57%
+[04:23:23] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 58%
+[04:23:24] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 61%
+[04:23:26] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 63%
+[04:23:27] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 66%
+[04:23:28] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 69%
+[04:23:29] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 73%
+[04:23:30] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 78%
+[04:23:31] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 82%
+[04:23:32] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 87%
+[04:23:33] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 90%
+[04:23:34] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 94%
+[04:23:35] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 98%
+[04:23:37] [Server thread/INFO] [FML]: Unloading dimension -1
+[04:23:37] [Server thread/INFO] [FML]: Unloading dimension 1
+[04:23:37] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
+[04:23:43] [Server thread/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:23:43] [Server thread/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=80cb0b0b-d56b-4cdd-a299-fdf065e3703b, class=EntityPlayerMP)
+[04:23:44] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[04:23:44] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[04:23:44] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 7 mods : minecraft@1.12.2,FML@8.0.99.99,obfuscate@0.4.2,forge@14.23.5.2768,wakfu@1.0,geckolib3@3.0.30,mcp@9.42
+[04:23:44] [Netty Local Client IO #0/INFO] [Obfuscate]: Updating 0 synced key mappings
+[04:23:44] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[04:23:44] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[04:23:45] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: hiraishin360[local:E:421aa8c4] logged in with entity id 844 at (-209.5, 68.0, 248.5)
+[04:23:45] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: hiraishin360 joined the game
+[04:23:45] [Server thread/INFO] [STDOUT]: [fr.skill.handlers.SkillSyncHandler:onPlayerLogin:22]: [WAKFU-SKILLS] Sent skills to player on login: hiraishin360
+[04:23:45] [Server thread/INFO] [STDOUT]: [fr.skill.handlers.SkillSyncHandler:onPlayerLogin:22]: [WAKFU-SKILLS] Sent skills to player on login: hiraishin360
+[04:23:46] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:23:46] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=3d4a4e34-bb74-48e6-8738-dff5a3b19ea7, class=EntityPlayerSP)
+[04:23:51] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[04:23:51] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[04:23:52] [main/INFO] [STDOUT]: [fr.wakfu.common.network.PacketRequestRaceSelection$Handler:lambda$0:21]: [Client] GUI ouvert !
+[04:23:56] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[04:23:56] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[04:23:57] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 19892ms behind, skipping 397 tick(s)
+[04:24:02] [main/INFO] [STDOUT]: [fr.wakfu.common.network.SyncRaceCapability$Handler:lambda$0:37]: [Client] Race synchronisée : Eliatrope
+[04:24:05] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded?[04:33:11] [main/INFO] [net.minecraft.client.multiplayer.GuiConnecting]: Connecting to 10.188.206.141, 61792
+[04:33:17] [Netty Client IO #0/WARN] [net.minecraft.client.network.NetHandlerLoginClient]: Couldn't connect to auth servers but will continue to join LAN
+[04:33:18] [Netty Client IO #0/INFO] [FML]: Server protocol version 2
+[04:33:19] [main/INFO] [FML]: Injecting existing registry data into this client instance
+[04:33:20] [main/INFO] [FML]: Applying holder lookups
+[04:33:20] [main/INFO] [FML]: Holder lookups applied
+[04:33:20] [Netty Client IO #0/INFO] [Obfuscate]: Updating 0 synced key mappings
+[04:33:20] [Netty Client IO #0/INFO] [FML]: [Netty Client IO #0] Client side modded connection established
+[04:33:22] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:33:22] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=7ba17269-9f22-497d-90bd-1077a8038022, class=EntityPlayerSP)
+[04:33:36] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:33:36] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=37210f7c-ffec-4020-bcb6-88ccfe910f14, class=EntityOtherPlayerMP)
+[04:33:37] [Netty Client IO #0/ERROR] [FML]: NetworkDispatcher exception
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.8.0_202]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:1.8.0_202]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:1.8.0_202]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[?:1.8.0_202]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[?:1.8.0_202]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[PooledUnsafeDirectByteBuf.class:4.1.9.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100) ~[AbstractByteBuf.class:4.1.9.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:372) ~[NioSocketChannel.class:4.1.9.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123) [AbstractNioByteChannel$NioByteUnsafe.class:4.1.9.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624) [NioEventLoop.class:4.1.9.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559) [NioEventLoop.class:4.1.9.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476) [NioEventLoop.class:4.1.9.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438) [NioEventLoop.class:4.1.9.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) [SingleThreadEventExecutor$5.class:4.1.9.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_202]
+[04:33:37] [main/INFO] [STDOUT]: [fr.wakfu.common.network.PacketRequestRaceSelection$Handler:lambda$0:21]: [Client] GUI ouvert !
+[04:33:38] [main/INFO] [FML]: Applying holder lookups
+[04:33:38] [main/INFO] [FML]: Holder lookups applied
+[04:33:47] [main/INFO] [net.minecraft.client.multiplayer.GuiConnecting]: Connecting to 10.188.206.141, 61792
+[04:33:47] [Netty Client IO #1/WARN] [net.minecraft.client.network.NetHandlerLoginClient]: Couldn't connect to auth servers but will continue to join LAN
+[04:33:48] [Netty Client IO #1/INFO] [FML]: Server protocol version 2
+[04:33:48] [main/INFO] [FML]: Injecting existing registry data into this client instance
+[04:33:49] [main/INFO] [FML]: Applying holder lookups
+[04:33:49] [main/INFO] [FML]: Holder lookups applied
+[04:33:49] [Netty Client IO #1/INFO] [Obfuscate]: Updating 0 synced key mappings
+[04:33:49] [Netty Client IO #1/INFO] [FML]: [Netty Client IO #1] Client side modded connection established
+[04:33:49] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:33:49] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=0bc4c7e2-1ad6-4375-8698-d5d2df6da926, class=EntityPlayerSP)
+[04:34:00] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:34:00] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=9c25df3b-2afb-43f4-b4f2-4c65047ab492, class=EntityOtherPlayerMP)
+[04:34:02] [main/INFO] [STDOUT]: [fr.wakfu.common.network.PacketRequestRaceSelection$Handler:lambda$0:21]: [Client] GUI ouvert !
+[04:34:15] [main/INFO] [STDOUT]: [fr.wakfu.common.network.SyncRaceCapability$Handler:lambda$0:37]: [Client] Race synchronisée : Eliatrope
+[04:34:26] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:27] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:28] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:38] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:39] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:39] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:40] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:41] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Teleported SAYLIE to hiraishin360
+[04:34:53] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] add, check, give, list, remove
+[04:34:54] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE, hiraishin360
+[04:34:59] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Go, wakfu:go
+[04:35:01] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Skill 'wakfu:go' ajouté à SAYLIE
+[04:35:01] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Vous avez débloqué le skill : wakfu:go
+[04:35:40] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Blink !!!
+[04:35:50] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Skill en cooldown : 2s
+[04:35:52] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Skill en cooldown : 1s
+[04:35:53] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Blink !!!
+[04:35:53] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Skill en cooldown : 12s
+[04:36:32] [main/INFO] [FML]: Applying holder lookups
+[04:36:32] [main/INFO] [FML]: Holder lookups applied
+[04:36:37] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	[04:36:42] [main/INFO] [net.minecraft.client.multiplayer.ChunkProviderClient]: Warning: Clientside chunk ticking took 216 ms
+[04:37:20] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 71814ms behind, skipping 1436 tick(s)
+[04:37:23] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 2276ms behind, skipping 45 tick(s)
+[04:37:43] [User Authenticator #3/WARN] [net.minecraft.server.network.NetHandlerLoginServer]: Failed to verify username but will let them in anyway!
+[04:37:43] [Server thread/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:37:43] [Server thread/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=ef969fd7-7a45-4c6e-8a61-9df71be9f37f, class=EntityPlayerMP)
+[04:37:43] [Netty Server IO #5/INFO] [FML]: Client protocol version 2
+[04:37:43] [Netty Server IO #5/INFO] [FML]: Client attempting to join with 7 mods : minecraft@1.12.2,FML@8.0.99.99,obfuscate@0.4.2,forge@14.23.5.2768,wakfu@1.0,geckolib3@3.0.30,mcp@9.42
+[04:37:45] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[04:37:45] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: SAYLIE[/10.188.206.141:61823] logged in with entity id 19177 at (-291.84912696332947, 64.0, 268.4180116746408)
+[04:37:45] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: SAYLIE joined the game
+[04:37:45] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE joined the game
+[04:37:45] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:37:45] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=358f0327-353f-45dd-af6f-678df9d7fb17, class=EntityOtherPlayerMP)
+[04:37:47] [Server thread/INFO] [STDOUT]: [fr.skill.handlers.SkillSyncHandler:onPlayerLogin:22]: [WAKFU-SKILLS] Sent skills to player on login: SAYLIE
+[04:37:47] [Server thread/INFO] [STDOUT]: [fr.skill.handlers.SkillSyncHandler:onPlayerLogin:22]: [WAKFU-SKILLS] Sent skills to player on login: SAYLIE
+[04:38:06] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [SAYLIE: Given 4 experience to SAYLIE]
+[04:38:07] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] [SAYLIE: Given 4 experience to SAYLIE]
+[04:38:42] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: SAYLIE lost connection: Disconnected
+[04:38:42] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: SAYLIE left the game
+[04:38:42] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE left the game
+[04:38:49] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: hiraishin360 lost connection: Internal Exception: java.nio.channels.ClosedChannelException
+[04:38:49] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: hiraishin360 left the game
+[04:38:49] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
+[04:38:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[04:38:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[04:38:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[04:38:52] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[04:38:56] [Server thread/INFO] [FML]: Unloading dimension 0
+[04:38:56] [Server thread/INFO] [FML]: Applying holder lookups
+[04:38:56] [Server thread/INFO] [FML]: Holder lookups applied
+[04:39:01] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove.processPacket(SPacketEntity.java:188) ~[SPacketEntity$S17PacketEntityLookMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove.processPacket(SPacketEntity.java:188) ~[SPacketEntity$S17PacketEntityLookMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove.processPacket(SPacketEntity.java:188) ~[SPacketEntity$S17PacketEntityLookMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEn[04:39:58] [main/INFO] [net.minecraft.client.multiplayer.GuiConnecting]: Connecting to 10.188.206.141, 61844
+[04:39:58] [Netty Client IO #3/WARN] [net.minecraft.client.network.NetHandlerLoginClient]: Couldn't connect to auth servers but will continue to join LAN
+[04:39:59] [Netty Client IO #3/INFO] [FML]: Server protocol version 2
+[04:39:59] [main/INFO] [FML]: Injecting existing registry data into this client instance
+[04:40:00] [main/INFO] [FML]: Applying holder lookups
+[04:40:00] [main/INFO] [FML]: Holder lookups applied
+[04:40:00] [Netty Client IO #3/INFO] [Obfuscate]: Updating 0 synced key mappings
+[04:40:00] [Netty Client IO #3/INFO] [FML]: [Netty Client IO #3] Client side modded connection established
+[04:40:02] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:40:02] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=b11f05b8-00d0-4898-b34d-eb366ad075a5, class=EntityPlayerSP)
+[04:40:08] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:40:08] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=1cc98049-c22c-4cc0-8e9b-e2f128fb4d17, class=EntityOtherPlayerMP)
+[04:40:43] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] hiraishin360 left the game
+[04:40:50] [main/INFO] [FML]: Applying holder lookups
+[04:40:50] [main/INFO] [FML]: Holder lookups applied
+ java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove.processPacket(SPacketEntity.java:188) ~[SPacketEntity$S17PacketEntityLookMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove.processPacket(SPacketEntity.java:188) ~[SPacketEntity$S17PacketEntityLookMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove.processPacket(SPacketEntity.java:188) ~[SPacketEntity$S17PacketEntityLookMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove.processPacket(SPacketEntity.java:109) ~[SPacketEntity$S15PacketEntityRelMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S15PacketEntityRelMove.processPacket(SPacketEntity.java:109) ~[SPacketEntity$S15PacketEntityRelMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove.processPacket(SPacketEntity.java:188) ~[SPacketEntity$S17PacketEntityLookMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntity.getEntity(SPacketEntity.java:64) ~[SPacketEntity.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityMovement(NetHandlerPlayClient.java:679) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntity.processPacket(SPacketEntity.java:53) ~[SPacketEntity.class:?]
+	at net.minecraft.network.play.server.SPacketEntity$S17PacketEntityLookMove.processPacket(SPacketEntity.java:188) ~[SPacketEntity$S17PacketEntityLookMove.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:02] [main/FATAL] [net.minecraft.client.Minecraft]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1177) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:441) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:118) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_202]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_202]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_202]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_202]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97) [start/:?]
+	at GradleStart.main(GradleStart.java:25) [start/:?]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.getEntity(SPacketEntityHeadLook.java:56) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.client.network.NetHandlerPlayClient.handleEntityHeadLook(NetHandlerPlayClient.java:707) ~[NetHandlerPlayClient.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:50) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.play.server.SPacketEntityHeadLook.processPacket(SPacketEntityHeadLook.java:12) ~[SPacketEntityHeadLook.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_202]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 15 more
+[04:39:08] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
+[04:39:08] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
+[04:39:08] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[04:39:09] [Server thread/INFO] [FML]: Applying holder lookups
+[04:39:09] [Server thread/INFO] [FML]: Holder lookups applied
+[04:39:09] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@573f7a2b)
+[04:39:10] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
+[04:39:10] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@573f7a2b)
+[04:39:10] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@573f7a2b)
+[04:39:10] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[04:39:11] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 2%
+[04:39:12] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 20%
+[04:39:13] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 36%
+[04:39:14] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 54%
+[04:39:16] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing spawn area: 76%
+[04:39:16] [Server thread/INFO] [FML]: Unloading dimension -1
+[04:39:17] [Server thread/INFO] [FML]: Unloading dimension 1
+[04:39:17] [Server thread/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:39:17] [Server thread/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=bce90032-806e-47fa-bc05-50ef92ef3463, class=EntityPlayerMP)
+[04:39:17] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
+[04:39:17] [Netty Local Client IO #1/INFO] [FML]: Server protocol version 2
+[04:39:17] [Netty Server IO #7/INFO] [FML]: Client protocol version 2
+[04:39:17] [Netty Server IO #7/INFO] [FML]: Client attempting to join with 7 mods : minecraft@1.12.2,FML@8.0.99.99,obfuscate@0.4.2,forge@14.23.5.2768,wakfu@1.0,geckolib3@3.0.30,mcp@9.42
+[04:39:17] [Netty Local Client IO #1/INFO] [Obfuscate]: Updating 0 synced key mappings
+[04:39:17] [Netty Local Client IO #1/INFO] [FML]: [Netty Local Client IO #1] Client side modded connection established
+[04:39:17] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[04:39:17] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: hiraishin360[local:E:c4cf1ddd] logged in with entity id 20012 at (-292.3308217000922, 64.0, 269.57954738562813)
+[04:39:17] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: hiraishin360 joined the game
+[04:39:17] [Server thread/INFO] [STDOUT]: [fr.skill.handlers.SkillSyncHandler:onPlayerLogin:22]: [WAKFU-SKILLS] Sent skills to player on login: hiraishin360
+[04:39:17] [Server thread/INFO] [STDOUT]: [fr.skill.handlers.SkillSyncHandler:onPlayerLogin:22]: [WAKFU-SKILLS] Sent skills to player on login: hiraishin360
+[04:39:18] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:39:18] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=c347e1a1-1f9c-4119-982f-fe2f0974fe28, class=EntityPlayerSP)
+[04:39:20] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[04:39:20] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[04:39:21] [main/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 8 advancements
+[04:39:22] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 3994ms behind, skipping 79 tick(s)
+[04:39:28] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: [hiraishin360: Given 1 experience to hiraishin360]
+[04:39:28] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Given 1 experience to hiraishin360
+[04:39:36] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[04:39:36] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[04:39:41] [main/INFO] [net.minecraft.network.NetworkSystem]: Using default channel type
+[04:39:41] [main/INFO] [net.minecraft.server.integrated.IntegratedServer]: Started on 61844
+[04:39:41] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Local game hosted on port 61844
+[04:39:58] [User Authenticator #4/WARN] [net.minecraft.server.network.NetHandlerLoginServer]: Failed to verify username but will let them in anyway!
+[04:39:58] [Server thread/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:39:58] [Server thread/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=1499ee8a-65cb-464d-ac7b-8f35508e9b9f, class=EntityPlayerMP)
+[04:39:59] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[04:39:59] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 7 mods : minecraft@1.12.2,FML@8.0.99.99,obfuscate@0.4.2,forge@14.23.5.2768,wakfu@1.0,geckolib3@3.0.30,mcp@9.42
+[04:40:01] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[04:40:01] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: SAYLIE[/10.188.206.141:61848] logged in with entity id 20137 at (-291.1055060892628, 64.0, 267.36579814314206)
+[04:40:01] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: SAYLIE joined the game
+[04:40:03] [Server thread/INFO] [STDOUT]: [fr.skill.handlers.SkillSyncHandler:onPlayerLogin:22]: [WAKFU-SKILLS] Sent skills to player on login: SAYLIE
+[04:40:03] [Server thread/INFO] [STDOUT]: [fr.skill.handlers.SkillSyncHandler:onPlayerLogin:22]: [WAKFU-SKILLS] Sent skills to player on login: SAYLIE
+[04:40:04] [main/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] SAYLIE joined the game
+[04:40:04] [main/INFO] [STDOUT]: [fr.wakfu.common.event.RaceEventHandler:onAttachCapabilities:24]: [Capability] Attachée au joueur.
+[04:40:04] [main/INFO] [STDOUT]: [fr.wakfu.allies.AllyEventHandler:attachCapability:25]: [WakfuMod] AllyProvider attaché (player UUID=8be26aaa-aea5-46c6-a2bb-0d7f4fd9be96, class=EntityOtherPlayerMP)
+[04:40:05] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 6255ms behind, skipping 125 tick(s)
+[04:40:37] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 19592ms behind, skipping 391 tick(s)
+[04:40:40] [Server thread/WARN] [net.minecraft.server.MinecraftServer]: Can't keep up! Did the system time change, or is the server overloaded? Running 3537ms behind, skipping 70 tick(s)
+[04:40:42] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: hiraishin360 lost connection: Disconnected
+[04:40:42] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: hiraishin360 left the game
+[04:40:42] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
+[04:40:43] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[04:40:43] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[04:40:43] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[04:40:43] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[04:40:48] [Server thread/INFO] [FML]: Unloading dimension 0
+[04:40:49] [Server thread/INFO] [FML]: Applying holder lookups
+[04:40:49] [Server thread/INFO] [FML]: Holder lookups applied
+[04:41:01] [main/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[04:41:01] [main/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[04:41:01] [main/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com

@@ -17,7 +17,7 @@ public class CommandWakfuLevel extends CommandBase {
 
     @Override
     public String getUsage(ICommandSender sender) {
-        return "/wakfu level";
+        return "/wakfu";
     }
 
     @Override
@@ -28,17 +28,21 @@ public class CommandWakfuLevel extends CommandBase {
         IPlayerStats stats = player.getCapability(StatsProvider.PLAYER_STATS, null);
         if (stats == null) return;
 
-        if (args.length == 1 && args[0].equalsIgnoreCase("level")) {
+     
             int level = stats.getLevel();
             int points = stats.getSkillPoints();
+            int intensity = stats.getIntensity();
             player.sendMessage(new TextComponentString("§b[Niveau Wakfu] §7Tu es niveau §a" + level + "§7, avec §e" + points + " §7points de compétence."));
-        } else {
-            player.sendMessage(new TextComponentString("§cUtilisation: /wakfu level"));
-        }
+            player.sendMessage(new TextComponentString("intensité= §a"+intensity));
     }
 
     @Override
     public int getRequiredPermissionLevel() {
         return 0; // tout le monde peut l’utiliser
+    }
+    
+    @Override
+    public boolean checkPermission(MinecraftServer server, ICommandSender sender) {
+        return true;
     }
 }

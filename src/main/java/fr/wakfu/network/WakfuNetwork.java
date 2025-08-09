@@ -1,8 +1,14 @@
 package fr.wakfu.network;
 
+import fr.skill.PacketRequestSkills;
+import fr.skill.network.PacketSelectRadialSkill;
+import fr.skill.network.PacketSyncSkills;
+import fr.wakfu.allies.network.PacketAllyResponse;
+import fr.wakfu.allies.network.PacketOpenAllyGui;
 import fr.wakfu.common.network.PacketRequestRaceSelection;
 import fr.wakfu.common.network.PacketSetRace;
 import fr.wakfu.common.network.SyncRaceCapability;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
@@ -31,6 +37,10 @@ public class WakfuNetwork {
         		packetId++,
         		Side.SERVER
         		);
+        WakfuNetwork.INSTANCE.registerMessage(PacketSelectRadialSkill.class,
+        		PacketSelectRadialSkill.Message.class, packetId++, Side.SERVER
+        );
+
 
         // === Stat packets ===
         INSTANCE.registerMessage(
@@ -65,8 +75,34 @@ public class WakfuNetwork {
             packetId++,
             Side.CLIENT
         );
-  
+        WakfuNetwork.INSTANCE.registerMessage(
+        	PacketOpenAllyGui.Handler.class, 
+        	PacketOpenAllyGui.class, packetId++, Side.CLIENT
+        );
+        WakfuNetwork.INSTANCE.registerMessage(
+        		PacketAllyResponse.Handler.class, 
+        		PacketAllyResponse.class, packetId++, Side.SERVER
+        );
         
+        INSTANCE.registerMessage(PacketSyncSkills.Handler.class,
+        		PacketSyncSkills.class,
+        		packetId++, Side.CLIENT
+        );
+        INSTANCE.registerMessage(PacketRequestSkills.Handler.class,
+        		PacketRequestSkills.class,
+        		packetId++, Side.SERVER
+        );
+        INSTANCE.registerMessage(fr.skill.network.PacketSyncSkills.Handler.class,
+        		fr.skill.network.PacketSyncSkills.class, packetId++, Side.CLIENT
+        );
+        INSTANCE.registerMessage(fr.skill.network.PacketRequestSkills.Handler.class,
+        		fr.skill.network.PacketRequestSkills.class, packetId++, Side.SERVER
+        );
+        INSTANCE.registerMessage(fr.skill.network.PacketUseSkill.Handler.class,
+        		fr.skill.network.PacketUseSkill.class, packetId++, Side.SERVER
+        );
+   
+   
 
      
 
@@ -81,7 +117,7 @@ public class WakfuNetwork {
         INSTANCE.sendToAll(msg);
     }
 
-    public static void sendTo(PacketAnimationControl msg, net.minecraft.entity.player.EntityPlayerMP player) {
+    public static void sendTo(PacketAnimationControl msg, EntityPlayerMP player) {
         INSTANCE.sendTo(msg, player);
     }
 }

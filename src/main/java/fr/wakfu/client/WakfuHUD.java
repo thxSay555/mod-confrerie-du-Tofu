@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import org.lwjgl.opengl.GL11;
 
 @EventBusSubscriber
-public class WakfuHUDOverlay {
+public class WakfuHUD {
 
     private static final Minecraft mc = Minecraft.getMinecraft();
 
